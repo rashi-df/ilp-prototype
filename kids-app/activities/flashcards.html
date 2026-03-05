@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Flashcards - Kids Islamic Learning</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:800">100%</span>
+                </div>
+            </div>
+
+            <div id="flashcards" class="screen active">
+                <div class="screen-header">
+                    <button class="screen-header-back" onclick="showScreen('lesson-progress')">←</button>
+                    <div class="screen-header-title">Flashcards</div>
+                    <div style="margin-left:auto;display:flex;align-items:center;gap:4px;font-size:13px;font-weight:800;color:#92400e;">⭐ 3</div>
+                </div>
+                <div class="screen-content">
+
+                    <!-- Progress row -->
+                    <div class="flashcard-progress-row">
+                        <div class="flashcard-count">Card 3 of 8</div>
+                        <div style="display:flex;gap:6px;align-items:center;">
+                            <span style="background:#d1fae5;border-radius:100px;padding:4px 10px;font-size:12px;font-weight:800;color:#065f46;">✓ 3 known</span>
+                            <span style="background:#fef9c3;border-radius:100px;padding:4px 10px;font-size:12px;font-weight:800;color:#92400e;">↩ 0 learning</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar" style="margin-bottom:16px;">
+                        <div class="progress-fill" style="width:37.5%;"></div>
+                    </div>
+
+                    <!-- Flashcard (flip on click) -->
+                    <div class="flashcard-kids" id="card" onclick="flipCard()">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <div class="flashcard-hint">Arabic Letter</div>
+                                <div class="flashcard-word">س</div>
+                                <div class="flashcard-transliteration">Seen</div>
+                                <div class="flashcard-tap-hint">Tap to see meaning →</div>
+                            </div>
+                            <div class="flashcard-back">
+                                <div class="flashcard-hint" style="color:#5D2E00;">English Meaning</div>
+                                <div class="flashcard-word-back">The Letter "S"</div>
+                                <div style="font-size:16px;font-weight:700;color:#92400e;margin-top:8px;">سَماء = Sky</div>
+                                <div style="font-size:14px;font-weight:700;color:#92400e;margin-top:4px;">سلام = Peace</div>
+                                <div class="flashcard-tap-hint" style="color:#92400e;">Tap to flip back</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="flashcard-action-row">
+                        <button class="btn-learning" onclick="nextCard('learning')">↩ Still learning</button>
+                        <button class="btn-know" onclick="nextCard('know')">I know it! ⭐</button>
+                    </div>
+
+                    <!-- Preview of remaining cards -->
+                    <div class="card mt-16" style="padding:14px 16px;">
+                        <div style="font-size:13px;font-weight:800;color:#374151;margin-bottom:10px;">Coming up:</div>
+                        <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;">
+                            <div style="min-width:48px;height:48px;background:linear-gradient(135deg,var(--color-quran),#5b21b6);border-radius:14px;display:flex;align-items:center;justify-content:center;color:white;font-size:22px;font-weight:900;">ش</div>
+                            <div style="min-width:48px;height:48px;background:linear-gradient(135deg,var(--color-quran),#5b21b6);border-radius:14px;display:flex;align-items:center;justify-content:center;color:white;font-size:22px;font-weight:900;">ص</div>
+                            <div style="min-width:48px;height:48px;background:linear-gradient(135deg,var(--color-quran),#5b21b6);border-radius:14px;display:flex;align-items:center;justify-content:center;color:white;font-size:22px;font-weight:900;">ض</div>
+                            <div style="min-width:48px;height:48px;background:#e5e7eb;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#9CA3AF;font-size:18px;font-weight:900;">+5</div>
+                        </div>
+                    </div>
+
+                    <button class="btn-secondary mt-16" onclick="showScreen('drag-drop')">Skip to Drag &amp; Drop</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                </optgroup>
+                <optgroup label="🏠 Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">My Quests</option>
+                    <option value="profile">My Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards" selected>Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                </optgroup>
+                <optgroup label="📝 Homework">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="🌟 Progress &amp; Support">
+                    <option value="progress">My Progress</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                </optgroup>
+            </select>
+            <a href="../../mobile-app/auth/login.html" class="btn-app-link">Adult App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script>
+        let stars = 3;
+        function flipCard() {
+            document.getElementById('card').classList.toggle('flipped');
+        }
+        function nextCard(result) {
+            const card = document.getElementById('card');
+            if (result === 'know') {
+                stars++;
+                card.style.transform = 'translateX(60px) rotate(5deg)';
+                card.style.opacity = '0';
+                card.style.transition = 'all 0.3s ease';
+            } else {
+                card.style.transform = 'translateX(-60px) rotate(-5deg)';
+                card.style.opacity = '0';
+                card.style.transition = 'all 0.3s ease';
+            }
+            setTimeout(() => {
+                card.classList.remove('flipped');
+                card.style.transform = '';
+                card.style.opacity = '';
+                // Update counter
+                document.querySelector('.flashcard-count').textContent = 'Card 4 of 8';
+            }, 350);
+            // Show star reward
+            if (result === 'know') {
+                document.querySelector('.screen-header [style*="color:#92400e"]').textContent = '⭐ ' + stars;
+            }
+        }
+    </script>
+</body>
+</html>

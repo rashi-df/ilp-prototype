@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Manager - Admin Panel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"><img src="../../assets/logo-noname.png" alt="ILP Logo" style="width:36px;height:36px;object-fit:contain;"></div>
+                <div>
+                    <div class="sidebar-title">Islamic Learn</div>
+                    <div class="sidebar-subtitle">Admin Panel</div>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" onclick="showScreen('dashboard')">
+                        <span class="nav-item-icon">📊</span>
+                        <span class="nav-item-text">Dashboard</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <div class="nav-item" onclick="showScreen('users')">
+                        <span class="nav-item-icon">👥</span>
+                        <span class="nav-item-text">Users</span>
+                        <span class="nav-item-badge">24</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('courses')">
+                        <span class="nav-item-icon">📚</span>
+                        <span class="nav-item-text">Courses</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('content')">
+                        <span class="nav-item-icon">📂</span>
+                        <span class="nav-item-text">Course Content</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('videos')">
+                        <span class="nav-item-icon">🎬</span>
+                        <span class="nav-item-text">Video Library</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Learning Tools</div>
+                    <div class="nav-item" onclick="showScreen('activities')">
+                        <span class="nav-item-icon">🎮</span>
+                        <span class="nav-item-text">Activity Builder</span>
+                    </div>
+                    <div class="nav-item active" onclick="showScreen('homework')">
+                        <span class="nav-item-icon">📝</span>
+                        <span class="nav-item-text">Homework</span>
+                        <span class="nav-item-badge">12</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Finance</div>
+                    <div class="nav-item" onclick="showScreen('payments')">
+                        <span class="nav-item-icon">💳</span>
+                        <span class="nav-item-text">Payments</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('certificates')">
+                        <span class="nav-item-icon">🏆</span>
+                        <span class="nav-item-text">Certificates</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">System</div>
+                    <div class="nav-item" onclick="showScreen('notifications')">
+                        <span class="nav-item-icon">🔔</span>
+                        <span class="nav-item-text">Notifications</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('categories')">
+                        <span class="nav-item-icon">🏷️</span>
+                        <span class="nav-item-text">Categories</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('settings')">
+                        <span class="nav-item-icon">⚙️</span>
+                        <span class="nav-item-text">Settings</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1 class="header-title" id="pageTitle">Homework Manager</h1>
+                <div class="header-actions">
+                    <div class="header-search">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a href="../../mobile-app/index.html" class="header-icon-btn" title="View Mobile App">📱</a>
+                    <div class="header-icon-btn">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </div>
+                    <div class="admin-avatar">👤</div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div id="homework" class="screen active">
+                    <div class="tabs">
+                        <div class="tab active" onclick="switchTab(this, 'create-task-tab')">Create Task</div>
+                        <div class="tab" onclick="switchTab(this, 'submissions-tab')">Submissions <span class="nav-item-badge" style="margin-left: 5px;">12</span></div>
+                    </div>
+
+                    <div id="create-task-tab" class="tab-content">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Create Homework Task</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Task Title</label>
+                                        <input type="text" class="form-input" placeholder="e.g., Recite Surah Al-Fatiha">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Link to Lesson</label>
+                                        <select class="form-select">
+                                            <option>Select a lesson...</option>
+                                            <option>Quran Basics &gt; Module 1 &gt; Lesson 1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Instructions</label>
+                                    <textarea class="form-textarea" placeholder="Provide detailed instructions for the homework..."></textarea>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Submission Type</label>
+                                        <select class="form-select">
+                                            <option>Audio Recording</option>
+                                            <option>Text/Written</option>
+                                            <option>File Upload</option>
+                                            <option>Video Recording</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Due Date</label>
+                                        <input type="date" class="form-input">
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Create Homework Task</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="submissions-tab" class="tab-content" style="display: none;">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Homework Submissions</h3>
+                                <div class="card-actions">
+                                    <select class="form-select" style="width: 150px;">
+                                        <option>All Status</option>
+                                        <option>Pending</option>
+                                        <option>Reviewed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Student</th>
+                                            <th>Task</th>
+                                            <th>Submitted</th>
+                                            <th>Assigned To</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar">👤</div>
+                                                    <div class="user-name">Ahmed Hassan</div>
+                                                </div>
+                                            </td>
+                                            <td>Recite Surah Al-Fatiha</td>
+                                            <td>2 hours ago</td>
+                                            <td>Sheikh Yusuf</td>
+                                            <td><span class="badge badge-warning">Pending</span></td>
+                                            <td><button class="btn btn-primary btn-sm">Review</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar">👤</div>
+                                                    <div class="user-name">Fatima Ali</div>
+                                                </div>
+                                            </td>
+                                            <td>Write Arabic Letters</td>
+                                            <td>5 hours ago</td>
+                                            <td>Ustadha Maryam</td>
+                                            <td><span class="badge badge-warning">Pending</span></td>
+                                            <td><button class="btn btn-primary btn-sm">Review</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar">👤</div>
+                                                    <div class="user-name">Omar Khan</div>
+                                                </div>
+                                            </td>
+                                            <td>Memorize Hadith 1</td>
+                                            <td>1 day ago</td>
+                                            <td>Sheikh Yusuf</td>
+                                            <td><span class="badge badge-success">Reviewed</span></td>
+                                            <td><button class="btn btn-secondary btn-sm">View</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

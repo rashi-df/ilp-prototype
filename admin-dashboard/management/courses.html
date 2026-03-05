@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Admin Panel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"><img src="../../assets/logo-noname.png" alt="ILP Logo" style="width:36px;height:36px;object-fit:contain;"></div>
+                <div>
+                    <div class="sidebar-title">Islamic Learn</div>
+                    <div class="sidebar-subtitle">Admin Panel</div>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" onclick="showScreen('dashboard')">
+                        <span class="nav-item-icon">📊</span>
+                        <span class="nav-item-text">Dashboard</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <div class="nav-item" onclick="showScreen('users')">
+                        <span class="nav-item-icon">👥</span>
+                        <span class="nav-item-text">Users</span>
+                        <span class="nav-item-badge">24</span>
+                    </div>
+                    <div class="nav-item active" onclick="showScreen('courses')">
+                        <span class="nav-item-icon">📚</span>
+                        <span class="nav-item-text">Courses</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('content')">
+                        <span class="nav-item-icon">📂</span>
+                        <span class="nav-item-text">Course Content</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('videos')">
+                        <span class="nav-item-icon">🎬</span>
+                        <span class="nav-item-text">Video Library</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Learning Tools</div>
+                    <div class="nav-item" onclick="showScreen('activities')">
+                        <span class="nav-item-icon">🎮</span>
+                        <span class="nav-item-text">Activity Builder</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('homework')">
+                        <span class="nav-item-icon">📝</span>
+                        <span class="nav-item-text">Homework</span>
+                        <span class="nav-item-badge">12</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Finance</div>
+                    <div class="nav-item" onclick="showScreen('payments')">
+                        <span class="nav-item-icon">💳</span>
+                        <span class="nav-item-text">Payments</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('certificates')">
+                        <span class="nav-item-icon">🏆</span>
+                        <span class="nav-item-text">Certificates</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">System</div>
+                    <div class="nav-item" onclick="showScreen('notifications')">
+                        <span class="nav-item-icon">🔔</span>
+                        <span class="nav-item-text">Notifications</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('categories')">
+                        <span class="nav-item-icon">🏷️</span>
+                        <span class="nav-item-text">Categories</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('settings')">
+                        <span class="nav-item-icon">⚙️</span>
+                        <span class="nav-item-text">Settings</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1 class="header-title" id="pageTitle">Courses</h1>
+                <div class="header-actions">
+                    <div class="header-search">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a href="../../mobile-app/index.html" class="header-icon-btn" title="View Mobile App">📱</a>
+                    <div class="header-icon-btn">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </div>
+                    <div class="admin-avatar">👤</div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div id="courses" class="screen active">
+                    <div class="content-card" style="margin-bottom: 25px;">
+                        <div class="card-header">
+                            <h3 class="card-title">All Courses</h3>
+                            <button class="btn btn-primary">+ Add New Course</button>
+                        </div>
+                    </div>
+
+                    <div class="grid-3">
+                        <div class="course-card">
+                            <div class="course-banner">📖</div>
+                            <div class="course-content">
+                                <div class="course-category">QURAN</div>
+                                <div class="course-title">Quran Reading Basics</div>
+                                <div class="course-meta">
+                                    <span>📚 12 Modules</span>
+                                    <span>👥 847 Students</span>
+                                </div>
+                                <div class="course-status">
+                                    <span class="badge badge-success">Published</span>
+                                    <button class="btn btn-secondary btn-sm">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-banner" style="background: #059669;">🎙️</div>
+                            <div class="course-content">
+                                <div class="course-category">TAJWEED</div>
+                                <div class="course-title">Tajweed Mastery</div>
+                                <div class="course-meta">
+                                    <span>📚 8 Modules</span>
+                                    <span>👥 523 Students</span>
+                                </div>
+                                <div class="course-status">
+                                    <span class="badge badge-success">Published</span>
+                                    <button class="btn btn-secondary btn-sm">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-banner" style="background: #d97706;">📜</div>
+                            <div class="course-content">
+                                <div class="course-category">HADITH</div>
+                                <div class="course-title">40 Hadith of Nawawi</div>
+                                <div class="course-meta">
+                                    <span>📚 10 Modules</span>
+                                    <span>👥 412 Students</span>
+                                </div>
+                                <div class="course-status">
+                                    <span class="badge badge-success">Published</span>
+                                    <button class="btn btn-secondary btn-sm">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-banner" style="background: #7c3aed;">⚖️</div>
+                            <div class="course-content">
+                                <div class="course-category">FIQH</div>
+                                <div class="course-title">Islamic Jurisprudence</div>
+                                <div class="course-meta">
+                                    <span>📚 15 Modules</span>
+                                    <span>👥 289 Students</span>
+                                </div>
+                                <div class="course-status">
+                                    <span class="badge badge-warning">Draft</span>
+                                    <button class="btn btn-secondary btn-sm">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-banner" style="background: #db2777;">🕋</div>
+                            <div class="course-content">
+                                <div class="course-category">SEERAH</div>
+                                <div class="course-title">Life of the Prophet</div>
+                                <div class="course-meta">
+                                    <span>📚 20 Modules</span>
+                                    <span>👥 634 Students</span>
+                                </div>
+                                <div class="course-status">
+                                    <span class="badge badge-success">Published</span>
+                                    <button class="btn btn-secondary btn-sm">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-banner" style="background: #0d9488;">🌙</div>
+                            <div class="course-content">
+                                <div class="course-category">AQEEDAH</div>
+                                <div class="course-title">Fundamentals of Faith</div>
+                                <div class="course-meta">
+                                    <span>📚 6 Modules</span>
+                                    <span>👥 198 Students</span>
+                                </div>
+                                <div class="course-status">
+                                    <span class="badge badge-warning">Draft</span>
+                                    <button class="btn btn-secondary btn-sm">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

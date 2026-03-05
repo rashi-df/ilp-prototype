@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>My Profile - Kids Islamic Learning</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:800">100%</span>
+                </div>
+            </div>
+
+            <div id="profile" class="screen active">
+                <div class="screen-content">
+
+                    <!-- Profile Hero -->
+                    <div class="profile-hero">
+                        <div class="profile-avatar-ring">🦁</div>
+                        <div class="profile-name">Amira</div>
+                        <div class="profile-level">Level 3 — Seeker · Age 9</div>
+                        <div style="display:flex;justify-content:center;gap:8px;margin-top:12px;">
+                            <span class="badge-chip">⭐ 284 Stars</span>
+                            <span class="badge-chip">🔥 7-day streak</span>
+                        </div>
+                    </div>
+
+                    <!-- Trophy Room -->
+                    <div class="trophy-card">
+                        <div class="trophy-card-title">🏆 Trophy Room</div>
+                        <div class="badge-scroll-row">
+                            <div class="badge-item">
+                                <div class="badge-icon-wrap">🔥</div>
+                                <div class="badge-label">Streak Fire</div>
+                            </div>
+                            <div class="badge-item">
+                                <div class="badge-icon-wrap">⭐</div>
+                                <div class="badge-label">Star Collector</div>
+                            </div>
+                            <div class="badge-item">
+                                <div class="badge-icon-wrap">🎯</div>
+                                <div class="badge-label">Quiz Master</div>
+                            </div>
+                            <div class="badge-item">
+                                <div class="badge-icon-wrap">📖</div>
+                                <div class="badge-label">Quran Lover</div>
+                            </div>
+                            <div class="badge-item">
+                                <div class="badge-icon-wrap locked">🎓</div>
+                                <div class="badge-label">Goal Getter</div>
+                            </div>
+                            <div class="badge-item">
+                                <div class="badge-icon-wrap locked">🏅</div>
+                                <div class="badge-label">Champion</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Menu -->
+                    <div class="profile-menu-item" onclick="showScreen('progress')">
+                        <span class="profile-menu-icon">📊</span>
+                        <span class="profile-menu-text">My Progress</span>
+                        <span class="profile-menu-arrow">›</span>
+                    </div>
+                    <div class="profile-menu-item">
+                        <span class="profile-menu-icon">🎨</span>
+                        <span class="profile-menu-text">Change my avatar</span>
+                        <span class="profile-menu-arrow">›</span>
+                    </div>
+                    <div class="profile-menu-item" onclick="showScreen('certificate')">
+                        <span class="profile-menu-icon">🏅</span>
+                        <span class="profile-menu-text">My Certificates</span>
+                        <span class="profile-menu-arrow">›</span>
+                    </div>
+                    <div class="profile-menu-item" onclick="showScreen('chat')">
+                        <span class="profile-menu-icon">💬</span>
+                        <span class="profile-menu-text">Message my Teacher</span>
+                        <span class="profile-menu-arrow">›</span>
+                    </div>
+                    <div class="profile-menu-item" onclick="showScreen('payment')">
+                        <span class="profile-menu-icon">👨‍👩‍👧</span>
+                        <span class="profile-menu-text">Parent Section</span>
+                        <span class="profile-menu-arrow">›</span>
+                    </div>
+                    <div class="profile-menu-item" onclick="showScreen('login')">
+                        <span class="profile-menu-icon">🚪</span>
+                        <span class="profile-menu-text" style="color:#ef4444;">Log Out</span>
+                        <span class="profile-menu-arrow">›</span>
+                    </div>
+                </div>
+
+                <div class="bottom-nav">
+                    <a href="dashboard.html" class="nav-item">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="courses.html" class="nav-item">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <span>Quests</span>
+                    </a>
+                    <a href="../support/progress.html" class="nav-item">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        <span>Stars</span>
+                    </a>
+                    <a href="profile.html" class="nav-item active">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span>Me</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                </optgroup>
+                <optgroup label="🏠 Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">My Quests</option>
+                    <option value="profile" selected>My Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                </optgroup>
+                <optgroup label="📝 Homework">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="🌟 Progress &amp; Support">
+                    <option value="progress">My Progress</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                </optgroup>
+            </select>
+            <a href="../../mobile-app/auth/login.html" class="btn-app-link">Adult App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

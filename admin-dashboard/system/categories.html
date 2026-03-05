@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Admin Panel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"><img src="../../assets/logo-noname.png" alt="ILP Logo" style="width:36px;height:36px;object-fit:contain;"></div>
+                <div>
+                    <div class="sidebar-title">Islamic Learn</div>
+                    <div class="sidebar-subtitle">Admin Panel</div>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" onclick="showScreen('dashboard')">
+                        <span class="nav-item-icon">📊</span>
+                        <span class="nav-item-text">Dashboard</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <div class="nav-item" onclick="showScreen('users')">
+                        <span class="nav-item-icon">👥</span>
+                        <span class="nav-item-text">Users</span>
+                        <span class="nav-item-badge">24</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('courses')">
+                        <span class="nav-item-icon">📚</span>
+                        <span class="nav-item-text">Courses</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('content')">
+                        <span class="nav-item-icon">📂</span>
+                        <span class="nav-item-text">Course Content</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('videos')">
+                        <span class="nav-item-icon">🎬</span>
+                        <span class="nav-item-text">Video Library</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Learning Tools</div>
+                    <div class="nav-item" onclick="showScreen('activities')">
+                        <span class="nav-item-icon">🎮</span>
+                        <span class="nav-item-text">Activity Builder</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('homework')">
+                        <span class="nav-item-icon">📝</span>
+                        <span class="nav-item-text">Homework</span>
+                        <span class="nav-item-badge">12</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Finance</div>
+                    <div class="nav-item" onclick="showScreen('payments')">
+                        <span class="nav-item-icon">💳</span>
+                        <span class="nav-item-text">Payments</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('certificates')">
+                        <span class="nav-item-icon">🏆</span>
+                        <span class="nav-item-text">Certificates</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">System</div>
+                    <div class="nav-item" onclick="showScreen('notifications')">
+                        <span class="nav-item-icon">🔔</span>
+                        <span class="nav-item-text">Notifications</span>
+                    </div>
+                    <div class="nav-item active" onclick="showScreen('categories')">
+                        <span class="nav-item-icon">🏷️</span>
+                        <span class="nav-item-text">Categories</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('settings')">
+                        <span class="nav-item-icon">⚙️</span>
+                        <span class="nav-item-text">Settings</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1 class="header-title" id="pageTitle">Categories</h1>
+                <div class="header-actions">
+                    <div class="header-search">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a href="../../mobile-app/index.html" class="header-icon-btn" title="View Mobile App">📱</a>
+                    <div class="header-icon-btn">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </div>
+                    <div class="admin-avatar">👤</div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div id="categories" class="screen active">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Course Categories</h3>
+                            <button class="btn btn-primary btn-sm">+ Add Category</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="category-item">
+                                <div class="category-icon" style="background: #2563eb;">📖</div>
+                                <div class="category-info">
+                                    <div class="category-name">Quran</div>
+                                    <div class="category-count">4 courses</div>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                            </div>
+
+                            <div class="category-item">
+                                <div class="category-icon" style="background: #059669;">🎙️</div>
+                                <div class="category-info">
+                                    <div class="category-name">Tajweed</div>
+                                    <div class="category-count">2 courses</div>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                            </div>
+
+                            <div class="category-item">
+                                <div class="category-icon" style="background: #d97706;">📜</div>
+                                <div class="category-info">
+                                    <div class="category-name">Hadith</div>
+                                    <div class="category-count">3 courses</div>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                            </div>
+
+                            <div class="category-item">
+                                <div class="category-icon" style="background: #7c3aed;">⚖️</div>
+                                <div class="category-info">
+                                    <div class="category-name">Fiqh</div>
+                                    <div class="category-count">2 courses</div>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                            </div>
+
+                            <div class="category-item">
+                                <div class="category-icon" style="background: #db2777;">🕋</div>
+                                <div class="category-info">
+                                    <div class="category-name">Seerah</div>
+                                    <div class="category-count">1 course</div>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                            </div>
+
+                            <div class="category-item">
+                                <div class="category-icon" style="background: #0d9488;">🌙</div>
+                                <div class="category-info">
+                                    <div class="category-name">Aqeedah</div>
+                                    <div class="category-count">1 course</div>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

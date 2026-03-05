@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Admin Panel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"><img src="../../assets/logo-noname.png" alt="ILP Logo" style="width:36px;height:36px;object-fit:contain;"></div>
+                <div>
+                    <div class="sidebar-title">Islamic Learn</div>
+                    <div class="sidebar-subtitle">Admin Panel</div>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" onclick="showScreen('dashboard')">
+                        <span class="nav-item-icon">📊</span>
+                        <span class="nav-item-text">Dashboard</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <div class="nav-item" onclick="showScreen('users')">
+                        <span class="nav-item-icon">👥</span>
+                        <span class="nav-item-text">Users</span>
+                        <span class="nav-item-badge">24</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('courses')">
+                        <span class="nav-item-icon">📚</span>
+                        <span class="nav-item-text">Courses</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('content')">
+                        <span class="nav-item-icon">📂</span>
+                        <span class="nav-item-text">Course Content</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('videos')">
+                        <span class="nav-item-icon">🎬</span>
+                        <span class="nav-item-text">Video Library</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Learning Tools</div>
+                    <div class="nav-item" onclick="showScreen('activities')">
+                        <span class="nav-item-icon">🎮</span>
+                        <span class="nav-item-text">Activity Builder</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('homework')">
+                        <span class="nav-item-icon">📝</span>
+                        <span class="nav-item-text">Homework</span>
+                        <span class="nav-item-badge">12</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Finance</div>
+                    <div class="nav-item" onclick="showScreen('payments')">
+                        <span class="nav-item-icon">💳</span>
+                        <span class="nav-item-text">Payments</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('certificates')">
+                        <span class="nav-item-icon">🏆</span>
+                        <span class="nav-item-text">Certificates</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">System</div>
+                    <div class="nav-item" onclick="showScreen('notifications')">
+                        <span class="nav-item-icon">🔔</span>
+                        <span class="nav-item-text">Notifications</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('categories')">
+                        <span class="nav-item-icon">🏷️</span>
+                        <span class="nav-item-text">Categories</span>
+                    </div>
+                    <div class="nav-item active" onclick="showScreen('settings')">
+                        <span class="nav-item-icon">⚙️</span>
+                        <span class="nav-item-text">Settings</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1 class="header-title" id="pageTitle">Settings</h1>
+                <div class="header-actions">
+                    <div class="header-search">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a href="../../mobile-app/index.html" class="header-icon-btn" title="View Mobile App">📱</a>
+                    <div class="header-icon-btn">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </div>
+                    <div class="admin-avatar">👤</div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div id="settings" class="screen active">
+                    <div class="settings-section">
+                        <div class="settings-section-title">📱 App Settings</div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">App Name</label>
+                                <input type="text" class="form-input" value="Islamic Learning Platform">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Support Email</label>
+                                <input type="email" class="form-input" value="support@islamiclearn.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Contact Phone</label>
+                                <input type="tel" class="form-input" value="+1 234 567 8900">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Website</label>
+                                <input type="url" class="form-input" value="https://islamiclearn.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <div class="settings-section-title">💳 Payment Gateway</div>
+                        <div class="form-group">
+                            <label class="form-label">Payment Provider</label>
+                            <select class="form-select">
+                                <option>Stripe</option>
+                                <option>Razorpay</option>
+                                <option>PayPal</option>
+                                <option>Manual Bank Transfer</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">API Key</label>
+                                <input type="password" class="form-input" value="sk_test_xxxxxxxxxxxx">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Secret Key</label>
+                                <input type="password" class="form-input" value="pk_test_xxxxxxxxxxxx">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Currency</label>
+                            <select class="form-select">
+                                <option>USD - US Dollar</option>
+                                <option>EUR - Euro</option>
+                                <option>GBP - British Pound</option>
+                                <option>SAR - Saudi Riyal</option>
+                                <option>AED - UAE Dirham</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <div class="settings-section-title">📧 Email Settings</div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">SMTP Host</label>
+                                <input type="text" class="form-input" placeholder="smtp.example.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">SMTP Port</label>
+                                <input type="number" class="form-input" value="587">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">SMTP Username</label>
+                                <input type="text" class="form-input" placeholder="email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">SMTP Password</label>
+                                <input type="password" class="form-input" placeholder="********">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary">Save All Settings</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

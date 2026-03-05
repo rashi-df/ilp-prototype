@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Admin Panel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"><img src="../../assets/logo-noname.png" alt="ILP Logo" style="width:36px;height:36px;object-fit:contain;"></div>
+                <div>
+                    <div class="sidebar-title">Islamic Learn</div>
+                    <div class="sidebar-subtitle">Admin Panel</div>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item active" onclick="showScreen('dashboard')">
+                        <span class="nav-item-icon">📊</span>
+                        <span class="nav-item-text">Dashboard</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <div class="nav-item" onclick="showScreen('users')">
+                        <span class="nav-item-icon">👥</span>
+                        <span class="nav-item-text">Users</span>
+                        <span class="nav-item-badge">24</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('courses')">
+                        <span class="nav-item-icon">📚</span>
+                        <span class="nav-item-text">Courses</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('content')">
+                        <span class="nav-item-icon">📂</span>
+                        <span class="nav-item-text">Course Content</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('videos')">
+                        <span class="nav-item-icon">🎬</span>
+                        <span class="nav-item-text">Video Library</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Learning Tools</div>
+                    <div class="nav-item" onclick="showScreen('activities')">
+                        <span class="nav-item-icon">🎮</span>
+                        <span class="nav-item-text">Activity Builder</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('homework')">
+                        <span class="nav-item-icon">📝</span>
+                        <span class="nav-item-text">Homework</span>
+                        <span class="nav-item-badge">12</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Finance</div>
+                    <div class="nav-item" onclick="showScreen('payments')">
+                        <span class="nav-item-icon">💳</span>
+                        <span class="nav-item-text">Payments</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('certificates')">
+                        <span class="nav-item-icon">🏆</span>
+                        <span class="nav-item-text">Certificates</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">System</div>
+                    <div class="nav-item" onclick="showScreen('notifications')">
+                        <span class="nav-item-icon">🔔</span>
+                        <span class="nav-item-text">Notifications</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('categories')">
+                        <span class="nav-item-icon">🏷️</span>
+                        <span class="nav-item-text">Categories</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('settings')">
+                        <span class="nav-item-icon">⚙️</span>
+                        <span class="nav-item-text">Settings</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1 class="header-title" id="pageTitle">Dashboard</h1>
+                <div class="header-actions">
+                    <div class="header-search">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a href="../../mobile-app/index.html" class="header-icon-btn" title="View Mobile App">📱</a>
+                    <div class="header-icon-btn">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </div>
+                    <div class="admin-avatar">👤</div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div id="dashboard" class="screen active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-icon">👥</div>
+                                <span class="stat-change positive">+12%</span>
+                            </div>
+                            <div class="stat-value">2,847</div>
+                            <div class="stat-label">Total Students</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-icon green">💰</div>
+                                <span class="stat-change positive">+8%</span>
+                            </div>
+                            <div class="stat-value">$24,580</div>
+                            <div class="stat-label">Monthly Revenue</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-icon orange">📝</div>
+                                <span class="stat-change negative">-3</span>
+                            </div>
+                            <div class="stat-value">47</div>
+                            <div class="stat-label">Pending Reviews</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-icon red">📊</div>
+                                <span class="stat-change positive">+5%</span>
+                            </div>
+                            <div class="stat-value">78%</div>
+                            <div class="stat-label">Completion Rate</div>
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Recent Enrollments</h3>
+                                <button class="btn btn-secondary btn-sm">View All</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="activity-item">
+                                    <div class="activity-icon">👤</div>
+                                    <div class="activity-info">
+                                        <div class="activity-text"><strong>Ahmed Hassan</strong> enrolled in Quran Basics</div>
+                                        <div class="activity-time">5 minutes ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">👤</div>
+                                    <div class="activity-info">
+                                        <div class="activity-text"><strong>Fatima Ali</strong> enrolled in Tajweed Course</div>
+                                        <div class="activity-time">1 hour ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">👤</div>
+                                    <div class="activity-info">
+                                        <div class="activity-text"><strong>Omar Khan</strong> enrolled in Hadith Studies</div>
+                                        <div class="activity-time">3 hours ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">👤</div>
+                                    <div class="activity-info">
+                                        <div class="activity-text"><strong>Aisha Rahman</strong> enrolled in Fiqh Basics</div>
+                                        <div class="activity-time">5 hours ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Recent Activity</h3>
+                                <button class="btn btn-secondary btn-sm">View All</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="activity-item">
+                                    <div class="activity-icon" style="background: #ecfdf5;">✅</div>
+                                    <div class="activity-info">
+                                        <div class="activity-text"><strong>Mentor Yusuf</strong> reviewed 5 submissions</div>
+                                        <div class="activity-time">10 minutes ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon" style="background: #fffbeb;">💳</div>
+                                    <div class="activity-info">
+                                        <div class="activity-text">New payment received from <strong>Hassan Ali</strong></div>
+                                        <div class="activity-time">30 minutes ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon" style="background: #eff6ff;">🎓</div>
+                                    <div class="activity-info">
+                                        <div class="activity-text"><strong>Sara Ahmed</strong> completed Quran Basics course</div>
+                                        <div class="activity-time">2 hours ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon" style="background: #fef2f2;">🏆</div>
+                                    <div class="activity-info">
+                                        <div class="activity-text">Certificate issued to <strong>Mohammed Farooq</strong></div>
+                                        <div class="activity-time">4 hours ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

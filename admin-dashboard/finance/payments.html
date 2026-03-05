@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments - Admin Panel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"><img src="../../assets/logo-noname.png" alt="ILP Logo" style="width:36px;height:36px;object-fit:contain;"></div>
+                <div>
+                    <div class="sidebar-title">Islamic Learn</div>
+                    <div class="sidebar-subtitle">Admin Panel</div>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" onclick="showScreen('dashboard')">
+                        <span class="nav-item-icon">📊</span>
+                        <span class="nav-item-text">Dashboard</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <div class="nav-item" onclick="showScreen('users')">
+                        <span class="nav-item-icon">👥</span>
+                        <span class="nav-item-text">Users</span>
+                        <span class="nav-item-badge">24</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('courses')">
+                        <span class="nav-item-icon">📚</span>
+                        <span class="nav-item-text">Courses</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('content')">
+                        <span class="nav-item-icon">📂</span>
+                        <span class="nav-item-text">Course Content</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('videos')">
+                        <span class="nav-item-icon">🎬</span>
+                        <span class="nav-item-text">Video Library</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Learning Tools</div>
+                    <div class="nav-item" onclick="showScreen('activities')">
+                        <span class="nav-item-icon">🎮</span>
+                        <span class="nav-item-text">Activity Builder</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('homework')">
+                        <span class="nav-item-icon">📝</span>
+                        <span class="nav-item-text">Homework</span>
+                        <span class="nav-item-badge">12</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Finance</div>
+                    <div class="nav-item active" onclick="showScreen('payments')">
+                        <span class="nav-item-icon">💳</span>
+                        <span class="nav-item-text">Payments</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('certificates')">
+                        <span class="nav-item-icon">🏆</span>
+                        <span class="nav-item-text">Certificates</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">System</div>
+                    <div class="nav-item" onclick="showScreen('notifications')">
+                        <span class="nav-item-icon">🔔</span>
+                        <span class="nav-item-text">Notifications</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('categories')">
+                        <span class="nav-item-icon">🏷️</span>
+                        <span class="nav-item-text">Categories</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('settings')">
+                        <span class="nav-item-icon">⚙️</span>
+                        <span class="nav-item-text">Settings</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1 class="header-title" id="pageTitle">Payments</h1>
+                <div class="header-actions">
+                    <div class="header-search">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a href="../../mobile-app/index.html" class="header-icon-btn" title="View Mobile App">📱</a>
+                    <div class="header-icon-btn">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </div>
+                    <div class="admin-avatar">👤</div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div id="payments" class="screen active">
+                    <div class="tabs">
+                        <div class="tab active" onclick="switchTab(this, 'plans-tab')">Subscription Plans</div>
+                        <div class="tab" onclick="switchTab(this, 'transactions-tab')">Transactions</div>
+                        <div class="tab" onclick="switchTab(this, 'verify-tab')">Verify Payments <span class="nav-item-badge" style="margin-left: 5px;">5</span></div>
+                    </div>
+
+                    <div id="plans-tab" class="tab-content">
+                        <div class="grid-3">
+                            <div class="plan-card">
+                                <div class="plan-name">Basic</div>
+                                <div class="plan-price">$9.99<span>/month</span></div>
+                                <div class="plan-features">
+                                    <div class="plan-feature"><span class="plan-feature-icon">✓</span>Access to 3 courses</div>
+                                    <div class="plan-feature"><span class="plan-feature-icon">✓</span>Basic quizzes</div>
+                                    <div class="plan-feature"><span class="plan-feature-icon">✓</span>Email support</div>
+                                </div>
+                                <button class="btn btn-secondary" style="width: 100%;">Edit Plan</button>
+                            </div>
+
+                            <div class="plan-card featured">
+                                <div class="plan-badge">Most Popular</div>
+                                <div class="plan-name">Premium</div>
+                                <div class="plan-price">$19.99<span>/month</span></div>
+                                <div class="plan-features">
+                                    <div class="plan-feature"><span class="plan-feature-icon">✓</span>Unlimited courses</div>
+                                    <div class="plan-feature"><span class="plan-feature-icon">✓</span>All activities</div>
+                                    <div class="plan-feature"><span class="plan-feature-icon">✓</span>Mentor support</div>
+                                    <div class="plan-feature"><span class="plan-feature-icon">✓</span>Certificates</div>
+                                </div>
+                                <button class="btn btn-primary" style="width: 100%;">Edit Plan</button>
+                            </div>
+
+                            <div class="plan-card">
+                                <div class="plan-name">Annual</div>
+                                <div class="plan-price">$149.99<span>/year</span></div>
+                                <div class="plan-features">
+                                    <div class="plan-feature"><span class="plan-feature-icon">✓</span>All Premium features</div>
+                                    <div class="plan-feature"><span class="plan-feature-icon">✓</span>2 months free</div>
+                                    <div class="plan-feature"><span class="plan-feature-icon">✓</span>Priority support</div>
+                                </div>
+                                <button class="btn btn-secondary" style="width: 100%;">Edit Plan</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" style="margin-top: 20px;">+ Add New Plan</button>
+                    </div>
+
+                    <div id="transactions-tab" class="tab-content" style="display: none;">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">All Transactions</h3>
+                                <button class="btn btn-secondary btn-sm">Export CSV</button>
+                            </div>
+                            <div class="card-body">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Transaction ID</th>
+                                            <th>User</th>
+                                            <th>Plan</th>
+                                            <th>Amount</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#TXN-2024-001</td>
+                                            <td>Ahmed Hassan</td>
+                                            <td>Premium</td>
+                                            <td>$19.99</td>
+                                            <td>Jan 15, 2024</td>
+                                            <td><span class="badge badge-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#TXN-2024-002</td>
+                                            <td>Fatima Ali</td>
+                                            <td>Basic</td>
+                                            <td>$9.99</td>
+                                            <td>Jan 14, 2024</td>
+                                            <td><span class="badge badge-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#TXN-2024-003</td>
+                                            <td>Omar Khan</td>
+                                            <td>Annual</td>
+                                            <td>$149.99</td>
+                                            <td>Jan 13, 2024</td>
+                                            <td><span class="badge badge-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#TXN-2024-004</td>
+                                            <td>Sara Ahmed</td>
+                                            <td>Premium</td>
+                                            <td>$19.99</td>
+                                            <td>Jan 12, 2024</td>
+                                            <td><span class="badge badge-warning">Pending</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="verify-tab" class="tab-content" style="display: none;">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Pending Verification</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>User</th>
+                                            <th>Plan</th>
+                                            <th>Amount</th>
+                                            <th>Payment Method</th>
+                                            <th>Proof</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar">👤</div>
+                                                    <div class="user-name">Hassan Ali</div>
+                                                </div>
+                                            </td>
+                                            <td>Premium</td>
+                                            <td>$19.99</td>
+                                            <td>Bank Transfer</td>
+                                            <td><button class="btn btn-secondary btn-sm">View</button></td>
+                                            <td>
+                                                <button class="btn btn-success btn-sm">Approve</button>
+                                                <button class="btn btn-danger btn-sm">Reject</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar">👤</div>
+                                                    <div class="user-name">Khadija Yusuf</div>
+                                                </div>
+                                            </td>
+                                            <td>Annual</td>
+                                            <td>$149.99</td>
+                                            <td>Bank Transfer</td>
+                                            <td><button class="btn btn-secondary btn-sm">View</button></td>
+                                            <td>
+                                                <button class="btn btn-success btn-sm">Approve</button>
+                                                <button class="btn btn-danger btn-sm">Reject</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

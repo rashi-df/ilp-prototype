@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Management - Admin Panel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"><img src="../../assets/logo-noname.png" alt="ILP Logo" style="width:36px;height:36px;object-fit:contain;"></div>
+                <div>
+                    <div class="sidebar-title">Islamic Learn</div>
+                    <div class="sidebar-subtitle">Admin Panel</div>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" onclick="showScreen('dashboard')">
+                        <span class="nav-item-icon">📊</span>
+                        <span class="nav-item-text">Dashboard</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <div class="nav-item active" onclick="showScreen('users')">
+                        <span class="nav-item-icon">👥</span>
+                        <span class="nav-item-text">Users</span>
+                        <span class="nav-item-badge">24</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('courses')">
+                        <span class="nav-item-icon">📚</span>
+                        <span class="nav-item-text">Courses</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('content')">
+                        <span class="nav-item-icon">📂</span>
+                        <span class="nav-item-text">Course Content</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('videos')">
+                        <span class="nav-item-icon">🎬</span>
+                        <span class="nav-item-text">Video Library</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Learning Tools</div>
+                    <div class="nav-item" onclick="showScreen('activities')">
+                        <span class="nav-item-icon">🎮</span>
+                        <span class="nav-item-text">Activity Builder</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('homework')">
+                        <span class="nav-item-icon">📝</span>
+                        <span class="nav-item-text">Homework</span>
+                        <span class="nav-item-badge">12</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Finance</div>
+                    <div class="nav-item" onclick="showScreen('payments')">
+                        <span class="nav-item-icon">💳</span>
+                        <span class="nav-item-text">Payments</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('certificates')">
+                        <span class="nav-item-icon">🏆</span>
+                        <span class="nav-item-text">Certificates</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">System</div>
+                    <div class="nav-item" onclick="showScreen('notifications')">
+                        <span class="nav-item-icon">🔔</span>
+                        <span class="nav-item-text">Notifications</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('categories')">
+                        <span class="nav-item-icon">🏷️</span>
+                        <span class="nav-item-text">Categories</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('settings')">
+                        <span class="nav-item-icon">⚙️</span>
+                        <span class="nav-item-text">Settings</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1 class="header-title" id="pageTitle">Users Management</h1>
+                <div class="header-actions">
+                    <div class="header-search">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a href="../../mobile-app/index.html" class="header-icon-btn" title="View Mobile App">📱</a>
+                    <div class="header-icon-btn">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </div>
+                    <div class="admin-avatar">👤</div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div id="users" class="screen active">
+                    <div class="tabs">
+                        <div class="tab active" onclick="switchTab(this, 'students-tab')">Students</div>
+                        <div class="tab" onclick="switchTab(this, 'mentors-tab')">Mentors</div>
+                    </div>
+
+                    <div id="students-tab" class="tab-content">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">All Students</h3>
+                                <div class="card-actions">
+                                    <button class="btn btn-secondary btn-sm">Export</button>
+                                    <button class="btn btn-primary btn-sm">+ Add Student</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Student</th>
+                                            <th>Enrolled Courses</th>
+                                            <th>Progress</th>
+                                            <th>Subscription</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar">👤</div>
+                                                    <div class="user-info">
+                                                        <div class="user-name">Ahmed Hassan</div>
+                                                        <div class="user-email">ahmed@email.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>3 courses</td>
+                                            <td>65%</td>
+                                            <td><span class="badge badge-success">Premium</span></td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                            <td><button class="btn btn-secondary btn-sm">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar">👤</div>
+                                                    <div class="user-info">
+                                                        <div class="user-name">Fatima Ali</div>
+                                                        <div class="user-email">fatima@email.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2 courses</td>
+                                            <td>45%</td>
+                                            <td><span class="badge badge-info">Basic</span></td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                            <td><button class="btn btn-secondary btn-sm">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar">👤</div>
+                                                    <div class="user-info">
+                                                        <div class="user-name">Omar Khan</div>
+                                                        <div class="user-email">omar@email.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>5 courses</td>
+                                            <td>88%</td>
+                                            <td><span class="badge badge-success">Premium</span></td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                            <td><button class="btn btn-secondary btn-sm">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar">👤</div>
+                                                    <div class="user-info">
+                                                        <div class="user-name">Sara Ahmed</div>
+                                                        <div class="user-email">sara@email.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>1 course</td>
+                                            <td>100%</td>
+                                            <td><span class="badge badge-warning">Expired</span></td>
+                                            <td><span class="badge badge-warning">Inactive</span></td>
+                                            <td><button class="btn btn-secondary btn-sm">View</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mentors-tab" class="tab-content" style="display: none;">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">All Mentors</h3>
+                                <button class="btn btn-primary btn-sm">+ Add Mentor</button>
+                            </div>
+                            <div class="card-body">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Mentor</th>
+                                            <th>Assigned Courses</th>
+                                            <th>Reviews Done</th>
+                                            <th>Rating</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar" style="background: #059669;">🎓</div>
+                                                    <div class="user-info">
+                                                        <div class="user-name">Sheikh Yusuf</div>
+                                                        <div class="user-email">yusuf@islamic.edu</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Quran, Tajweed</td>
+                                            <td>156</td>
+                                            <td>4.9 ⭐</td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                            <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="user-cell">
+                                                    <div class="user-avatar" style="background: #059669;">🎓</div>
+                                                    <div class="user-info">
+                                                        <div class="user-name">Ustadha Maryam</div>
+                                                        <div class="user-email">maryam@islamic.edu</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Hadith, Fiqh</td>
+                                            <td>89</td>
+                                            <td>4.8 ⭐</td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                            <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

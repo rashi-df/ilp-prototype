@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Quiz - Kids Islamic Learning</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:800">100%</span>
+                </div>
+            </div>
+
+            <div id="quiz" class="screen active">
+                <div class="screen-header">
+                    <button class="screen-header-back" onclick="showScreen('drag-drop')">←</button>
+                    <div class="screen-header-title">Quiz Time!</div>
+                    <div style="margin-left:auto;display:flex;align-items:center;gap:4px;font-size:13px;font-weight:800;color:#92400e;" id="quiz-stars">⭐ 0</div>
+                </div>
+                <div class="screen-content" style="position:relative;">
+
+                    <!-- Noori in corner -->
+                    <div class="noori-corner noori-float" style="position:absolute;">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                            <circle cx="40" cy="43" r="29" fill="#FFD700"/>
+                            <ellipse cx="30" cy="30" rx="9" ry="6" fill="rgba(255,255,255,0.22)" transform="rotate(-15 30 30)"/>
+                            <circle cx="33" cy="39" r="4" fill="#2D1B00"/>
+                            <circle cx="34.5" cy="37.5" r="1.5" fill="rgba(255,255,255,0.65)"/>
+                            <circle cx="47" cy="39" r="4" fill="#2D1B00"/>
+                            <circle cx="48.5" cy="37.5" r="1.5" fill="rgba(255,255,255,0.65)"/>
+                            <path d="M32 49 Q40 56 48 49" stroke="#2D1B00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <circle cx="27" cy="47" r="5" fill="#ff8888" opacity="0.35"/>
+                            <circle cx="53" cy="47" r="5" fill="#ff8888" opacity="0.35"/>
+                            <polygon points="60,6 61.5,11.5 67,11.5 62.5,15 64,20 60,17 56,20 57.5,15 53,11.5 58.5,11.5" fill="#fff" opacity="0.9"/>
+                        </svg>
+                    </div>
+
+                    <!-- Quiz header row -->
+                    <div class="quiz-header-row" style="padding-right:68px;">
+                        <div class="quiz-progress-text">Question 2 of 5</div>
+                        <div class="quiz-stars-count">⭐ +5 per right answer</div>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div class="progress-bar" style="margin-bottom:16px;">
+                        <div class="progress-fill" style="width:40%;"></div>
+                    </div>
+
+                    <!-- Question card -->
+                    <div class="quiz-question-card">
+                        <div style="font-size:11px;font-weight:900;color:var(--color-quran);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">Arabic Letters · Lesson 3</div>
+                        <div class="quiz-question-text">Which of these is the letter "Seen" (س)?</div>
+                    </div>
+
+                    <!-- Options -->
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectOption(this, false)">
+                            <div class="quiz-letter-badge badge-a">A</div>
+                            <span style="font-size:24px;font-weight:900;">ش</span>
+                            <span style="margin-left:8px;">Sheen</span>
+                        </div>
+                        <div class="quiz-option selected" onclick="selectOption(this, true)">
+                            <div class="quiz-letter-badge badge-b">B</div>
+                            <span style="font-size:24px;font-weight:900;">س</span>
+                            <span style="margin-left:8px;">Seen</span>
+                        </div>
+                        <div class="quiz-option" onclick="selectOption(this, false)">
+                            <div class="quiz-letter-badge badge-c">C</div>
+                            <span style="font-size:24px;font-weight:900;">ص</span>
+                            <span style="margin-left:8px;">Saad</span>
+                        </div>
+                        <div class="quiz-option" onclick="selectOption(this, false)">
+                            <div class="quiz-letter-badge badge-d">D</div>
+                            <span style="font-size:24px;font-weight:900;">ض</span>
+                            <span style="margin-left:8px;">Daad</span>
+                        </div>
+                    </div>
+
+                    <!-- Answer feedback (hidden initially) -->
+                    <div id="answer-feedback" style="display:none;text-align:center;padding:14px;border-radius:20px;margin-bottom:16px;background:#d1fae5;border:2.5px solid var(--color-correct);">
+                        <div style="font-size:20px;margin-bottom:4px;">🌟</div>
+                        <div style="font-size:15px;font-weight:900;color:#065f46;">Correct! +5 Stars!</div>
+                    </div>
+
+                    <button class="btn-primary" onclick="checkMyAnswer()" id="check-btn">Check My Answer! ✅</button>
+                    <button class="btn-secondary mt-12" onclick="showScreen('homework')" style="font-size:13px;">Skip Question</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                </optgroup>
+                <optgroup label="🏠 Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">My Quests</option>
+                    <option value="profile">My Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz" selected>Quiz</option>
+                </optgroup>
+                <optgroup label="📝 Homework">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="🌟 Progress &amp; Support">
+                    <option value="progress">My Progress</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                </optgroup>
+            </select>
+            <a href="../../mobile-app/auth/login.html" class="btn-app-link">Adult App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script>
+        let selected = null;
+        let isCorrect = false;
+        let stars = 0;
+
+        function selectOption(el, correct) {
+            document.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+            el.classList.add('selected');
+            selected = el;
+            isCorrect = correct;
+        }
+
+        function checkMyAnswer() {
+            if (!selected) return;
+            const feedback = document.getElementById('answer-feedback');
+            document.querySelectorAll('.quiz-option').forEach(o => o.style.pointerEvents = 'none');
+
+            if (isCorrect) {
+                selected.classList.remove('selected');
+                selected.classList.add('correct');
+                feedback.style.background = '#d1fae5';
+                feedback.style.borderColor = 'var(--color-correct)';
+                feedback.innerHTML = '<div style="font-size:20px;margin-bottom:4px;">🌟</div><div style="font-size:15px;font-weight:900;color:#065f46;">Correct! +5 Stars!</div>';
+                stars += 5;
+            } else {
+                selected.classList.remove('selected');
+                selected.classList.add('wrong');
+                // Show correct
+                document.querySelectorAll('.quiz-option')[1].classList.add('correct');
+                feedback.style.background = '#fee2e2';
+                feedback.style.borderColor = 'var(--color-wrong)';
+                feedback.innerHTML = '<div style="font-size:20px;margin-bottom:4px;">💪</div><div style="font-size:15px;font-weight:900;color:#991b1b;">Not quite — it was Seen (B)! Keep going!</div>';
+            }
+
+            feedback.style.display = 'block';
+            document.getElementById('quiz-stars').textContent = '⭐ ' + stars;
+            document.getElementById('check-btn').textContent = 'Next Question →';
+            document.getElementById('check-btn').onclick = () => showScreen('homework');
+        }
+    </script>
+</body>
+</html>

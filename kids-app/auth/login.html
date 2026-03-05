@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Login - Kids Islamic Learning</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .login-tab-row {
+            display: flex;
+            background: #f3f4f6;
+            border-radius: 18px;
+            padding: 4px;
+            margin-bottom: 24px;
+        }
+        .login-tab {
+            flex: 1;
+            padding: 10px;
+            border-radius: 14px;
+            border: none;
+            background: transparent;
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 800;
+            color: #6B7280;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .login-tab.active {
+            background: #fff;
+            color: var(--color-primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .login-panel { display: none; }
+        .login-panel.active { display: block; }
+
+        .forgot-link {
+            color: var(--color-primary);
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .divider-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background: #e5e7eb;
+        }
+        .divider-text {
+            font-size: 12px;
+            font-weight: 700;
+            color: #9CA3AF;
+        }
+    </style>
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:800">100%</span>
+                </div>
+            </div>
+
+            <div id="login" class="screen active">
+                <div class="screen-content" style="padding-top:20px;">
+
+                    <!-- Noori + App header -->
+                    <div style="text-align:center;margin-bottom:20px;">
+                        <div style="width:72px;height:72px;margin:0 auto 12px;" class="noori-float">
+                            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                                <circle cx="40" cy="43" r="29" fill="#FFD700"/>
+                                <ellipse cx="30" cy="30" rx="9" ry="6" fill="rgba(255,255,255,0.22)" transform="rotate(-15 30 30)"/>
+                                <circle cx="33" cy="39" r="4" fill="#2D1B00"/>
+                                <circle cx="34.5" cy="37.5" r="1.5" fill="rgba(255,255,255,0.65)"/>
+                                <circle cx="47" cy="39" r="4" fill="#2D1B00"/>
+                                <circle cx="48.5" cy="37.5" r="1.5" fill="rgba(255,255,255,0.65)"/>
+                                <path d="M32 49 Q40 56 48 49" stroke="#2D1B00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                <circle cx="27" cy="47" r="5" fill="#ff8888" opacity="0.35"/>
+                                <circle cx="53" cy="47" r="5" fill="#ff8888" opacity="0.35"/>
+                                <polygon points="60,6 61.5,11.5 67,11.5 62.5,15 64,20 60,17 56,20 57.5,15 53,11.5 58.5,11.5" fill="#fff" opacity="0.9"/>
+                            </svg>
+                        </div>
+                        <div style="font-size:22px;font-weight:900;color:var(--color-primary-dark);">Islamic Kids Learning</div>
+                        <div style="font-size:13px;color:#6B7280;font-weight:600;margin-top:2px;">Sign in to continue</div>
+                    </div>
+
+                    <!-- Tabs: Parent Login / Child PIN -->
+                    <div class="login-tab-row">
+                        <button class="login-tab active" id="tab-parent" onclick="switchTab('parent')">👨‍👩‍👧 Parent Login</button>
+                        <button class="login-tab" id="tab-child" onclick="switchTab('child')">🧒 Child PIN</button>
+                    </div>
+
+                    <!-- PANEL: Parent email login -->
+                    <div class="login-panel active" id="panel-parent">
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-input" placeholder="parent@email.com" value="sarah@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-input" placeholder="Enter password" value="••••••••">
+                        </div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+                            <label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#374151;cursor:pointer;">
+                                <input type="checkbox" checked style="width:16px;height:16px;accent-color:var(--color-primary);">
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-link">Forgot Password?</a>
+                        </div>
+
+                        <button class="btn-primary" onclick="showScreen('dashboard')">Sign In</button>
+
+                        <div class="divider-row">
+                            <div class="divider-line"></div>
+                            <div class="divider-text">or continue with</div>
+                            <div class="divider-line"></div>
+                        </div>
+
+                        <!-- Social sign-in -->
+                        <div style="display:flex;gap:10px;margin-bottom:20px;">
+                            <button onclick="showScreen('dashboard')" style="flex:1;height:52px;border-radius:16px;background:#fff;border:2px solid #e5e7eb;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:800;color:#374151;font-family:var(--font-body);cursor:pointer;transition:all 0.2s;">
+                                <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                                Google
+                            </button>
+                            <button onclick="showScreen('dashboard')" style="flex:1;height:52px;border-radius:16px;background:#fff;border:2px solid #e5e7eb;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:800;color:#374151;font-family:var(--font-body);cursor:pointer;transition:all 0.2s;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                Facebook
+                            </button>
+                        </div>
+
+                        <div style="text-align:center;font-size:13px;font-weight:700;color:#6B7280;">
+                            New parent?
+                            <a href="#" onclick="showScreen('register');return false;" style="color:var(--color-primary);font-weight:800;">Create Account</a>
+                        </div>
+                    </div>
+
+                    <!-- PANEL: Child PIN (quick access) -->
+                    <div class="login-panel" id="panel-child">
+                        <div style="text-align:center;margin-bottom:16px;">
+                            <div style="font-size:14px;font-weight:700;color:#6B7280;margin-bottom:12px;">Who's learning today?</div>
+                            <div class="avatar-pick-row" style="justify-content:center;">
+                                <div class="avatar-pick-item selected" onclick="selectAvatar(this)">🦁</div>
+                                <div class="avatar-pick-item" onclick="selectAvatar(this)">🐬</div>
+                                <div class="avatar-pick-item" onclick="selectAvatar(this)">🦋</div>
+                                <div class="avatar-pick-item" onclick="selectAvatar(this)">🐢</div>
+                            </div>
+                            <div style="font-size:16px;font-weight:900;color:#1a1a1a;margin-top:10px;">Amira</div>
+                        </div>
+
+                        <div style="font-size:14px;font-weight:800;color:#374151;text-align:center;margin-bottom:12px;">Enter your PIN</div>
+                        <div class="pin-display" style="justify-content:center;">
+                            <div class="pin-dot" id="d1"></div>
+                            <div class="pin-dot" id="d2"></div>
+                            <div class="pin-dot" id="d3"></div>
+                            <div class="pin-dot" id="d4"></div>
+                        </div>
+
+                        <div class="pin-pad">
+                            <button class="pin-key" onclick="pinPress('1')">1</button>
+                            <button class="pin-key" onclick="pinPress('2')">2</button>
+                            <button class="pin-key" onclick="pinPress('3')">3</button>
+                            <button class="pin-key" onclick="pinPress('4')">4</button>
+                            <button class="pin-key" onclick="pinPress('5')">5</button>
+                            <button class="pin-key" onclick="pinPress('6')">6</button>
+                            <button class="pin-key" onclick="pinPress('7')">7</button>
+                            <button class="pin-key" onclick="pinPress('8')">8</button>
+                            <button class="pin-key" onclick="pinPress('9')">9</button>
+                            <button class="pin-key pin-empty"></button>
+                            <button class="pin-key" onclick="pinPress('0')">0</button>
+                            <button class="pin-key pin-delete" onclick="pinDelete()">⌫</button>
+                        </div>
+
+                        <div style="text-align:center;margin-top:8px;font-size:12px;color:#9CA3AF;font-weight:600;">
+                            Parent login? <a href="#" onclick="switchTab('parent');return false;" style="color:var(--color-primary);font-weight:700;">Sign in with email</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login" selected>Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                </optgroup>
+                <optgroup label="🏠 Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">My Quests</option>
+                    <option value="profile">My Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                </optgroup>
+                <optgroup label="📝 Homework">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="🌟 Progress &amp; Support">
+                    <option value="progress">My Progress</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                </optgroup>
+            </select>
+            <a href="../../mobile-app/auth/login.html" class="btn-app-link">Adult App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script>
+        function switchTab(tab) {
+            document.getElementById('tab-parent').classList.toggle('active', tab === 'parent');
+            document.getElementById('tab-child').classList.toggle('active', tab === 'child');
+            document.getElementById('panel-parent').classList.toggle('active', tab === 'parent');
+            document.getElementById('panel-child').classList.toggle('active', tab === 'child');
+        }
+        let pin = '';
+        function pinPress(n) {
+            if (pin.length >= 4) return;
+            pin += n;
+            updateDots();
+            if (pin.length === 4) setTimeout(() => showScreen('dashboard'), 300);
+        }
+        function pinDelete() { pin = pin.slice(0, -1); updateDots(); }
+        function updateDots() {
+            for (let i = 1; i <= 4; i++)
+                document.getElementById('d' + i).classList.toggle('filled', i <= pin.length);
+        }
+        function selectAvatar(el) {
+            document.querySelectorAll('.avatar-pick-item').forEach(e => e.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+    </script>
+</body>
+</html>

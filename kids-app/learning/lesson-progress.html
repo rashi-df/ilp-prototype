@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Lesson Progress - Kids Islamic Learning</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:800">100%</span>
+                </div>
+            </div>
+
+            <div id="lesson-progress" class="screen active">
+                <div class="screen-content" style="padding-top:24px;">
+                    <div class="lesson-progress-celebration">
+
+                        <!-- Noori excited -->
+                        <div class="celebration-noori-wrap noori-excited">
+                            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                                <circle cx="40" cy="43" r="29" fill="#FFD700"/>
+                                <ellipse cx="30" cy="30" rx="9" ry="6" fill="rgba(255,255,255,0.22)" transform="rotate(-15 30 30)"/>
+                                <!-- Wide eyes (excited) -->
+                                <circle cx="33" cy="38" r="5.5" fill="#2D1B00"/>
+                                <circle cx="35" cy="36" r="2" fill="rgba(255,255,255,0.7)"/>
+                                <circle cx="47" cy="38" r="5.5" fill="#2D1B00"/>
+                                <circle cx="49" cy="36" r="2" fill="rgba(255,255,255,0.7)"/>
+                                <!-- Big smile -->
+                                <path d="M29 49 Q40 60 51 49" stroke="#2D1B00" stroke-width="3" fill="rgba(255,180,0,0.3)" stroke-linecap="round"/>
+                                <circle cx="27" cy="47" r="5" fill="#ff8888" opacity="0.45"/>
+                                <circle cx="53" cy="47" r="5" fill="#ff8888" opacity="0.45"/>
+                                <!-- Star particles -->
+                                <polygon points="60,6 61.5,11.5 67,11.5 62.5,15 64,20 60,17 56,20 57.5,15 53,11.5 58.5,11.5" fill="#fff" opacity="0.9"/>
+                                <polygon points="15,15 16,18.5 20,18.5 17,21 18,24.5 15,22.5 12,24.5 13,21 10,18.5 14,18.5" fill="#FFD700" opacity="0.8"/>
+                            </svg>
+                        </div>
+
+                        <div class="celebration-title">Amazing Job! 🎉</div>
+                        <div class="celebration-sub">You completed Lesson 3 — The Letter Seen!</div>
+
+                        <!-- 3 Star pop -->
+                        <div class="stars-earned-row">
+                            <span class="star-earned">⭐</span>
+                            <span class="star-earned">⭐</span>
+                            <span class="star-earned">⭐</span>
+                        </div>
+
+                        <!-- XP earned badge -->
+                        <div style="display:flex;justify-content:center;margin-bottom:20px;">
+                            <div class="xp-earned-badge">
+                                🌟 +20 XP earned!
+                            </div>
+                        </div>
+
+                        <!-- Step tracker -->
+                        <div class="step-tracker">
+                            <div class="step-track-item">
+                                <div class="step-track-dot done">▶</div>
+                                <div style="font-size:10px;font-weight:700;color:#6B7280;margin-top:3px;">Watch</div>
+                            </div>
+                            <div class="step-track-line done"></div>
+                            <div class="step-track-item">
+                                <div class="step-track-dot current">✦</div>
+                                <div style="font-size:10px;font-weight:700;color:var(--color-primary);margin-top:3px;">Practice</div>
+                            </div>
+                            <div class="step-track-line"></div>
+                            <div class="step-track-item">
+                                <div class="step-track-dot">❓</div>
+                                <div style="font-size:10px;font-weight:700;color:#6B7280;margin-top:3px;">Quiz</div>
+                            </div>
+                            <div class="step-track-line"></div>
+                            <div class="step-track-item">
+                                <div class="step-track-dot">📝</div>
+                                <div style="font-size:10px;font-weight:700;color:#6B7280;margin-top:3px;">HW</div>
+                            </div>
+                        </div>
+
+                        <!-- XP bar update -->
+                        <div class="card" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);">
+                            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                                <div style="font-size:13px;font-weight:800;color:#065f46;">Level 3 — Seeker</div>
+                                <div style="font-size:13px;font-weight:700;color:#6B7280;">170 / 300 XP</div>
+                            </div>
+                            <div class="xp-bar-wrap">
+                                <div class="xp-bar-fill" style="width:57%;"></div>
+                            </div>
+                            <div style="font-size:12px;color:#6B7280;font-weight:600;margin-top:6px;text-align:right;">130 XP to Scholar!</div>
+                        </div>
+
+                    </div>
+
+                    <button class="btn-primary" onclick="showScreen('flashcards')">Practice Flashcards ✦</button>
+                    <button class="btn-secondary mt-12" onclick="showScreen('quiz')">Take the Quiz</button>
+                    <button class="btn-secondary mt-12" onclick="showScreen('module-view')">Back to Module</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                </optgroup>
+                <optgroup label="🏠 Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">My Quests</option>
+                    <option value="profile">My Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress" selected>Lesson Progress</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                </optgroup>
+                <optgroup label="📝 Homework">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="🌟 Progress &amp; Support">
+                    <option value="progress">My Progress</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                </optgroup>
+            </select>
+            <a href="../../mobile-app/auth/login.html" class="btn-app-link">Adult App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

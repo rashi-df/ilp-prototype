@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Mentor Dashboard - Kids Islamic Learning</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:800">100%</span>
+                </div>
+            </div>
+
+            <div id="mentor-dashboard" class="screen active">
+                <div class="screen-content">
+
+                    <!-- Mentor hero -->
+                    <div class="mentor-hero-kids">
+                        <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                            <div>
+                                <div style="font-size:13px;opacity:0.8;font-weight:700;margin-bottom:4px;">As-Salamu Alaikum,</div>
+                                <div class="mentor-hero-title">Teacher Fatima 👩‍🏫</div>
+                                <div class="mentor-hero-sub">Kids Arabic &amp; Quran Teacher</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.2);border-radius:16px;padding:10px 14px;text-align:center;">
+                                <div style="font-size:22px;font-weight:900;color:white;">8</div>
+                                <div style="font-size:10px;opacity:0.8;font-weight:700;">Students</div>
+                            </div>
+                        </div>
+
+                        <div class="mentor-stat-row">
+                            <div class="mentor-stat-item">
+                                <div class="mentor-stat-val">3 📝</div>
+                                <div class="mentor-stat-label">Pending Reviews</div>
+                            </div>
+                            <div class="mentor-stat-item">
+                                <div class="mentor-stat-val">2 💬</div>
+                                <div class="mentor-stat-label">New Messages</div>
+                            </div>
+                            <div class="mentor-stat-item">
+                                <div class="mentor-stat-val">🔥 5</div>
+                                <div class="mentor-stat-label">Avg Streak</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pending reviews alert -->
+                    <div style="background:linear-gradient(135deg,#fff9e0,#fffbeb);border:2.5px solid var(--color-star);border-radius:var(--radius-card);padding:14px 16px;margin-bottom:16px;display:flex;align-items:center;gap:12px;">
+                        <span style="font-size:28px;">📬</span>
+                        <div style="flex:1;">
+                            <div style="font-size:14px;font-weight:900;color:#92400e;">3 homeworks waiting!</div>
+                            <div style="font-size:12px;color:#6B7280;font-weight:600;">Give feedback to keep students motivated</div>
+                        </div>
+                        <button onclick="showScreen('mentor-review')" style="background:var(--color-primary);color:white;border:none;border-radius:12px;padding:8px 14px;font-size:13px;font-weight:800;font-family:var(--font-body);cursor:pointer;">Review</button>
+                    </div>
+
+                    <!-- Student list -->
+                    <div class="section-title">My Young Learners</div>
+
+                    <div class="student-list-item" onclick="showScreen('mentor-review')">
+                        <div class="student-avatar">🦁</div>
+                        <div class="student-info">
+                            <div class="student-name">Amira</div>
+                            <div class="student-age">Age 9 · Arabic Letters</div>
+                            <div class="progress-bar" style="height:6px;margin:6px 0 0;">
+                                <div class="progress-fill" style="width:65%;"></div>
+                            </div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;">
+                            <div class="star-pending-badge">⭐ 284</div>
+                            <div style="background:#fee2e2;border-radius:100px;padding:3px 8px;font-size:11px;font-weight:800;color:#b91c1c;">📝 Review</div>
+                        </div>
+                    </div>
+
+                    <div class="student-list-item" onclick="showScreen('mentor-review')">
+                        <div class="student-avatar">🐬</div>
+                        <div class="student-info">
+                            <div class="student-name">Yusuf</div>
+                            <div class="student-age">Age 11 · Quran &amp; Tajweed</div>
+                            <div class="progress-bar" style="height:6px;margin:6px 0 0;">
+                                <div class="progress-fill" style="width:80%;"></div>
+                            </div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;">
+                            <div class="star-pending-badge">⭐ 412</div>
+                            <div style="background:#d1fae5;border-radius:100px;padding:3px 8px;font-size:11px;font-weight:800;color:#065f46;">✓ Done</div>
+                        </div>
+                    </div>
+
+                    <div class="student-list-item" onclick="showScreen('mentor-review')">
+                        <div class="student-avatar">🦋</div>
+                        <div class="student-info">
+                            <div class="student-name">Fatima Z.</div>
+                            <div class="student-age">Age 8 · Fiqh Basics</div>
+                            <div class="progress-bar" style="height:6px;margin:6px 0 0;">
+                                <div class="progress-fill" style="width:45%;"></div>
+                            </div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;">
+                            <div class="star-pending-badge">⭐ 156</div>
+                            <div style="background:#fee2e2;border-radius:100px;padding:3px 8px;font-size:11px;font-weight:800;color:#b91c1c;">📝 Review</div>
+                        </div>
+                    </div>
+
+                    <div class="student-list-item" onclick="showScreen('mentor-review')">
+                        <div class="student-avatar">🐢</div>
+                        <div class="student-info">
+                            <div class="student-name">Ibrahim</div>
+                            <div class="student-age">Age 10 · Prophet's Story</div>
+                            <div class="progress-bar" style="height:6px;margin:6px 0 0;">
+                                <div class="progress-fill" style="width:30%;"></div>
+                            </div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;">
+                            <div class="star-pending-badge">⭐ 98</div>
+                            <div style="background:#fee2e2;border-radius:100px;padding:3px 8px;font-size:11px;font-weight:800;color:#b91c1c;">📝 Review</div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" onclick="showScreen('mentor-review')">Review Pending Homeworks →</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                </optgroup>
+                <optgroup label="🏠 Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">My Quests</option>
+                    <option value="profile">My Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                </optgroup>
+                <optgroup label="📝 Homework">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="🌟 Progress &amp; Support">
+                    <option value="progress">My Progress</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor">
+                    <option value="mentor-dashboard" selected>Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                </optgroup>
+            </select>
+            <a href="../../mobile-app/auth/login.html" class="btn-app-link">Adult App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

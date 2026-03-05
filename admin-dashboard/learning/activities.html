@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Builder - Admin Panel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"><img src="../../assets/logo-noname.png" alt="ILP Logo" style="width:36px;height:36px;object-fit:contain;"></div>
+                <div>
+                    <div class="sidebar-title">Islamic Learn</div>
+                    <div class="sidebar-subtitle">Admin Panel</div>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" onclick="showScreen('dashboard')">
+                        <span class="nav-item-icon">📊</span>
+                        <span class="nav-item-text">Dashboard</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <div class="nav-item" onclick="showScreen('users')">
+                        <span class="nav-item-icon">👥</span>
+                        <span class="nav-item-text">Users</span>
+                        <span class="nav-item-badge">24</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('courses')">
+                        <span class="nav-item-icon">📚</span>
+                        <span class="nav-item-text">Courses</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('content')">
+                        <span class="nav-item-icon">📂</span>
+                        <span class="nav-item-text">Course Content</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('videos')">
+                        <span class="nav-item-icon">🎬</span>
+                        <span class="nav-item-text">Video Library</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Learning Tools</div>
+                    <div class="nav-item active" onclick="showScreen('activities')">
+                        <span class="nav-item-icon">🎮</span>
+                        <span class="nav-item-text">Activity Builder</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('homework')">
+                        <span class="nav-item-icon">📝</span>
+                        <span class="nav-item-text">Homework</span>
+                        <span class="nav-item-badge">12</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Finance</div>
+                    <div class="nav-item" onclick="showScreen('payments')">
+                        <span class="nav-item-icon">💳</span>
+                        <span class="nav-item-text">Payments</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('certificates')">
+                        <span class="nav-item-icon">🏆</span>
+                        <span class="nav-item-text">Certificates</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">System</div>
+                    <div class="nav-item" onclick="showScreen('notifications')">
+                        <span class="nav-item-icon">🔔</span>
+                        <span class="nav-item-text">Notifications</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('categories')">
+                        <span class="nav-item-icon">🏷️</span>
+                        <span class="nav-item-text">Categories</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('settings')">
+                        <span class="nav-item-icon">⚙️</span>
+                        <span class="nav-item-text">Settings</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1 class="header-title" id="pageTitle">Activity Builder</h1>
+                <div class="header-actions">
+                    <div class="header-search">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a href="../../mobile-app/index.html" class="header-icon-btn" title="View Mobile App">📱</a>
+                    <div class="header-icon-btn">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </div>
+                    <div class="admin-avatar">👤</div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div id="activities" class="screen active">
+                    <div class="activity-type-grid">
+                        <div class="activity-type-card active" onclick="selectActivityType(this, 'flashcards')">
+                            <div class="activity-type-icon">🎴</div>
+                            <div class="activity-type-title">Flashcards</div>
+                            <div class="activity-type-desc">Create vocabulary &amp; term cards</div>
+                        </div>
+                        <div class="activity-type-card" onclick="selectActivityType(this, 'quiz')">
+                            <div class="activity-type-icon">❓</div>
+                            <div class="activity-type-title">Quiz</div>
+                            <div class="activity-type-desc">Multiple choice questions</div>
+                        </div>
+                        <div class="activity-type-card" onclick="selectActivityType(this, 'dragdrop')">
+                            <div class="activity-type-icon">🔀</div>
+                            <div class="activity-type-title">Drag &amp; Drop</div>
+                            <div class="activity-type-desc">Ordering &amp; matching activities</div>
+                        </div>
+                    </div>
+
+                    <div id="flashcards-builder" class="content-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Create Flashcard Set</h3>
+                            <button class="btn btn-primary btn-sm">+ Add Card</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-row" style="margin-bottom: 20px;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Set Title</label>
+                                    <input type="text" class="form-input" placeholder="e.g., Arabic Letter Recognition">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Link to Lesson</label>
+                                    <select class="form-select">
+                                        <option>Select a lesson...</option>
+                                        <option>Quran Basics &gt; Module 1 &gt; Lesson 1</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="flashcard-item">
+                                <div>
+                                    <label class="form-label">Front (Term)</label>
+                                    <input type="text" class="form-input" placeholder="e.g., ا" value="ا">
+                                </div>
+                                <div>
+                                    <label class="form-label">Back (Definition)</label>
+                                    <input type="text" class="form-input" placeholder="e.g., Alif" value="Alif - First letter">
+                                </div>
+                                <button class="btn btn-danger btn-sm">🗑️</button>
+                            </div>
+
+                            <div class="flashcard-item">
+                                <div>
+                                    <label class="form-label">Front (Term)</label>
+                                    <input type="text" class="form-input" placeholder="e.g., ب" value="ب">
+                                </div>
+                                <div>
+                                    <label class="form-label">Back (Definition)</label>
+                                    <input type="text" class="form-input" placeholder="e.g., Ba" value="Ba - Second letter">
+                                </div>
+                                <button class="btn btn-danger btn-sm">🗑️</button>
+                            </div>
+
+                            <div class="flashcard-item">
+                                <div>
+                                    <label class="form-label">Front (Term)</label>
+                                    <input type="text" class="form-input" placeholder="e.g., ت" value="ت">
+                                </div>
+                                <div>
+                                    <label class="form-label">Back (Definition)</label>
+                                    <input type="text" class="form-input" placeholder="e.g., Ta" value="Ta - Third letter">
+                                </div>
+                                <button class="btn btn-danger btn-sm">🗑️</button>
+                            </div>
+
+                            <button class="btn btn-success" style="margin-top: 20px;">Save Flashcard Set</button>
+                        </div>
+                    </div>
+
+                    <div id="quiz-builder" class="content-card" style="display: none;">
+                        <div class="card-header">
+                            <h3 class="card-title">Create Quiz</h3>
+                            <button class="btn btn-primary btn-sm">+ Add Question</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-row" style="margin-bottom: 20px;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Quiz Title</label>
+                                    <input type="text" class="form-input" placeholder="e.g., Arabic Letters Quiz">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Link to Lesson</label>
+                                    <select class="form-select">
+                                        <option>Select a lesson...</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="quiz-question-card">
+                                <div class="quiz-question-header">
+                                    <span class="quiz-question-number">Question 1</span>
+                                    <button class="btn btn-danger btn-sm">🗑️</button>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-input" placeholder="Enter question..." value="What is the first letter of the Arabic alphabet?">
+                                </div>
+                                <div class="quiz-options-grid">
+                                    <div class="quiz-option-input">
+                                        <input type="radio" name="q1" checked>
+                                        <input type="text" class="form-input" value="Alif" placeholder="Option A">
+                                    </div>
+                                    <div class="quiz-option-input">
+                                        <input type="radio" name="q1">
+                                        <input type="text" class="form-input" value="Ba" placeholder="Option B">
+                                    </div>
+                                    <div class="quiz-option-input">
+                                        <input type="radio" name="q1">
+                                        <input type="text" class="form-input" value="Ta" placeholder="Option C">
+                                    </div>
+                                    <div class="quiz-option-input">
+                                        <input type="radio" name="q1">
+                                        <input type="text" class="form-input" value="Tha" placeholder="Option D">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-success" style="margin-top: 20px;">Save Quiz</button>
+                        </div>
+                    </div>
+
+                    <div id="dragdrop-builder" class="content-card" style="display: none;">
+                        <div class="card-header">
+                            <h3 class="card-title">Create Drag &amp; Drop Activity</h3>
+                            <button class="btn btn-primary btn-sm">+ Add Item</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-row" style="margin-bottom: 20px;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Activity Title</label>
+                                    <input type="text" class="form-input" placeholder="e.g., Order the Prayer Steps">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Activity Type</label>
+                                    <select class="form-select">
+                                        <option>Ordering (put in sequence)</option>
+                                        <option>Matching (pair items)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <p style="color: #9ca3af; margin-bottom: 15px;">Add items in the correct order. Students will need to rearrange them.</p>
+
+                            <div class="flashcard-item">
+                                <div style="grid-column: span 2;">
+                                    <label class="form-label">Item 1 (First in sequence)</label>
+                                    <input type="text" class="form-input" value="Stand facing Qibla (Qiyam)">
+                                </div>
+                                <button class="btn btn-danger btn-sm">🗑️</button>
+                            </div>
+
+                            <div class="flashcard-item">
+                                <div style="grid-column: span 2;">
+                                    <label class="form-label">Item 2</label>
+                                    <input type="text" class="form-input" value="Raise hands and say Takbir">
+                                </div>
+                                <button class="btn btn-danger btn-sm">🗑️</button>
+                            </div>
+
+                            <div class="flashcard-item">
+                                <div style="grid-column: span 2;">
+                                    <label class="form-label">Item 3</label>
+                                    <input type="text" class="form-input" value="Recite Al-Fatiha">
+                                </div>
+                                <button class="btn btn-danger btn-sm">🗑️</button>
+                            </div>
+
+                            <button class="btn btn-success" style="margin-top: 20px;">Save Activity</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

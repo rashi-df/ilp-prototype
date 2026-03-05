@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates - Admin Panel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"><img src="../../assets/logo-noname.png" alt="ILP Logo" style="width:36px;height:36px;object-fit:contain;"></div>
+                <div>
+                    <div class="sidebar-title">Islamic Learn</div>
+                    <div class="sidebar-subtitle">Admin Panel</div>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" onclick="showScreen('dashboard')">
+                        <span class="nav-item-icon">📊</span>
+                        <span class="nav-item-text">Dashboard</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <div class="nav-item" onclick="showScreen('users')">
+                        <span class="nav-item-icon">👥</span>
+                        <span class="nav-item-text">Users</span>
+                        <span class="nav-item-badge">24</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('courses')">
+                        <span class="nav-item-icon">📚</span>
+                        <span class="nav-item-text">Courses</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('content')">
+                        <span class="nav-item-icon">📂</span>
+                        <span class="nav-item-text">Course Content</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('videos')">
+                        <span class="nav-item-icon">🎬</span>
+                        <span class="nav-item-text">Video Library</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Learning Tools</div>
+                    <div class="nav-item" onclick="showScreen('activities')">
+                        <span class="nav-item-icon">🎮</span>
+                        <span class="nav-item-text">Activity Builder</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('homework')">
+                        <span class="nav-item-icon">📝</span>
+                        <span class="nav-item-text">Homework</span>
+                        <span class="nav-item-badge">12</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Finance</div>
+                    <div class="nav-item" onclick="showScreen('payments')">
+                        <span class="nav-item-icon">💳</span>
+                        <span class="nav-item-text">Payments</span>
+                    </div>
+                    <div class="nav-item active" onclick="showScreen('certificates')">
+                        <span class="nav-item-icon">🏆</span>
+                        <span class="nav-item-text">Certificates</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">System</div>
+                    <div class="nav-item" onclick="showScreen('notifications')">
+                        <span class="nav-item-icon">🔔</span>
+                        <span class="nav-item-text">Notifications</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('categories')">
+                        <span class="nav-item-icon">🏷️</span>
+                        <span class="nav-item-text">Categories</span>
+                    </div>
+                    <div class="nav-item" onclick="showScreen('settings')">
+                        <span class="nav-item-icon">⚙️</span>
+                        <span class="nav-item-text">Settings</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1 class="header-title" id="pageTitle">Certificates</h1>
+                <div class="header-actions">
+                    <div class="header-search">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a href="../../mobile-app/index.html" class="header-icon-btn" title="View Mobile App">📱</a>
+                    <div class="header-icon-btn">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </div>
+                    <div class="admin-avatar">👤</div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div id="certificates" class="screen active">
+                    <div class="tabs">
+                        <div class="tab active" onclick="switchTab(this, 'templates-tab')">Templates</div>
+                        <div class="tab" onclick="switchTab(this, 'issued-tab')">Issued Certificates</div>
+                    </div>
+
+                    <div id="templates-tab" class="tab-content">
+                        <div class="grid-2">
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Certificate Preview</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="certificate-preview">
+                                        <div class="certificate-title">Certificate of Completion</div>
+                                        <div class="certificate-subtitle">Islamic Learning Platform</div>
+                                        <p style="margin-bottom: 20px; color: #6b5b45;">This is to certify that</p>
+                                        <div class="certificate-name">[Student Name]</div>
+                                        <p style="color: #6b5b45;">has successfully completed</p>
+                                        <div class="certificate-course">[Course Name]</div>
+                                        <div class="certificate-date">Date: [Completion Date]</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Template Settings</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="form-label">Certificate Title</label>
+                                        <input type="text" class="form-input" value="Certificate of Completion">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Subtitle</label>
+                                        <input type="text" class="form-input" value="Islamic Learning Platform">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Signature Name</label>
+                                        <input type="text" class="form-input" placeholder="e.g., Sheikh Abdullah">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Signature Title</label>
+                                        <input type="text" class="form-input" placeholder="e.g., Director of Education">
+                                    </div>
+                                    <button class="btn btn-primary">Save Template</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="issued-tab" class="tab-content" style="display: none;">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Issued Certificates</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Certificate ID</th>
+                                            <th>Student</th>
+                                            <th>Course</th>
+                                            <th>Issue Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#CERT-2024-001</td>
+                                            <td>Sara Ahmed</td>
+                                            <td>Quran Reading Basics</td>
+                                            <td>Jan 10, 2024</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-sm">View</button>
+                                                <button class="btn btn-secondary btn-sm">Revoke</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#CERT-2024-002</td>
+                                            <td>Mohammed Farooq</td>
+                                            <td>Tajweed Mastery</td>
+                                            <td>Jan 8, 2024</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-sm">View</button>
+                                                <button class="btn btn-secondary btn-sm">Revoke</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#CERT-2024-003</td>
+                                            <td>Aisha Rahman</td>
+                                            <td>40 Hadith of Nawawi</td>
+                                            <td>Jan 5, 2024</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-sm">View</button>
+                                                <button class="btn btn-secondary btn-sm">Revoke</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

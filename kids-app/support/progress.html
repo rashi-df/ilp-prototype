@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>My Progress - Kids Islamic Learning</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:800">100%</span>
+                </div>
+            </div>
+
+            <div id="progress" class="screen active">
+                <div class="screen-content">
+                    <div style="font-size:22px;font-weight:900;color:#1a1a1a;margin-bottom:16px;">My Stars &amp; Progress 🌟</div>
+
+                    <!-- Level ring -->
+                    <div style="background:#fff;border-radius:var(--radius-card);padding:20px;text-align:center;margin-bottom:16px;box-shadow:var(--shadow-card);">
+                        <div class="level-ring-wrap">
+                            <div class="level-ring-wrap-relative">
+                                <svg class="level-ring-svg" viewBox="0 0 120 120">
+                                    <defs>
+                                        <linearGradient id="ring-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#2DB86D"/>
+                                            <stop offset="100%" style="stop-color:#FFD700"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="level-ring-track" cx="60" cy="60" r="52"/>
+                                    <circle class="level-ring-fill" cx="60" cy="60" r="52"/>
+                                </svg>
+                                <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                                    <div class="level-ring-text-val">3</div>
+                                    <div class="level-ring-text-label">SEEKER</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="font-size:16px;font-weight:900;color:#1a1a1a;margin-top:8px;">Level 3 — Seeker</div>
+                        <div style="font-size:13px;color:#6B7280;font-weight:600;margin-top:4px;">150 XP · 130 to next level!</div>
+                        <div class="xp-bar-wrap" style="margin-top:12px;">
+                            <div class="xp-bar-fill" style="width:50%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Star stats -->
+                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;">
+                        <div class="card" style="text-align:center;padding:14px 8px;">
+                            <div style="font-size:24px;font-weight:900;color:var(--color-primary);">284</div>
+                            <div style="font-size:11px;color:#6B7280;font-weight:700;">Total Stars</div>
+                        </div>
+                        <div class="card" style="text-align:center;padding:14px 8px;">
+                            <div style="font-size:24px;font-weight:900;color:var(--color-xp);">7🔥</div>
+                            <div style="font-size:11px;color:#6B7280;font-weight:700;">Day Streak</div>
+                        </div>
+                        <div class="card" style="text-align:center;padding:14px 8px;">
+                            <div style="font-size:24px;font-weight:900;color:var(--color-star);">4🏆</div>
+                            <div style="font-size:11px;color:#6B7280;font-weight:700;">Badges</div>
+                        </div>
+                    </div>
+
+                    <!-- Weekly Quest Stars -->
+                    <div class="weekly-quest-card">
+                        <div class="weekly-quest-title">This Week's Quest ⭐</div>
+                        <div class="weekly-quest-item">
+                            <span style="font-size:16px;">📖</span>
+                            <span>Complete 5 lessons</span>
+                            <span style="margin-left:auto;font-size:13px;font-weight:700;color:#6B7280;">3/5</span>
+                            <span class="weekly-quest-stars">⭐ 50</span>
+                        </div>
+                        <div class="weekly-quest-item">
+                            <span style="font-size:16px;">✅</span>
+                            <span>Submit 2 homeworks</span>
+                            <span style="margin-left:auto;font-size:13px;font-weight:700;color:var(--color-correct);">2/2 ✓</span>
+                            <span class="weekly-quest-stars">⭐ 40</span>
+                        </div>
+                        <div class="weekly-quest-item">
+                            <span style="font-size:16px;">🎯</span>
+                            <span>Perfect quiz score</span>
+                            <span style="margin-left:auto;font-size:13px;font-weight:700;color:#6B7280;">0/1</span>
+                            <span class="weekly-quest-stars">⭐ 25</span>
+                        </div>
+                        <div class="progress-bar" style="margin-top:10px;">
+                            <div class="progress-fill" style="width:60%;background:linear-gradient(90deg,var(--color-star),var(--color-xp));"></div>
+                        </div>
+                        <div style="font-size:12px;color:#92400e;font-weight:700;margin-top:6px;text-align:right;">60% of weekly goal done!</div>
+                    </div>
+
+                    <!-- Trophy case -->
+                    <div class="section-title">Trophy Case 🏆</div>
+                    <div class="trophy-case-grid">
+                        <div class="trophy-case-item" onclick="showScreen('certificate')">
+                            <div class="trophy-case-emoji">📜</div>
+                            <div class="trophy-case-label">Arabic Cert</div>
+                        </div>
+                        <div class="trophy-case-item">
+                            <div class="trophy-case-emoji">🔥</div>
+                            <div class="trophy-case-label">7-Day Streak</div>
+                        </div>
+                        <div class="trophy-case-item">
+                            <div class="trophy-case-emoji">⭐</div>
+                            <div class="trophy-case-label">100 Stars</div>
+                        </div>
+                        <div class="trophy-case-item" style="opacity:0.4;filter:grayscale(1);">
+                            <div class="trophy-case-emoji">🏅</div>
+                            <div class="trophy-case-label">Hafiz</div>
+                        </div>
+                        <div class="trophy-case-item" style="opacity:0.4;filter:grayscale(1);">
+                            <div class="trophy-case-emoji">🎓</div>
+                            <div class="trophy-case-label">Champion</div>
+                        </div>
+                        <div class="trophy-case-item" style="opacity:0.4;filter:grayscale(1);">
+                            <div class="trophy-case-emoji">💫</div>
+                            <div class="trophy-case-label">500 Stars</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="bottom-nav">
+                    <a href="../dashboard/dashboard.html" class="nav-item">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="../dashboard/courses.html" class="nav-item">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <span>Quests</span>
+                    </a>
+                    <a href="progress.html" class="nav-item active">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        <span>Stars</span>
+                    </a>
+                    <a href="../dashboard/profile.html" class="nav-item">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span>Me</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                </optgroup>
+                <optgroup label="🏠 Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">My Quests</option>
+                    <option value="profile">My Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                </optgroup>
+                <optgroup label="📝 Homework">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="🌟 Progress &amp; Support">
+                    <option value="progress" selected>My Progress</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                </optgroup>
+            </select>
+            <a href="../../mobile-app/auth/login.html" class="btn-app-link">Adult App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
