@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>ക്ലാസ് - Islamic Learning Platform</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:600">100%</span>
+                </div>
+            </div>
+
+            <div id="lesson" class="screen active">
+                <div class="screen-header">
+                    <button class="screen-header-back" onclick="history.back()">←</button>
+                    <div class="screen-header-title">ക്ലാസ്</div>
+                </div>
+                <div class="screen-content">
+                    <div class="video-container">
+                        <div class="play-button">▶️</div>
+                    </div>
+
+                    <div class="detail-title">ക്ലാസ് 2: ആകാശശാസ്ത്രം (Astronomy)</div>
+                    <div class="detail-meta mb-20">
+                        <div>⏱️ 10 മിനിറ്റ്</div>
+                        <div>ഭാഗം 1: പ്രീ-റെക്കോർഡഡ് വീഡിയോ സെഷനുകൾ</div>
+                    </div>
+
+                    <div class="video-controls">
+                        <button class="btn-secondary">⬇️ ഡൗൺലോഡ്</button>
+                        <button class="btn-secondary">📄 നോട്ടുകൾ</button>
+                        <button class="btn-secondary">⚙️ സ്പീഡ്</button>
+                    </div>
+
+                    <div class="section-title">പാഠ വിവരണം</div>
+                    <div class="detail-description mb-20">
+                        ബ്രഹ്മാണ്ഡത്തിന്റെ വികാസം, ആകാശവും ഭൂമിയും ഒന്നായിരുന്ന അവസ്ഥ (Big Bang Theory സൂചനകൾ), ഗ്രഹങ്ങളുടെ സഞ്ചാരപഥം — ഇവ ഖുർആൻ വചനങ്ങളുമായി ബന്ധിപ്പിച്ച് മനസ്സിലാക്കുന്ന ക്ലാസ്. ഗ്രഹ സഞ്ചാരത്തെക്കുറിച്ചുള്ള ആനിമേഷൻ വീഡിയോ ഉൾപ്പെടുന്നു.
+                    </div>
+
+                    <button class="btn-primary" onclick="showScreen('lesson-progress')">പാഠ പുരോഗതി കാണുക</button>
+                    <button class="btn-secondary mt-20" style="width: 100%;" onclick="showScreen('flashcards')">ആക്ടിവിറ്റി ആരംഭിക്കുക</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                </optgroup>
+                <optgroup label="👤 Student Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">Course Library</option>
+                    <option value="profile">Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning Flow">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson" selected>Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                </optgroup>
+                <optgroup label="📝 Homework &amp; Review">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="💬 Support &amp; Extras">
+                    <option value="progress">Progress &amp; Stats</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor/Admin">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                </optgroup>
+            </select>
+            <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">🔧 Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

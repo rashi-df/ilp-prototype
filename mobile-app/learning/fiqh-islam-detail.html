@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>ഇസ്ലാം കാര്യങ്ങൾ - Islamic Learning Platform</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:600">100%</span>
+                </div>
+            </div>
+
+            <div id="course-detail" class="screen active">
+                <div class="screen-header">
+                    <button class="screen-header-back" onclick="history.back()">←</button>
+                    <div class="screen-header-title">Course Detail</div>
+                </div>
+                <div class="screen-content">
+                    <div class="detail-header">
+                        <div class="detail-banner">🤲</div>
+                        <div class="detail-title">ഇസ്ലാം കാര്യങ്ങൾ</div>
+                        <div style="font-size:12px;color:#6b7280;text-align:center;margin-bottom:8px;">FIQH</div>
+                        <div class="detail-meta">
+                            <div>⏱️ 3 മണിക്കൂർ</div>
+                            <div>📝 17 ക്ലാസുകൾ</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-description">
+                        ഇസ്ലാമിന്റെ അഞ്ച് കാര്യങ്ങൾ — ശഹാദത്ത്, നമസ്കാരം, നോമ്പ്, സകാത്ത്, ഹജ്ജ് — കർമ്മശാസ്ത്ര അടിസ്ഥാനത്തിൽ പഠിക്കുന്ന കോഴ്‌സ്. നമസ്കാരത്തിന് 10 ക്ലാസുകൾ ഉൾപ്പെടെ 17 ക്ലാസുകൾ.
+                    </div>
+
+                    <button class="btn-primary mb-20" onclick="showScreen('payment')">ഇപ്പോൾ എൻറോൾ ചെയ്യുക</button>
+
+                    <div class="section-title">Course Modules</div>
+
+                    <div class="module-list">
+
+                        <!-- Module 1: Shahadah -->
+                        <div class="module-item">
+                            <div class="module-header">
+                                <div class="module-name">ശഹാദത്ത് കലിമകൾ</div>
+                                <div class="module-duration">30 മിനിറ്റ്</div>
+                            </div>
+                            <div class="lesson-list">
+                                <div class="lesson-item completed" onclick="window.location.href='fiqh-islam-lesson.html'" style="cursor:pointer;flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>✓ ക്ലാസ് 1: ലാ ഇലാഹ ഇല്ലല്ലാഹ്</span>
+                                        <span>15 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#6b7280;">ആക്ടിവിറ്റി: Objective ചോദ്യങ്ങൾ</div>
+                                </div>
+                                <div class="lesson-item" onclick="window.location.href='fiqh-islam-lesson.html'" style="cursor:pointer;flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🎯 ക്ലാസ് 2: മുഹമ്മദ് റസൂലുല്ലാഹ്</span>
+                                        <span>15 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#6b7280;">ആക്ടിവിറ്റി: Objective ചോദ്യങ്ങൾ</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Module 2: Salah -->
+                        <div class="module-item">
+                            <div class="module-header">
+                                <div class="module-name">നമസ്കാരം</div>
+                                <div class="module-duration">100 മിനിറ്റ്</div>
+                            </div>
+                            <div class="lesson-list">
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 3: വുദുവിന്റെ രൂപവും പ്രാർഥനയും</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: വീഡിയോ / ആനിമേഷൻ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 4: തയ്യാറെടുക്കൽ — നിയ്യത്ത്, ഖിബ്ല, ജമാഅത്ത്</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: വീഡിയോ / ആനിമേഷൻ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 5: തക്ബീർ, ഫാത്തിഹ, ഖുർആൻ പാരായണം</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: വീഡിയോ / ആനിമേഷൻ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 6: റുകൂഅ്, ഇഅ്തിദാൽ</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: വീഡിയോ / ആനിമേഷൻ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 7: സുജൂദ്, ഇടയിലെ ഇരുത്തം</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: വീഡിയോ / ആനിമേഷൻ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 8: തശഹ്ഹുദ്, ഇരുത്തം, പ്രാർഥനകൾ</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: PDF പ്രാർഥന കാർഡുകൾ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 9: നമസ്കാരശേഷമുള്ള ദിക്‌റുകൾ</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: PDF ദിക്‌ർ കാർഡുകൾ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 10: സുന്നത്ത് നമസ്കാരങ്ങൾ</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: Objective ചോദ്യങ്ങൾ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 11: ജുമുഅ നമസ്കാരം</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: Objective ചോദ്യങ്ങൾ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 12: രാത്രി നമസ്കാരം / തറാവീഹ്</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: Objective ചോദ്യങ്ങൾ</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Module 3: Sawm, Zakath, Hajj -->
+                        <div class="module-item">
+                            <div class="module-header">
+                                <div class="module-name">സൗം, സകാത്ത്, ഹജ്ജ് &amp; ഉംറ</div>
+                                <div class="module-duration">75 മിനിറ്റ്</div>
+                            </div>
+                            <div class="lesson-list">
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 13: സൗം — നോമ്പിന്റെ വിധികൾ</span>
+                                        <span>15 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: Objective ചോദ്യങ്ങൾ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 14: സകാത്ത് — അർഥവും പ്രാധാന്യവും</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: Objective ചോദ്യങ്ങൾ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 15: ഫിഖ്ഹ് സകാത്ത്</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: Objective ചോദ്യങ്ങൾ</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 16: സകാത്ത് കാൽക്കുലേഷൻ</span>
+                                        <span>10 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: Drag &amp; Drop</div>
+                                </div>
+                                <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
+                                    <div style="display:flex;justify-content:space-between;width:100%;">
+                                        <span>🔒 ക്ലാസ് 17: ഹജ്ജ് &amp; ഉംറ</span>
+                                        <span>30 min</span>
+                                    </div>
+                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: വീഡിയോ &amp; ആനിമേഷൻ</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                </optgroup>
+                <optgroup label="👤 Student Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">Course Library</option>
+                    <option value="profile">Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning Flow">
+                    <option value="course-detail" selected>Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                </optgroup>
+                <optgroup label="📝 Homework &amp; Review">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="💬 Support &amp; Extras">
+                    <option value="progress">Progress &amp; Stats</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor/Admin">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                </optgroup>
+            </select>
+            <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">🔧 Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
