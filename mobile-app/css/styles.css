@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
         :root {
-            --color-primary:       #006634;
-            --color-primary-light: #008a45;
-            --color-primary-dark:  #004d26;
+            --color-primary:       #177840;
+            --color-primary-light: #22904F;
+            --color-primary-dark:  #0A4D2A;
             --color-correct:       #22C55E;
             --color-wrong:         #F87171;
             --bg-screen:           #F5F7FA;
             --radius-card:         22px;
-            --radius-btn:          16px;
+            --radius-btn:          20px;
             --shadow-card:         0 4px 20px rgba(0,0,0,0.07);
-            --shadow-btn:          0 6px 20px rgba(0,102,52,0.30);
+            --shadow-btn:          0 6px 20px rgba(23,120,64,0.35);
         }
 
         * {
@@ -61,7 +61,7 @@
             width: 100%;
             background: #1f2937;
             color: #ffffff;
-            border: 1px solid rgba(0, 102, 52, 0.4);
+            border: 1px solid rgba(23, 120, 64, 0.4);
             padding: 11px 14px;
             border-radius: 12px;
             font-size: 13px;
@@ -72,14 +72,14 @@
         }
 
         .nav-dropdown:hover {
-            border-color: rgba(0, 102, 52, 0.6);
-            box-shadow: 0 5px 15px rgba(0, 102, 52, 0.3);
+            border-color: rgba(23, 120, 64, 0.6);
+            box-shadow: 0 5px 15px rgba(23, 120, 64, 0.3);
         }
 
         .nav-dropdown:focus {
             outline: none;
-            border-color: #006634;
-            box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+            border-color: #177840;
+            box-shadow: 0 0 0 3px rgba(23, 120, 64, 0.2);
         }
 
         .nav-dropdown option,
@@ -93,7 +93,7 @@
             display: block;
             margin-top: 16px;
             padding: 12px 16px;
-            background: linear-gradient(135deg, #006634 0%, #004d26 100%);
+            background: linear-gradient(135deg, #177840 0%, #0A4D2A 100%);
             color: white;
             text-decoration: none;
             border-radius: 12px;
@@ -105,7 +105,7 @@
 
         .btn-admin-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(22, 163, 74, 0.35);
+            box-shadow: 0 8px 24px rgba(23, 120, 64, 0.35);
         }
 
         .btn-app-link {
@@ -218,12 +218,12 @@
         }
 
         .screen-content::-webkit-scrollbar-thumb {
-            background: rgba(22, 163, 74, 0.3);
+            background: rgba(23, 120, 64, 0.3);
             border-radius: 10px;
         }
 
         .screen-content::-webkit-scrollbar-thumb:hover {
-            background: rgba(22, 163, 74, 0.5);
+            background: rgba(23, 120, 64, 0.5);
         }
 
         /* Login Screen */
@@ -296,9 +296,9 @@
 
         .form-input:focus {
             outline: none;
-            border-color: #006634;
+            border-color: #177840;
             background: #ffffff;
-            box-shadow: 0 0 0 3px rgba(0,102,52,0.15), 0 4px 12px rgba(0, 102, 52, 0.08);
+            box-shadow: 0 0 0 3px rgba(23,120,64,0.15), 0 4px 12px rgba(23, 120, 64, 0.08);
         }
 
         .form-input::placeholder {
@@ -357,7 +357,7 @@
         }
 
         .homework-review-item.reviewed {
-            border-left: 4px solid #10b981;
+            border-left: 4px solid #22904F;
             background: rgba(34, 197, 94, 0.03);
         }
 
@@ -401,7 +401,7 @@
 
         .status-badge.reviewed {
             background: rgba(34, 197, 94, 0.12);
-            color: #006634;
+            color: #177840;
         }
 
         .homework-preview {
@@ -424,7 +424,7 @@
         .btn-review {
             flex: 1;
             padding: 12px;
-            background: linear-gradient(180deg, #007a3d 0%, #006634 100%);
+            background: linear-gradient(180deg, #22904F 0%, #177840 100%);
             color: white;
             border: none;
             border-radius: 14px;
@@ -513,10 +513,10 @@
         }
 
         .feedback-tab.active {
-            background: linear-gradient(180deg, #007a3d 0%, #006634 100%);
+            background: linear-gradient(180deg, #22904F 0%, #177840 100%);
             color: white;
             border-color: transparent;
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+            box-shadow: 0 4px 12px rgba(23, 120, 64, 0.25);
         }
 
         .record-feedback-btn {
@@ -574,23 +574,22 @@
         .btn-primary {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(180deg, #007a3d 0%, #006634 60%);
+            background: linear-gradient(135deg, #22904F 0%, #177840 100%);
             color: white;
             border: none;
-            border-radius: 16px;
+            border-radius: var(--radius-btn);
             font-size: 16px;
-            font-weight: 700;
+            font-weight: 800;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.2s;
             letter-spacing: 0.3px;
             font-family: inherit;
-            box-shadow: 0 6px 20px rgba(0,102,52,0.30);
+            box-shadow: var(--shadow-btn);
         }
 
         .btn-primary:hover {
-            background: linear-gradient(180deg, #007a3d 0%, #004d26 100%);
-            box-shadow: 0 8px 28px rgba(0, 102, 52, 0.45), 0 2px 8px rgba(0, 102, 52, 0.2);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(23,120,64,0.45);
         }
 
         .btn-primary:active {
@@ -658,13 +657,13 @@
         }
 
         .continue-card {
-            background: linear-gradient(135deg, #006634 0%, #004d26 100%);
+            background: linear-gradient(135deg, #22904F 0%, #177840 100%);
             border-radius: 24px;
             padding: 24px;
             margin-bottom: 24px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 12px 32px rgba(22, 163, 74, 0.28);
+            box-shadow: 0 12px 32px rgba(23, 120, 64, 0.28);
         }
 
         .continue-card::before {
@@ -875,10 +874,10 @@
         }
 
         .chip.active {
-            background: linear-gradient(180deg, #007a3d 0%, #006634 100%);
+            background: linear-gradient(180deg, #22904F 0%, #177840 100%);
             color: white;
             border-color: transparent;
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+            box-shadow: 0 4px 12px rgba(23, 120, 64, 0.25);
         }
 
         .chip:active {
@@ -964,7 +963,7 @@
         .detail-banner {
             width: 100%;
             height: 180px;
-            background: linear-gradient(135deg, #006634 0%, #004d26 100%);
+            background: linear-gradient(135deg, #177840 0%, #0A4D2A 100%);
             border-radius: 24px;
             display: flex;
             align-items: center;
@@ -1043,7 +1042,7 @@
         }
 
         .lesson-item.completed {
-            color: #006634;
+            color: #177840;
         }
 
         .lesson-item.locked {
@@ -1066,7 +1065,7 @@
         .play-button {
             width: 64px;
             height: 64px;
-            background: rgba(22, 163, 74, 0.9);
+            background: rgba(23, 120, 64, 0.9);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1176,7 +1175,7 @@
         }
 
         .btn-know {
-            background: #10b981;
+            background: #22904F;
             color: white;
             box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
         }
@@ -1227,14 +1226,14 @@
         }
 
         .quiz-option.selected {
-            background: rgba(22, 163, 74, 0.06);
-            border-color: #006634;
-            box-shadow: 0 0 0 3px rgba(0, 102, 52, 0.1), 0 8px 24px rgba(0, 102, 52, 0.08);
+            background: rgba(23, 120, 64, 0.06);
+            border-color: #177840;
+            box-shadow: 0 0 0 3px rgba(23, 120, 64, 0.1), 0 8px 24px rgba(23, 120, 64, 0.08);
         }
 
         .quiz-option.correct {
             background: rgba(34, 197, 94, 0.1);
-            border-color: #10b981;
+            border-color: #22904F;
         }
 
         .quiz-option.incorrect {
@@ -1336,7 +1335,7 @@
         .mentor-avatar {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, #006634 0%, #004d26 100%);
+            background: linear-gradient(135deg, #177840 0%, #0A4D2A 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1356,7 +1355,7 @@
 
         .mentor-status {
             font-size: 12px;
-            color: #10b981;
+            color: #22904F;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -1365,7 +1364,7 @@
         .status-dot {
             width: 7px;
             height: 7px;
-            background: #10b981;
+            background: #22904F;
             border-radius: 50%;
         }
 
@@ -1385,7 +1384,7 @@
         }
 
         .chat-messages::-webkit-scrollbar-thumb {
-            background: rgba(22, 163, 74, 0.25);
+            background: rgba(23, 120, 64, 0.25);
             border-radius: 10px;
         }
 
@@ -1416,10 +1415,10 @@
         }
 
         .message.sent .message-bubble {
-            background: linear-gradient(135deg, #006634 0%, #004d26 100%);
+            background: linear-gradient(135deg, #177840 0%, #0A4D2A 100%);
             color: white;
             border-bottom-right-radius: 4px;
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.2);
+            box-shadow: 0 4px 12px rgba(23, 120, 64, 0.2);
         }
 
         .message-time {
@@ -1456,7 +1455,7 @@
         .btn-send {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, #006634 0%, #004d26 100%);
+            background: linear-gradient(135deg, #177840 0%, #0A4D2A 100%);
             border: none;
             border-radius: 10px;
             color: white;
@@ -1474,12 +1473,12 @@
 
         /* Progress Screen */
         .progress-header {
-            background: linear-gradient(135deg, #006634 0%, #004d26 100%);
+            background: linear-gradient(135deg, #177840 0%, #0A4D2A 100%);
             border-radius: 24px;
             padding: 24px;
             margin-bottom: 24px;
             text-align: center;
-            box-shadow: 0 12px 32px rgba(22, 163, 74, 0.25);
+            box-shadow: 0 12px 32px rgba(23, 120, 64, 0.25);
             position: relative;
             overflow: hidden;
         }
@@ -1534,7 +1533,7 @@
 
         .bar {
             flex: 1;
-            background: linear-gradient(to top, #006634 0%, #10b981 100%);
+            background: linear-gradient(to top, #177840 0%, #22904F 100%);
             border-radius: 8px 8px 0 0;
             position: relative;
             min-height: 20px;
@@ -1689,11 +1688,11 @@
         }
 
         .subscription-card {
-            background: linear-gradient(135deg, #006634 0%, #004d26 100%);
+            background: linear-gradient(135deg, #177840 0%, #0A4D2A 100%);
             border-radius: 24px;
             padding: 24px;
             margin-bottom: 24px;
-            box-shadow: 0 12px 32px rgba(22, 163, 74, 0.25);
+            box-shadow: 0 12px 32px rgba(23, 120, 64, 0.25);
             position: relative;
             overflow: hidden;
         }
@@ -1761,7 +1760,7 @@
         .certificate-title {
             font-size: 24px;
             font-weight: 700;
-            color: #006634;
+            color: #177840;
             margin-bottom: 8px;
             letter-spacing: -0.3px;
         }
@@ -1775,7 +1774,7 @@
         .certificate-course {
             font-size: 17px;
             font-weight: 600;
-            color: #006634;
+            color: #177840;
             margin-bottom: 16px;
         }
 
@@ -1818,9 +1817,9 @@
         }
 
         .plan-card.selected {
-            background: rgba(22, 163, 74, 0.04);
-            border-color: #006634;
-            box-shadow: 0 0 0 2px #006634, 0 8px 32px rgba(0, 102, 52, 0.12);
+            background: rgba(23, 120, 64, 0.04);
+            border-color: #177840;
+            box-shadow: 0 0 0 2px #177840, 0 8px 32px rgba(23, 120, 64, 0.12);
         }
 
         .plan-card.recommended::before {
@@ -1828,7 +1827,7 @@
             position: absolute;
             top: -11px;
             right: 20px;
-            background: linear-gradient(135deg, #006634 0%, #004d26 100%);
+            background: linear-gradient(135deg, #177840 0%, #0A4D2A 100%);
             color: white;
             padding: 4px 12px;
             border-radius: 999px;
@@ -1869,7 +1868,7 @@
 
         .plan-features li::before {
             content: '✓ ';
-            color: #10b981;
+            color: #22904F;
             font-weight: 700;
         }
 
@@ -1892,9 +1891,9 @@
         }
 
         .payment-method.selected {
-            border-color: #006634;
-            background: rgba(22, 163, 74, 0.04);
-            box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+            border-color: #177840;
+            background: rgba(23, 120, 64, 0.04);
+            box-shadow: 0 0 0 3px rgba(23, 120, 64, 0.1);
         }
 
         .payment-icon {
@@ -1926,14 +1925,14 @@
         }
 
         .payment-method.selected .radio-check {
-            border-color: #006634;
+            border-color: #177840;
         }
 
         .payment-method.selected .radio-check::after {
             content: '';
             width: 10px;
             height: 10px;
-            background: #006634;
+            background: #177840;
             border-radius: 50%;
         }
 
@@ -1988,7 +1987,7 @@
         }
 
         .dot.active {
-            background: #006634;
+            background: #177840;
             width: 24px;
             border-radius: 999px;
         }
@@ -2045,20 +2044,20 @@
         }
 
         .drop-slot.filled {
-            border-color: #10b981;
+            border-color: #22904F;
             background: rgba(34, 197, 94, 0.06);
         }
 
         .slot-number {
             width: 32px;
             height: 32px;
-            background: rgba(22, 163, 74, 0.1);
+            background: rgba(23, 120, 64, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 600;
-            color: #006634;
+            color: #177840;
             font-size: 13px;
             flex-shrink: 0;
         }
@@ -2113,7 +2112,7 @@
         .feedback-avatar {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, #10b981 0%, #006634 100%);
+            background: linear-gradient(135deg, #22904F 0%, #177840 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -2128,7 +2127,7 @@
         .feedback-mentor-name {
             font-size: 14px;
             font-weight: 600;
-            color: #006634;
+            color: #177840;
             margin-bottom: 4px;
         }
 
@@ -2157,7 +2156,7 @@
         .audio-play-btn {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, #10b981 0%, #006634 100%);
+            background: linear-gradient(135deg, #22904F 0%, #177840 100%);
             border-radius: 50%;
             border: none;
             color: white;
@@ -2185,8 +2184,8 @@
 
         .grade-badge {
             display: inline-block;
-            background: rgba(22, 163, 74, 0.06);
-            color: #006634;
+            background: rgba(23, 120, 64, 0.06);
+            color: #177840;
             padding: 6px 16px;
             border-radius: 999px;
             font-size: 32px;
@@ -2224,8 +2223,8 @@
         }
 
         .progress-step.active {
-            background: rgba(22, 163, 74, 0.08);
-            border: 1.5px solid rgba(22, 163, 74, 0.25);
+            background: rgba(23, 120, 64, 0.08);
+            border: 1.5px solid rgba(23, 120, 64, 0.25);
         }
 
         .progress-step.locked {
@@ -2246,21 +2245,21 @@
         }
 
         .step-indicator.completed {
-            background: linear-gradient(135deg, #10b981 0%, #006634 100%);
+            background: linear-gradient(135deg, #22904F 0%, #177840 100%);
             border-color: transparent;
-            box-shadow: 0 4px 16px rgba(0, 102, 52, 0.3);
+            box-shadow: 0 4px 16px rgba(23, 120, 64, 0.3);
         }
 
         .step-indicator.active {
-            background: linear-gradient(135deg, #006634 0%, #004d26 100%);
+            background: linear-gradient(135deg, #22904F 0%, #177840 100%);
             border-color: transparent;
             animation: pulse-ring 2s infinite;
-            filter: drop-shadow(0 4px 8px rgba(0, 102, 52, 0.4));
+            filter: drop-shadow(0 4px 8px rgba(23, 120, 64, 0.4));
         }
 
         @keyframes pulse-ring {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
-            50% { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(23, 120, 64, 0.5); }
+            50% { box-shadow: 0 0 0 8px rgba(23, 120, 64, 0); }
         }
 
         .step-info {
@@ -2281,7 +2280,7 @@
 
         .step-status {
             font-size: 11px;
-            color: #10b981;
+            color: #22904F;
             font-weight: 600;
         }
 
@@ -2309,10 +2308,10 @@
 
         .progress-bar-fill {
             height: 100%;
-            background: linear-gradient(90deg, #006634, #10b981);
+            background: linear-gradient(90deg, #22904F, #177840);
             border-radius: 999px;
             transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 2px 8px rgba(22, 163, 74, 0.35);
+            box-shadow: 0 2px 8px rgba(23, 120, 64, 0.35);
         }
 
         /* Screen Header Component */
@@ -2400,7 +2399,7 @@
         .bottom-nav {
             display: flex;
             background: linear-gradient(180deg, rgba(255,255,255,0.97) 0%, #ffffff 100%);
-            border-top: 2px solid rgba(0,102,52,0.08);
+            border-top: 2px solid rgba(23,120,64,0.08);
             box-shadow: 0 -1px 0 rgba(0,0,0,0.04), 0 -8px 24px rgba(0,0,0,0.06);
             padding: 8px 0 20px;
             flex-shrink: 0;
@@ -2423,9 +2422,9 @@
         }
 
         .bottom-nav .nav-item.active {
-            color: #006634;
+            color: #177840;
             font-weight: 600;
-            background: rgba(0,102,52,0.08);
+            background: rgba(23,120,64,0.08);
             border-radius: 12px;
             padding: 6px 12px;
         }
@@ -2437,6 +2436,6 @@
         }
 
         .bottom-nav .nav-item.active svg {
-            stroke: #006634;
+            stroke: #177840;
             transform: scale(1.1);
         }
