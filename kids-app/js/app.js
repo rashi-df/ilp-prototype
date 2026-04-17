@@ -27,6 +27,12 @@ function showScreen(screenId) {
   if (path) window.location.href = path;
 }
 
+// Embed mode for showcase
+if (new URLSearchParams(window.location.search).get('embed') === '1') {
+  document.documentElement.style.background = 'transparent';
+  document.body.classList.add('embed');
+}
+
 // Sync nav dropdown to current page on load
 (function initNav() {
   const dropdown = document.getElementById('screenSelector');

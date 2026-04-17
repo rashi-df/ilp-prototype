@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids ILP — All Screens</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --em:#0D4A3A;--em2:#166652;--em3:#1D9E75;--em4:#5DCAA5;
+  --gold:#FFD700;--gold2:#FFC200;
+  --cream:#FDFAF5;--cream2:#F5EFE4;--cream3:#EBE2D0;
+  --page-bg:#0F1A16;--page-bg2:#162118;
+  --white:#FFFFFF;
+}
+
+body{
+  font-family:'Nunito',sans-serif;
+  background:var(--page-bg);
+  background-image:radial-gradient(ellipse at 20% 30%,var(--page-bg2) 0%,var(--page-bg) 70%);
+  color:#fff;
+  min-height:100vh;
+}
+
+/* PAGE HEADER */
+.page-header{
+  padding:60px 60px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  border-bottom:1px solid #1E3530;
+  position:relative;
+}
+.ph-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#1D9E7520;border:1px solid #1D9E7540;
+  border-radius:30px;padding:6px 16px;
+  font-size:12px;color:var(--em4);font-weight:700;letter-spacing:.5px;
+  margin-bottom:16px;
+}
+.ph-title{
+  font-size:42px;font-weight:900;
+  color:var(--white);line-height:1.1;margin-bottom:8px;
+}
+.ph-title span{color:var(--gold)}
+.ph-sub{font-size:15px;color:#6B8F85;max-width:480px;line-height:1.6;font-weight:600}
+.ph-badge{
+  display:inline-block;background:var(--em);
+  border-radius:12px;padding:14px 22px;text-align:right;
+}
+.pb-label{font-size:11px;color:var(--em4);margin-bottom:4px;letter-spacing:.5px;font-weight:700}
+.pb-val{font-size:28px;font-weight:900;color:var(--gold)}
+.pb-sub{font-size:12px;color:#6B8F85;margin-top:2px;font-weight:600}
+
+/* SECTION */
+.section{padding:40px 60px}
+.section-title{font-size:24px;font-weight:900;color:var(--white);margin-bottom:6px}
+.section-sub{font-size:13px;color:#6B8F85;margin-bottom:28px;font-weight:600}
+.screen-count-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#1D9E7518;border:1px solid #1D9E7530;
+  border-radius:20px;padding:5px 14px;
+  font-size:12px;color:var(--em4);font-weight:700;
+  margin-bottom:12px;
+}
+
+/* SCREENS GRID */
+.screens-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:28px;
+  margin-bottom:60px;
+}
+.screen-wrap{display:flex;flex-direction:column;gap:12px}
+
+/* PHONE SHELL */
+.phone-shell{
+  width:100%;
+  aspect-ratio:375/812;
+  border-radius:32px;
+  overflow:hidden;
+  position:relative;
+  border:1.5px solid rgba(29,158,117,0.25);
+  box-shadow:0 20px 60px rgba(0,0,0,0.65);
+  background:#111;
+}
+.phone-shell iframe{
+  position:absolute;
+  top:0;left:0;
+  width:375px;
+  height:812px;
+  border:none;
+  transform-origin:top left;
+  pointer-events:none;
+}
+
+/* SCREEN LABEL */
+.screen-label-outer{display:flex;align-items:flex-start;gap:10px}
+.screen-num{
+  width:22px;height:22px;border-radius:6px;
+  background:var(--em);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:800;color:var(--gold);
+}
+.screen-name{font-size:13px;font-weight:800;color:var(--white)}
+.screen-desc{font-size:11px;color:#6B8F85;margin-top:2px;font-weight:600}
+
+/* DESIGN SYSTEM */
+.tokens-section{
+  padding:40px 60px 60px;
+  border-top:1px solid #1E3530;
+}
+.tokens-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;margin-top:8px}
+.token-group{background:#162118;border-radius:16px;padding:24px;border:1px solid #1E3530}
+.tg-title{font-size:13px;font-weight:800;color:var(--em4);letter-spacing:.5px;text-transform:uppercase;margin-bottom:16px}
+.color-swatches{display:flex;flex-direction:column;gap:10px}
+.cs-item{display:flex;align-items:center;gap:12px}
+.cs-dot{width:28px;height:28px;border-radius:8px;flex-shrink:0}
+.cs-name{font-size:12px;font-weight:800;color:var(--white)}
+.cs-hex{font-size:11px;color:#6B8F85;font-weight:600;margin-top:1px}
+.type-samples{display:flex;flex-direction:column;gap:14px}
+.ts-item{border-bottom:0.5px solid #1E3530;padding-bottom:12px}
+.ts-item:last-child{border-bottom:none;padding-bottom:0}
+.ts-label{font-size:9px;color:var(--em4);letter-spacing:.8px;text-transform:uppercase;margin-bottom:5px;font-weight:700}
+.ts-sample.ts-1{font-size:22px;font-weight:900;color:var(--white)}
+.ts-sample.ts-2{font-size:16px;font-weight:800;color:var(--white)}
+.ts-sample.ts-3{font-size:12px;font-weight:600;color:#6B8F85;line-height:1.5}
+.ts-sample.ts-4{font-size:11px;font-weight:600;color:#6B8F85}
+.comp-samples{display:flex;flex-direction:column;gap:12px}
+.comp-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:6px}
+.btn-em{background:var(--em);border:none;border-radius:12px;padding:8px 18px;font-size:12px;font-weight:800;color:var(--gold);cursor:pointer;font-family:'Nunito',sans-serif}
+.btn-out2{background:transparent;border:1.5px solid #1D9E7560;border-radius:12px;padding:8px 18px;font-size:12px;font-weight:800;color:var(--em4);cursor:pointer;font-family:'Nunito',sans-serif}
+.badge-beg{background:#E8F5EF;color:#0D4A3A;font-size:10px;font-weight:800;padding:3px 10px;border-radius:8px}
+.badge-int{background:#FBF4E0;color:#6B4F10;font-size:10px;font-weight:800;padding:3px 10px;border-radius:8px}
+.badge-adv{background:#FAECE7;color:#7A2810;font-size:10px;font-weight:800;padding:3px 10px;border-radius:8px}
+.chip-active{background:var(--em);color:var(--gold);font-size:10px;font-weight:800;padding:4px 12px;border-radius:20px}
+.chip-inactive{background:#162118;border:0.5px solid #1E3530;color:#6B8F85;font-size:10px;font-weight:700;padding:4px 12px;border-radius:20px}
+.star-chip{background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);color:var(--gold);font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px}
+
+/* FOOTER */
+.page-footer{
+  padding:28px 60px;
+  border-top:1px solid #1E3530;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.pf-brand{font-size:20px;font-weight:900;color:var(--white)}
+.pf-brand span{color:var(--gold)}
+.pf-label{font-size:10px;color:var(--em4);letter-spacing:.8px;font-weight:700;margin-bottom:2px}
+.pf-val{font-size:15px;font-weight:800;color:var(--white)}
+.pf-right{text-align:right}
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <a href="../mobile-app/showcase.html" style="position:absolute;top:28px;right:60px;display:inline-flex;align-items:center;gap:8px;background:#162118;border:1px solid #1E3530;border-radius:20px;padding:8px 18px;font-size:13px;font-weight:700;color:var(--em4);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#1E3530'" onmouseout="this.style.background='#162118'">Adult App →</a>
+  <div>
+    <div class="ph-tag">✦ PROTOTYPE · KIDS APP</div>
+    <div class="ph-title">Kids Islamic <span>Learning</span></div>
+    <div class="ph-sub">Complete flow — from login to mentor chat. Built for young learners with an adventure-first experience.</div>
+  </div>
+  <div>
+    <div class="ph-badge">
+      <div class="pb-label">TOTAL SCREENS</div>
+      <div class="pb-val">21</div>
+      <div class="pb-sub">Full user journey</div>
+    </div>
+  </div>
+</div>
+
+<!-- SCREENS -->
+<div class="section">
+  <div class="section-title">All App Screens</div>
+  <div class="section-sub">Complete prototype covering the full learning journey — from login to mentor chat</div>
+  <div class="screen-count-tag">✦ 21 screens · 7 sections</div>
+
+  <div class="screens-grid" id="screensGrid">
+
+    <!-- 1. Login -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-1"><iframe src="auth/login.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">1</div>
+        <div><div class="screen-name">Login</div><div class="screen-desc">Kid + parent sign in</div></div>
+      </div>
+    </div>
+
+    <!-- 2. Register -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-2"><iframe src="auth/register.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">2</div>
+        <div><div class="screen-name">Register</div><div class="screen-desc">Create new account</div></div>
+      </div>
+    </div>
+
+    <!-- 3. Onboarding -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-3"><iframe src="auth/onboarding.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">3</div>
+        <div><div class="screen-name">Onboarding</div><div class="screen-desc">Adventure setup + companion</div></div>
+      </div>
+    </div>
+
+    <!-- 4. Dashboard -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-4"><iframe src="dashboard/dashboard.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">4</div>
+        <div><div class="screen-name">Dashboard</div><div class="screen-desc">XP, streak &amp; active quest</div></div>
+      </div>
+    </div>
+
+    <!-- 5. My Quests -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-5"><iframe src="dashboard/courses.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">5</div>
+        <div><div class="screen-name">My Quests</div><div class="screen-desc">All enrolled courses</div></div>
+      </div>
+    </div>
+
+    <!-- 6. Profile -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-6"><iframe src="dashboard/profile.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">6</div>
+        <div><div class="screen-name">Profile</div><div class="screen-desc">Badges, level &amp; settings</div></div>
+      </div>
+    </div>
+
+    <!-- 7. Course Detail -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-7"><iframe src="learning/course-detail.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">7</div>
+        <div><div class="screen-name">Course Detail</div><div class="screen-desc">Modules + enrol CTA</div></div>
+      </div>
+    </div>
+
+    <!-- 8. Module View -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-8"><iframe src="learning/module-view.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">8</div>
+        <div><div class="screen-name">Module View</div><div class="screen-desc">Lessons list + progress</div></div>
+      </div>
+    </div>
+
+    <!-- 9. Lesson -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-9"><iframe src="learning/lesson.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">9</div>
+        <div><div class="screen-name">Lesson</div><div class="screen-desc">Video + notes content</div></div>
+      </div>
+    </div>
+
+    <!-- 10. Lesson Progress -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-10"><iframe src="learning/lesson-progress.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">10</div>
+        <div><div class="screen-name">Lesson Progress</div><div class="screen-desc">Stars earned + next step</div></div>
+      </div>
+    </div>
+
+    <!-- 11. Flashcards -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-11"><iframe src="activities/flashcards.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">11</div>
+        <div><div class="screen-name">Flashcards</div><div class="screen-desc">Flip card activity</div></div>
+      </div>
+    </div>
+
+    <!-- 12. Drag & Drop -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-12"><iframe src="activities/drag-drop.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">12</div>
+        <div><div class="screen-name">Drag &amp; Drop</div><div class="screen-desc">Match word activity</div></div>
+      </div>
+    </div>
+
+    <!-- 13. Quiz -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-13"><iframe src="activities/quiz.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">13</div>
+        <div><div class="screen-name">Quiz</div><div class="screen-desc">MCQ + instant feedback</div></div>
+      </div>
+    </div>
+
+    <!-- 14. Homework -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-14"><iframe src="homework/homework.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">14</div>
+        <div><div class="screen-name">Homework</div><div class="screen-desc">Task list + upload</div></div>
+      </div>
+    </div>
+
+    <!-- 15. Homework Feedback -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-15"><iframe src="homework/homework-feedback.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">15</div>
+        <div><div class="screen-name">HW Feedback</div><div class="screen-desc">Mentor grade + comment</div></div>
+      </div>
+    </div>
+
+    <!-- 16. Progress -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-16"><iframe src="support/progress.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">16</div>
+        <div><div class="screen-name">Progress</div><div class="screen-desc">XP, weekly chart, trophies</div></div>
+      </div>
+    </div>
+
+    <!-- 17. Chat -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-17"><iframe src="support/chat.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">17</div>
+        <div><div class="screen-name">Chat</div><div class="screen-desc">Mentor messaging</div></div>
+      </div>
+    </div>
+
+    <!-- 18. Certificate -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-18"><iframe src="support/certificate.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">18</div>
+        <div><div class="screen-name">Certificate</div><div class="screen-desc">Completion award</div></div>
+      </div>
+    </div>
+
+    <!-- 19. Payment -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-19"><iframe src="support/payment.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">19</div>
+        <div><div class="screen-name">Payment</div><div class="screen-desc">Plan selection + checkout</div></div>
+      </div>
+    </div>
+
+    <!-- 20. Mentor Dashboard -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-20"><iframe src="mentor/mentor-dashboard.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">20</div>
+        <div><div class="screen-name">Mentor Dashboard</div><div class="screen-desc">Student roster + tasks</div></div>
+      </div>
+    </div>
+
+    <!-- 21. Mentor Review -->
+    <div class="screen-wrap">
+      <div class="phone-shell" id="shell-21"><iframe src="mentor/mentor-review.html?embed=1" loading="lazy"></iframe></div>
+      <div class="screen-label-outer">
+        <div class="screen-num">21</div>
+        <div><div class="screen-name">Mentor Review</div><div class="screen-desc">Grade &amp; feedback form</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  <div>
+    <div class="pf-brand">Kids ILP <span>App</span></div>
+    <div style="font-size:12px;color:#6B8F85;margin-top:4px;font-weight:600">Emerald Sanctuary · 2025 Design Prototype</div>
+  </div>
+  <div class="pf-right">
+    <div class="pf-label">PREPARED BY</div>
+    <div class="pf-val">Decode Factory</div>
+    <div style="font-size:11px;color:#6B8F85;margin-top:2px;font-weight:600">decodefactory.com</div>
+  </div>
+</div>
+
+<script>
+// Scale iframes to fit their phone shell containers
+function scaleIframes() {
+  document.querySelectorAll('.phone-shell').forEach(shell => {
+    const iframe = shell.querySelector('iframe');
+    if (!iframe) return;
+    const shellW = shell.clientWidth;
+    const scale = shellW / 375;
+    iframe.style.transform = `scale(${scale})`;
+  });
+}
+scaleIframes();
+window.addEventListener('resize', scaleIframes);
+</script>
+</body>
+</html>

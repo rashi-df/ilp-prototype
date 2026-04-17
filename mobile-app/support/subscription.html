@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription - Islamic Learning Platform</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:600">100%</span>
+                </div>
+            </div>
+
+            <div id="subscription" class="screen active">
+                <div class="screen-header">
+                    <button class="screen-header-back" onclick="history.back()">←</button>
+                    <div class="screen-header-title">My Subscription</div>
+                    <div></div>
+                </div>
+                <div class="screen-content">
+
+                    <!-- Active plan hero -->
+                    <div style="background:linear-gradient(135deg,var(--em) 0%,var(--em2) 100%);border-radius:18px;padding:20px;margin-bottom:20px;position:relative;overflow:hidden;">
+                        <div style="position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:rgba(255,255,255,0.04);border-radius:50%;"></div>
+                        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(232,201,106,0.2);border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;color:var(--gold2,#E8C96A);margin-bottom:12px;letter-spacing:.5px;">
+                            ✓ ACTIVE PLAN
+                        </div>
+                        <div style="font-size:22px;font-weight:700;color:#fff;margin-bottom:4px;">Annual Plan</div>
+                        <div style="font-size:28px;font-weight:700;color:var(--gold2,#E8C96A);margin-bottom:4px;">₹14,999 <span style="font-size:14px;font-weight:400;color:#9DC9BE;">/year</span></div>
+                        <div style="font-size:12px;color:#9DC9BE;margin-bottom:16px;">Renews on 17 April 2027</div>
+
+                        <!-- Days remaining -->
+                        <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:12px;display:flex;justify-content:space-between;align-items:center;">
+                            <div>
+                                <div style="font-size:11px;color:#9DC9BE;margin-bottom:2px;">Days remaining</div>
+                                <div style="font-size:24px;font-weight:700;color:#fff;">365 <span style="font-size:12px;font-weight:400;color:#9DC9BE;">days</span></div>
+                            </div>
+                            <div style="text-align:right;">
+                                <div style="font-size:11px;color:#9DC9BE;margin-bottom:2px;">Member since</div>
+                                <div style="font-size:14px;font-weight:600;color:#fff;">17 Apr 2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Usage stats -->
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
+                        <div style="background:var(--white);border-radius:14px;padding:14px;border:1px solid var(--cream3,#EBE2D0);text-align:center;">
+                            <div style="font-size:22px;font-weight:700;color:var(--em2);margin-bottom:2px;">6</div>
+                            <div style="font-size:11px;color:var(--txt3);">Courses Enrolled</div>
+                        </div>
+                        <div style="background:var(--white);border-radius:14px;padding:14px;border:1px solid var(--cream3,#EBE2D0);text-align:center;">
+                            <div style="font-size:22px;font-weight:700;color:var(--em2);margin-bottom:2px;">48</div>
+                            <div style="font-size:11px;color:var(--txt3);">Lessons Completed</div>
+                        </div>
+                        <div style="background:var(--white);border-radius:14px;padding:14px;border:1px solid var(--cream3,#EBE2D0);text-align:center;">
+                            <div style="font-size:22px;font-weight:700;color:var(--em2);margin-bottom:2px;">3</div>
+                            <div style="font-size:11px;color:var(--txt3);">Mentors Assigned</div>
+                        </div>
+                        <div style="background:var(--white);border-radius:14px;padding:14px;border:1px solid var(--cream3,#EBE2D0);text-align:center;">
+                            <div style="font-size:22px;font-weight:700;color:var(--em2);margin-bottom:2px;">2</div>
+                            <div style="font-size:11px;color:var(--txt3);">Certificates Earned</div>
+                        </div>
+                    </div>
+
+                    <!-- Included features -->
+                    <div style="background:var(--white);border-radius:16px;padding:16px;margin-bottom:16px;border:1px solid var(--cream3,#EBE2D0);">
+                        <div style="font-size:12px;font-weight:700;color:var(--txt);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;">Plan Includes</div>
+                        <div style="display:flex;flex-direction:column;gap:8px;">
+                            <div style="display:flex;gap:10px;align-items:center;"><span style="color:var(--em3);font-weight:700;">✓</span><span style="font-size:12px;color:var(--txt2);">Unlimited access to all courses</span></div>
+                            <div style="display:flex;gap:10px;align-items:center;"><span style="color:var(--em3);font-weight:700;">✓</span><span style="font-size:12px;color:var(--txt2);">Dedicated mentor (1-on-1 sessions)</span></div>
+                            <div style="display:flex;gap:10px;align-items:center;"><span style="color:var(--em3);font-weight:700;">✓</span><span style="font-size:12px;color:var(--txt2);">HD offline downloads</span></div>
+                            <div style="display:flex;gap:10px;align-items:center;"><span style="color:var(--em3);font-weight:700;">✓</span><span style="font-size:12px;color:var(--txt2);">Live sessions &amp; Q&A access</span></div>
+                            <div style="display:flex;gap:10px;align-items:center;"><span style="color:var(--em3);font-weight:700;">✓</span><span style="font-size:12px;color:var(--txt2);">Digital completion certificates</span></div>
+                            <div style="display:flex;gap:10px;align-items:center;"><span style="color:var(--em3);font-weight:700;">✓</span><span style="font-size:12px;color:var(--txt2);">Priority support</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Billing history -->
+                    <div style="font-size:12px;font-weight:700;color:var(--txt);margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px;">Billing History</div>
+                    <div style="background:var(--white);border-radius:14px;overflow:hidden;margin-bottom:20px;border:1px solid var(--cream3,#EBE2D0);">
+                        <div style="padding:12px 14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--cream3,#EBE2D0);">
+                            <div>
+                                <div style="font-size:12px;font-weight:600;color:var(--txt);">Annual Plan — Renewal</div>
+                                <div style="font-size:11px;color:var(--txt3);">17 Apr 2026</div>
+                            </div>
+                            <div style="text-align:right;">
+                                <div style="font-size:12px;font-weight:600;color:var(--em2);">₹14,999</div>
+                                <div style="font-size:10px;color:#22c55e;font-weight:600;">Paid</div>
+                            </div>
+                        </div>
+                        <div style="padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+                            <div>
+                                <div style="font-size:12px;font-weight:600;color:var(--txt);">Annual Plan — First Year</div>
+                                <div style="font-size:11px;color:var(--txt3);">17 Apr 2025</div>
+                            </div>
+                            <div style="text-align:right;">
+                                <div style="font-size:12px;font-weight:600;color:var(--em2);">₹14,999</div>
+                                <div style="font-size:10px;color:#22c55e;font-weight:600;">Paid</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Manage actions -->
+                    <button style="background:transparent;border:1.5px solid var(--em3);border-radius:12px;padding:12px;font-size:13px;font-weight:600;color:var(--em2);cursor:pointer;width:100%;margin-bottom:10px;">Switch to Monthly Plan</button>
+                    <button style="background:transparent;border:1px solid #FECACA;border-radius:12px;padding:12px;font-size:13px;font-weight:500;color:#DC2626;cursor:pointer;width:100%;">Cancel Subscription</button>
+                    <div style="text-align:center;font-size:11px;color:var(--txt3);margin-top:10px;">No cancellation fees · Access continues until 17 Apr 2027</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
+                </optgroup>
+                <optgroup label="👤 Student Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">Course Library</option>
+                    <option value="profile">Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning Flow">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Session</option>
+                    <option value="notes">Notes</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="audio-recording">Audio Recording</option>
+                </optgroup>
+                <optgroup label="📝 Homework &amp; Review">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="💬 Support &amp; Extras">
+                    <option value="progress">Progress &amp; Stats</option>
+                    <option value="notifications">Notifications</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                    <option value="downloads">Downloads</option>
+                    <option value="subscription" selected>Subscription</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor/Admin">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
+                </optgroup>
+            </select>
+            <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">🔧 Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>ഖുർആനും ശാസ്ത്രവും - Islamic Learning Platform</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -16,36 +13,26 @@
                 <div class="time">9:41</div>
                 <div class="icons">
                     <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
-                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
                     <span style="font-size:12px;font-weight:600">100%</span>
                 </div>
             </div>
 
             <div id="course-detail" class="screen active">
-                <div class="screen-header">
-                    <button class="screen-header-back" onclick="history.back()">←</button>
-                    <div class="screen-header-title">Course Detail</div>
-                </div>
-                <div class="screen-content">
-                    <div class="detail-header">
-                        <div class="detail-banner">🔭</div>
-                        <div class="detail-title">ഖുർആനും ശാസ്ത്രവും</div>
-                        <div style="font-size:12px;color:#6b7280;text-align:center;margin-bottom:8px;">QURAN &amp; TAJWEED</div>
-                        <div class="detail-meta">
-                            <div>⏱️ 1 മണിക്കൂർ</div>
-                            <div>📝 6 ക്ലാസുകൾ</div>
+                <div class="screen-content no-pad" style="display:flex;flex-direction:column;">
+                    <div class="lesson-top">
+                        <div class="lesson-top-back-row">
+                            <button class="lesson-back-btn" onclick="history.back()">←</button>
+                            <span class="lesson-crumb">QURAN & SCIENCE</span>
                         </div>
+                        <div class="lesson-top-title">🔬 ഖുർആനും ശാസ്ത്രവും</div>
+                        <div class="lesson-top-meta">1 മണിക്കൂർ · 6 ക്ലാസുകൾ</div>
+                        <div class="lesson-pb"><div class="lesson-pf" style="width:20%"></div></div>
                     </div>
-
-                    <div class="detail-description">
-                        ഖുർആനിലെ ശാസ്ത്രീയ അത്ഭുതങ്ങൾ — ആകാശശാസ്ത്രം, ഭ്രൂണശാസ്ത്രം, സമുദ്ര പഠനം, ഭൂമിശാസ്ത്രം, ജീവശാസ്ത്രം. ഖുർആൻ ഒരു ശാസ്ത്രഗ്രന്ഥമല്ല, മറിച്ച് ദൃഷ്ടാന്തങ്ങളുടെ ഗ്രന്ഥമാണ് എന്ന അടിസ്ഥാന ദർശനത്തിൽ നിന്ന് ആരംഭിക്കുന്ന പ്രി-റെക്കോർഡഡ് വീഡിയോ കോഴ്‌സ്.
-                    </div>
-
-                    <button class="btn-primary mb-20" onclick="showScreen('payment')">ഇപ്പോൾ എൻറോൾ ചെയ്യുക</button>
-
-                    <div class="section-title">Course Modules</div>
-
-                    <div class="module-list">
+                    <div class="lesson-body">
+                        <div class="lesson-text">ഖുർആനിലെ ശാസ്ത്രീയ സൂചനകൾ — ഭ്രൂണശാസ്ത്രം, ആകാശശാസ്ത്രം, സമുദ്രശാസ്ത്രം, പർവതങ്ങൾ — ആധുനിക ശാസ്ത്രവുമായി ബന്ധിപ്പിച്ച് പഠിക്കുന്ന കോഴ്‌സ്.</div>
+                        <button class="btn-primary mb-20" onclick="showScreen('payment')">ഇപ്പോൾ എൻറോൾ ചെയ്യുക</button>
+                        <div class="lesson-sec-title">Course Modules</div>
+                        <div class="module-list">
                         <div class="module-item">
                             <div class="module-header">
                                 <div class="module-name">ഭാഗം 1: പ്രീ-റെക്കോർഡഡ് വീഡിയോ സെഷനുകൾ</div>
@@ -57,44 +44,45 @@
                                         <span>✓ ക്ലാസ് 1: ആമുഖം - വിജ്ഞാനത്തിന്റെ ഉറവിടം</span>
                                         <span>10 min</span>
                                     </div>
-                                    <div style="font-size:11px;color:#6b7280;">ആക്ടിവിറ്റി: ഖുർആൻ വചനങ്ങൾ കണ്ടെത്തുക</div>
+                                    <div style="font-size:11px;color:#7A8F88;">ആക്ടിവിറ്റി: ഖുർആൻ വചനങ്ങൾ കണ്ടെത്തുക</div>
                                 </div>
                                 <div class="lesson-item" onclick="window.location.href='quran-science-lesson.html'" style="cursor:pointer;flex-direction:column;align-items:flex-start;gap:4px;">
                                     <div style="display:flex;justify-content:space-between;width:100%;">
                                         <span>🎯 ക്ലാസ് 2: ആകാശശാസ്ത്രം (Astronomy)</span>
                                         <span>10 min</span>
                                     </div>
-                                    <div style="font-size:11px;color:#6b7280;">ആക്ടിവിറ്റി: ഗ്രഹ സഞ്ചാരം - വീഡിയോ</div>
+                                    <div style="font-size:11px;color:#7A8F88;">ആക്ടിവിറ്റി: ഗ്രഹ സഞ്ചാരം - വീഡിയോ</div>
                                 </div>
                                 <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
                                     <div style="display:flex;justify-content:space-between;width:100%;">
                                         <span>🔒 ക്ലാസ് 3: ഭ്രൂണശാസ്ത്രം (Embryology)</span>
                                         <span>10 min</span>
                                     </div>
-                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: ആനിമേഷൻ വീഡിയോ</div>
+                                    <div style="font-size:11px;color:#7A8F88;">ആക്ടിവിറ്റി: ആനിമേഷൻ വീഡിയോ</div>
                                 </div>
                                 <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
                                     <div style="display:flex;justify-content:space-between;width:100%;">
                                         <span>🔒 ക്ലാസ് 4: ജലശാസ്ത്രവും സമുദ്ര പഠനവും</span>
                                         <span>10 min</span>
                                     </div>
-                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: ഒബ്ജക്റ്റീവ് ടൈപ്പ് ചോദ്യങ്ങൾ</div>
+                                    <div style="font-size:11px;color:#7A8F88;">ആക്ടിവിറ്റി: ഒബ്ജക്റ്റീവ് ടൈപ്പ് ചോദ്യങ്ങൾ</div>
                                 </div>
                                 <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
                                     <div style="display:flex;justify-content:space-between;width:100%;">
                                         <span>🔒 ക്ലാസ് 5: ഭൂമിയും പർവ്വതങ്ങളും (Geology)</span>
                                         <span>10 min</span>
                                     </div>
-                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: Matching - ശാസ്ത്രവും ഖുർആനും</div>
+                                    <div style="font-size:11px;color:#7A8F88;">ആക്ടിവിറ്റി: Matching - ശാസ്ത്രവും ഖുർആനും</div>
                                 </div>
                                 <div class="lesson-item locked" style="flex-direction:column;align-items:flex-start;gap:4px;">
                                     <div style="display:flex;justify-content:space-between;width:100%;">
                                         <span>🔒 ക്ലാസ് 6: തേൻച്ചയും ഉറുമ്പും (Biology)</span>
                                         <span>10 min</span>
                                     </div>
-                                    <div style="font-size:11px;color:#9ca3af;">ആക്ടിവിറ്റി: Final Quiz (10 ചോദ്യങ്ങൾ)</div>
+                                    <div style="font-size:11px;color:#7A8F88;">ആക്ടിവിറ്റി: Final Quiz (10 ചോദ്യങ്ങൾ)</div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -102,7 +90,7 @@
         </div>
 
         <div class="screen-navigation">
-            <div class="nav-title">Navigate Screens</div>
+            <div class="nav-title">Navigate <span>Screens</span></div>
             <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
                 <optgroup label="🔐 Auth &amp; Onboarding">
                     <option value="login">Login</option>

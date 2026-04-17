@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Profile - Islamic Learning Platform</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -92,7 +89,7 @@
                         </div>
                     </div>
 
-                    <button class="btn-secondary mt-20" style="width: 100%; color: #ef4444; border-color: #ef4444;" onclick="showScreen('login')">
+                    <button class="btn-secondary mt-20" style="width: 100%; color: #D85A30; border-color: #D85A30;" onclick="showScreen('login')">
                         🚪 Logout
                     </button>
                 </div>
@@ -124,6 +121,7 @@
                     <option value="login">Login</option>
                     <option value="register">Register</option>
                     <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
                 </optgroup>
                 <optgroup label="👤 Student Dashboard">
                     <option value="dashboard">Dashboard</option>
@@ -135,11 +133,15 @@
                     <option value="module-view">Module View</option>
                     <option value="lesson">Lesson Video</option>
                     <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Session</option>
+                    <option value="notes">Notes</option>
                 </optgroup>
                 <optgroup label="✏️ Activities">
                     <option value="flashcards">Flashcards</option>
                     <option value="drag-drop">Drag &amp; Drop</option>
                     <option value="quiz">Quiz</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="audio-recording">Audio Recording</option>
                 </optgroup>
                 <optgroup label="📝 Homework &amp; Review">
                     <option value="homework">Homework Submit</option>
@@ -150,10 +152,13 @@
                     <option value="chat">Mentor Chat</option>
                     <option value="certificate">Certificate</option>
                     <option value="payment">Payment</option>
+                    <option value="downloads">Downloads</option>
+                    <option value="subscription">Subscription</option>
                 </optgroup>
                 <optgroup label="🎓 Mentor/Admin">
                     <option value="mentor-dashboard">Mentor Dashboard</option>
                     <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
                 </optgroup>
             </select>
             <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>

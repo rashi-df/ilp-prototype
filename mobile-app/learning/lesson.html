@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Lesson Video - Islamic Learning Platform</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -16,51 +13,57 @@
                 <div class="time">9:41</div>
                 <div class="icons">
                     <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
-                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
                     <span style="font-size:12px;font-weight:600">100%</span>
                 </div>
             </div>
 
             <div id="lesson" class="screen active">
-                <div class="screen-header">
-                    <button class="screen-header-back" onclick="history.back()">←</button>
-                    <div class="screen-header-title">Lesson</div>
-                </div>
-                <div class="screen-content">
-                    <div class="video-container">
-                        <div class="play-button">▶️</div>
+                <div class="screen-content no-pad" style="display:flex;flex-direction:column;">
+                    <div class="lesson-top">
+                        <div class="lesson-top-back-row">
+                            <button class="lesson-back-btn" onclick="history.back()">←</button>
+                            <span class="lesson-crumb">Tajweed · Module 4</span>
+                        </div>
+                        <div class="lesson-top-title">Madd Rules — Al-Madd Al-Tabi'i</div>
+                        <div class="lesson-top-meta">Lesson 2 of 5 · ~12 min</div>
+                        <div class="lesson-pb"><div class="lesson-pf" style="width:40%"></div></div>
                     </div>
-
-                    <div class="detail-title">Noon Sakinah &amp; Tanween Rules</div>
-                    <div class="detail-meta mb-20">
-                        <div>⏱️ 18 minutes</div>
-                        <div>Module 1: Basic Tajweed</div>
+                    <div class="video-box">
+                        <div class="video-play">▶</div>
+                        <div class="video-caption">Ustadh Ibrahim Hassan</div>
+                        <div class="video-ctrl">
+                            <span class="vct">4:21</span>
+                            <div class="vcb"><div class="vcb-f" style="width:35%"></div></div>
+                            <span class="vct">12:03</span>
+                        </div>
                     </div>
-
-                    <div class="video-controls">
-                        <button class="btn-secondary">⬇️ Download</button>
-                        <button class="btn-secondary">📄 Notes</button>
-                        <button class="btn-secondary">⚙️ Speed</button>
+                    <div class="lesson-body">
+                        <div class="lesson-sec-title">What is Al-Madd Al-Tabi'i?</div>
+                        <div class="lesson-text">Al-Madd Al-Tabi'i is the natural elongation — the foundation of all Madd rules. It occurs when a letter of Madd follows a vowel without any hamzah or sukoon.</div>
+                        <div class="ayah-box">
+                            <div class="ayah-ar">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+                            <div class="ayah-tr">Notice the natural elongation on "نِ" and "يمِ" — this is Al-Madd Al-Tabi'i in action.</div>
+                        </div>
+                        <div class="lesson-text">Duration: exactly 2 harakat. Cannot be increased or decreased — hence "natural" (Tabi'i). This rule applies when one of the three Madd letters (Alif, Waw, Ya) appears without a hamzah or sukoon following it.</div>
+                        <div class="lesson-sec-title">Key Takeaways</div>
+                        <div class="lesson-text">Al-Madd Al-Tabi'i is always 2 harakat — neither more nor less. Recognise the three Madd letters and practice reciting verses that contain them.</div>
                     </div>
-
-                    <div class="section-title">Lesson Overview</div>
-                    <div class="detail-description mb-20">
-                        Learn the four essential rules of Noon Sakinah and Tanween: Izhaar, Idghaam, Iqlaab, and Ikhfaa. This lesson includes examples from the Quran and practice exercises.
+                    <div class="lesson-actions">
+                        <button class="lesson-btn-secondary">Notes</button>
+                        <button class="lesson-btn-primary" onclick="showScreen('quiz')">Take Quiz →</button>
                     </div>
-
-                    <button class="btn-primary" onclick="showScreen('lesson-progress')">View Lesson Progress</button>
-                    <button class="btn-secondary mt-20" style="width: 100%;" onclick="showScreen('flashcards')">Start Activity</button>
                 </div>
             </div>
         </div>
 
         <div class="screen-navigation">
-            <div class="nav-title">Navigate Screens</div>
+            <div class="nav-title">Navigate <span>Screens</span></div>
             <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
                 <optgroup label="🔐 Auth &amp; Onboarding">
                     <option value="login">Login</option>
                     <option value="register">Register</option>
                     <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
                 </optgroup>
                 <optgroup label="👤 Student Dashboard">
                     <option value="dashboard">Dashboard</option>
@@ -72,11 +75,15 @@
                     <option value="module-view">Module View</option>
                     <option value="lesson" selected>Lesson Video</option>
                     <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Session</option>
+                    <option value="notes">Notes</option>
                 </optgroup>
                 <optgroup label="✏️ Activities">
                     <option value="flashcards">Flashcards</option>
                     <option value="drag-drop">Drag &amp; Drop</option>
                     <option value="quiz">Quiz</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="audio-recording">Audio Recording</option>
                 </optgroup>
                 <optgroup label="📝 Homework &amp; Review">
                     <option value="homework">Homework Submit</option>
@@ -87,10 +94,13 @@
                     <option value="chat">Mentor Chat</option>
                     <option value="certificate">Certificate</option>
                     <option value="payment">Payment</option>
+                    <option value="downloads">Downloads</option>
+                    <option value="subscription">Subscription</option>
                 </optgroup>
                 <optgroup label="🎓 Mentor/Admin">
                     <option value="mentor-dashboard">Mentor Dashboard</option>
                     <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
                 </optgroup>
             </select>
             <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>

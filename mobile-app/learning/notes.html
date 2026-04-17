@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes - Islamic Learning Platform</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:600">100%</span>
+                </div>
+            </div>
+
+            <div id="notes" class="screen active">
+                <div class="screen-header">
+                    <button class="screen-header-back" onclick="history.back()">←</button>
+                    <div class="screen-header-title">My Notes</div>
+                    <button style="background:var(--em);border:none;border-radius:8px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--gold2,#E8C96A);cursor:pointer;">+ New</button>
+                </div>
+                <div class="screen-content">
+
+                    <!-- Context chip -->
+                    <div style="display:flex;align-items:center;gap:8px;background:var(--em-soft,#E8F5EF);border-radius:10px;padding:8px 12px;margin-bottom:16px;border:1px solid rgba(29,158,117,0.2);">
+                        <span style="font-size:12px;">📚</span>
+                        <div style="font-size:11px;color:var(--em2);font-weight:600;">Tajweed Foundations · Module 1 · Lesson 3</div>
+                    </div>
+
+                    <!-- Search -->
+                    <div style="background:var(--cream2,#F5EFE4);border-radius:12px;padding:10px 14px;display:flex;gap:8px;align-items:center;margin-bottom:16px;">
+                        <span style="font-size:14px;color:var(--txt3);">🔍</span>
+                        <span style="font-size:12px;color:var(--txt3);">Search notes...</span>
+                    </div>
+
+                    <!-- Pinned note (expanded) -->
+                    <div style="background:linear-gradient(135deg,#FBF4E0,#F5EFE4);border-radius:16px;padding:16px;margin-bottom:12px;border:1px solid rgba(201,168,76,0.3);position:relative;">
+                        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+                            <div style="display:flex;gap:8px;align-items:center;">
+                                <span style="font-size:12px;">📌</span>
+                                <span style="font-size:10px;font-weight:700;color:var(--gold,#C9A84C);text-transform:uppercase;letter-spacing:.5px;">Pinned</span>
+                            </div>
+                            <div style="font-size:10px;color:var(--txt3);">Today · 11:04 AM</div>
+                        </div>
+                        <div style="font-size:13px;font-weight:700;color:var(--txt);margin-bottom:6px;">Madd Rules Summary</div>
+                        <div style="font-size:12px;color:var(--txt2);line-height:1.7;margin-bottom:10px;">
+                            <strong>Madd Asli (2 counts):</strong> Natural elongation — waw, alif, ya without hamzah.<br>
+                            <strong>Madd Muttasil (4-5):</strong> Joined — hamzah follows madd in same word.<br>
+                            <strong>Madd Munfasil (2-5):</strong> Separate — hamzah begins next word.<br>
+                            <strong>Madd Lazim (6):</strong> Necessary — sukun follows madd letter.
+                        </div>
+                        <!-- Tags -->
+                        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                            <span style="background:var(--em-soft,#E8F5EF);color:var(--em2);font-size:10px;font-weight:500;padding:3px 10px;border-radius:20px;">Madd</span>
+                            <span style="background:var(--em-soft,#E8F5EF);color:var(--em2);font-size:10px;font-weight:500;padding:3px 10px;border-radius:20px;">Tajweed</span>
+                            <span style="background:var(--em-soft,#E8F5EF);color:var(--em2);font-size:10px;font-weight:500;padding:3px 10px;border-radius:20px;">Rules</span>
+                        </div>
+                    </div>
+
+                    <!-- Note 2 -->
+                    <div style="background:var(--white);border-radius:14px;padding:14px;margin-bottom:10px;border:1px solid var(--cream3,#EBE2D0);">
+                        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                            <div style="font-size:13px;font-weight:600;color:var(--txt);">Pronunciation Tips</div>
+                            <div style="font-size:10px;color:var(--txt3);">Yesterday</div>
+                        </div>
+                        <div style="font-size:12px;color:var(--txt2);line-height:1.6;">Hold the breath slightly before qalqalah letters. The bounce should come naturally from the throat...</div>
+                        <div style="display:flex;gap:6px;margin-top:8px;">
+                            <span style="background:var(--cream2,#F5EFE4);color:var(--txt3);font-size:10px;padding:3px 10px;border-radius:20px;">Qalqalah</span>
+                        </div>
+                    </div>
+
+                    <!-- Note 3 -->
+                    <div style="background:var(--white);border-radius:14px;padding:14px;margin-bottom:10px;border:1px solid var(--cream3,#EBE2D0);">
+                        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                            <div style="font-size:13px;font-weight:600;color:var(--txt);">Question for Ustadh</div>
+                            <div style="font-size:10px;color:var(--txt3);">Apr 15</div>
+                        </div>
+                        <div style="font-size:12px;color:var(--txt2);line-height:1.6;">Ask about the difference between Madd Lazim Harfi and Kalimi — still confused when they overlap.</div>
+                        <div style="display:flex;gap:6px;margin-top:8px;">
+                            <span style="background:#FEF3C7;color:#92400E;font-size:10px;padding:3px 10px;border-radius:20px;">❓ Question</span>
+                        </div>
+                    </div>
+
+                    <!-- Note 4 -->
+                    <div style="background:var(--white);border-radius:14px;padding:14px;margin-bottom:20px;border:1px solid var(--cream3,#EBE2D0);">
+                        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                            <div style="font-size:13px;font-weight:600;color:var(--txt);">Waqf (Stopping) Rules</div>
+                            <div style="font-size:10px;color:var(--txt3);">Apr 14</div>
+                        </div>
+                        <div style="font-size:12px;color:var(--txt2);line-height:1.6;">م = Must stop · ﻻ = Don't stop · ج = Allowed · ﺼﻠﻰ = Better to continue...</div>
+                    </div>
+
+                    <!-- New note composer -->
+                    <div style="background:var(--em-soft,#E8F5EF);border-radius:16px;padding:16px;border:1.5px dashed rgba(29,158,117,0.4);">
+                        <div style="font-size:12px;font-weight:600;color:var(--em2);margin-bottom:10px;">✏️ New Note</div>
+                        <div style="background:var(--white);border-radius:10px;padding:12px;min-height:60px;font-size:12px;color:var(--txt3);border:1px solid var(--cream3,#EBE2D0);">
+                            Start typing your note here...
+                        </div>
+                        <button style="background:var(--em);border:none;border-radius:10px;padding:10px;font-size:12px;font-weight:600;color:var(--gold2,#E8C96A);cursor:pointer;width:100%;margin-top:10px;">Save Note</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
+                </optgroup>
+                <optgroup label="👤 Student Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">Course Library</option>
+                    <option value="profile">Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning Flow">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Session</option>
+                    <option value="notes" selected>Notes</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="audio-recording">Audio Recording</option>
+                </optgroup>
+                <optgroup label="📝 Homework &amp; Review">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="💬 Support &amp; Extras">
+                    <option value="progress">Progress &amp; Stats</option>
+                    <option value="notifications">Notifications</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                    <option value="downloads">Downloads</option>
+                    <option value="subscription">Subscription</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor/Admin">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
+                </optgroup>
+            </select>
+            <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">🔧 Admin Panel</a>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

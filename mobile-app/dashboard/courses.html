@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Course Library - Islamic Learning Platform</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -16,218 +13,147 @@
                 <div class="time">9:41</div>
                 <div class="icons">
                     <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
-                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
                     <span style="font-size:12px;font-weight:600">100%</span>
                 </div>
             </div>
 
             <div id="courses" class="screen active">
-                <div class="screen-content">
-                    <div class="section-title">Course Library</div>
-
-                    <div class="search-bar">
-                        <span>🔍</span>
-                        <input type="text" placeholder="Search courses...">
+                <div class="screen-content no-pad" style="display:flex;flex-direction:column;">
+                    <div class="lib-hero">
+                        <div class="lib-hero-title">Course Library</div>
+                        <div class="lib-hero-search">
+                            🔍 <input type="text" placeholder="Search courses, scholars...">
+                        </div>
                     </div>
-
-                    <div class="filter-chips">
+                    <div class="chips-row">
                         <div class="chip active">All</div>
-                        <div class="chip">Quran</div>
-                        <div class="chip">Hadith</div>
+                        <div class="chip">Quran &amp; Tajweed</div>
                         <div class="chip">Aqeedah</div>
                         <div class="chip">Fiqh</div>
-                        <div class="chip">Seerah</div>
-                        <div class="chip">Arabic</div>
+                        <div class="chip">Parenting</div>
                     </div>
-
-                    <div class="course-list-item" onclick="window.location.href='../learning/aqeedah-detail.html'">
-                        <div class="course-thumbnail">🌟</div>
-                        <div class="course-info">
-                            <div class="course-category">AQEEDAH</div>
-                            <div class="course-name">ഈമാൻ കാര്യങ്ങൾ</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 2 മണിക്കൂർ</div>
-                                <div class="meta-item">📝 9 ക്ലാസുകൾ</div>
+                    <div style="flex:1;overflow-y:auto;">
+                        <div class="lib-grid">
+                            <div class="lb-card" onclick="window.location.href='../learning/tajweed-detail.html'">
+                                <div class="lb-img" style="background:#E8F5EF">🎙️</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">തജ്വീദ് പാഠ്യപദ്ധതി</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">10 classes · 4.9★</span>
+                                        <span class="badge-beg">Beginner</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="window.location.href='../learning/fiqh-islam-detail.html'">
-                        <div class="course-thumbnail">🤲</div>
-                        <div class="course-info">
-                            <div class="course-category">FIQH</div>
-                            <div class="course-name">ഇസ്ലാം കാര്യങ്ങൾ</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 3 മണിക്കൂർ</div>
-                                <div class="meta-item">📝 17 ക്ലാസുകൾ</div>
+                            <div class="lb-card" onclick="window.location.href='../learning/aqeedah-detail.html'">
+                                <div class="lb-img" style="background:#FBF4E0">🤲</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">ഈമാൻ കാര്യങ്ങൾ</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">9 classes · 4.8★</span>
+                                        <span class="badge-beg">Beginner</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="window.location.href='../learning/parenting-detail.html'">
-                        <div class="course-thumbnail">👶</div>
-                        <div class="course-info">
-                            <div class="course-category">PARENTING</div>
-                            <div class="course-name">ഇസ്ലാമിക് പാരന്റിംഗ്</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 2 മണിക്കൂർ</div>
-                                <div class="meta-item">📝 8 ക്ലാസുകൾ</div>
+                            <div class="lb-card" onclick="window.location.href='../learning/fiqh-islam-detail.html'">
+                                <div class="lb-img" style="background:#E8F0FB">🕌</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">ഇസ്ലാം കാര്യങ്ങൾ</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">17 classes · 4.8★</span>
+                                        <span class="badge-int">Intermediate</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="window.location.href='../learning/tajweed-detail.html'">
-                        <div class="course-thumbnail">🎙️</div>
-                        <div class="course-info">
-                            <div class="course-category">QURAN &amp; TAJWEED</div>
-                            <div class="course-name">തജ്വീദ് പാഠ്യപദ്ധതി</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 1 മണിക്കൂർ</div>
-                                <div class="meta-item">📝 10 ക്ലാസുകൾ</div>
+                            <div class="lb-card" onclick="window.location.href='../learning/fiqh-family-detail.html'">
+                                <div class="lb-img" style="background:#F0EBF5">👨‍👩‍👧</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">കുടുംബം (My Family)</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">6 classes · 4.7★</span>
+                                        <span class="badge-beg">Beginner</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="window.location.href='../learning/quran-science-detail.html'">
-                        <div class="course-thumbnail">🔭</div>
-                        <div class="course-info">
-                            <div class="course-category">QURAN &amp; TAJWEED</div>
-                            <div class="course-name">ഖുർആനും ശാസ്ത്രവും</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 1 മണിക്കൂർ</div>
-                                <div class="meta-item">📝 6 ക്ലാസുകൾ</div>
+                            <div class="lb-card" onclick="window.location.href='../learning/quran-science-detail.html'">
+                                <div class="lb-img" style="background:#E8F5EF">🔬</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">ഖുർആനും ശാസ്ത്രവും</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">6 classes · 4.9★</span>
+                                        <span class="badge-int">Intermediate</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="window.location.href='../learning/fiqh-family-detail.html'">
-                        <div class="course-thumbnail">👨‍👩‍👧‍👦</div>
-                        <div class="course-info">
-                            <div class="course-category">FIQH</div>
-                            <div class="course-name">കുടുംബം (My Family)</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 1 മണിക്കൂർ</div>
-                                <div class="meta-item">📝 6 ക്ലാസുകൾ</div>
+                            <div class="lb-card" onclick="window.location.href='../learning/parenting-detail.html'">
+                                <div class="lb-img" style="background:#FBF4E0">👶</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">ഇസ്ലാമിക് പാരന്റിംഗ്</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">8 classes · 4.7★</span>
+                                        <span class="badge-beg">Beginner</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="showScreen('course-detail')">
-                        <div class="course-thumbnail">📖</div>
-                        <div class="course-info">
-                            <div class="course-category">QURAN &amp; TAJWEED</div>
-                            <div class="course-name">Basic Tajweed &amp; Juz Amma</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 25 hours</div>
-                                <div class="meta-item">📝 30 lessons</div>
+                            <!-- English Courses -->
+                            <div class="lb-card" onclick="showScreen('course-detail')">
+                                <div class="lb-img" style="background:#E8F5EF">📿</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">Tajweed Foundations</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">8 mod · 4.9★</span>
+                                        <span class="badge-beg">Beginner</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="showScreen('course-detail')">
-                        <div class="course-thumbnail">🕌</div>
-                        <div class="course-info">
-                            <div class="course-category">AQEEDAH</div>
-                            <div class="course-name">6 Pillars of Iman</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 15 hours</div>
-                                <div class="meta-item">📝 18 lessons</div>
+                            <div class="lb-card" onclick="showScreen('course-detail')">
+                                <div class="lb-img" style="background:#FBF4E0">🕌</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">Islamic History</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">12 mod · 4.8★</span>
+                                        <span class="badge-int">Intermediate</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="showScreen('course-detail')">
-                        <div class="course-thumbnail">🤲</div>
-                        <div class="course-info">
-                            <div class="course-category">FIQH</div>
-                            <div class="course-name">Islamic Jurisprudence</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 25 hours</div>
-                                <div class="meta-item">📝 28 lessons</div>
+                            <div class="lb-card" onclick="showScreen('course-detail')">
+                                <div class="lb-img" style="background:#F0EBF5">🌙</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">Quran Memorisation</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">Ongoing · 4.9★</span>
+                                        <span class="badge-adv">Advanced</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="showScreen('course-detail')">
-                        <div class="course-thumbnail">📜</div>
-                        <div class="course-info">
-                            <div class="course-category">HADITH &amp; SEERAH</div>
-                            <div class="course-name">Life of Prophet Muhammad ﷺ</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 20 hours</div>
-                                <div class="meta-item">📝 24 lessons</div>
+                            <div class="lb-card" onclick="showScreen('course-detail')">
+                                <div class="lb-img" style="background:#E8F0FB">📜</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">Fiqh Essentials</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">6 mod · 4.7★</span>
+                                        <span class="badge-beg">Beginner</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="showScreen('course-detail')">
-                        <div class="course-thumbnail">💚</div>
-                        <div class="course-info">
-                            <div class="course-category">AKHLAQ</div>
-                            <div class="course-name">Islamic Ethics &amp; Manners</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 15 hours</div>
-                                <div class="meta-item">📝 20 lessons</div>
+                            <div class="lb-card" onclick="showScreen('course-detail')">
+                                <div class="lb-img" style="background:#FBF4E0">🗣️</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">Arabic for Beginners</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">10 mod · 4.8★</span>
+                                        <span class="badge-beg">Beginner</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="showScreen('course-detail')">
-                        <div class="course-thumbnail">🌙</div>
-                        <div class="course-info">
-                            <div class="course-category">SEERAH</div>
-                            <div class="course-name">Prophetic Biography</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 20 hours</div>
-                                <div class="meta-item">📝 24 lessons</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="showScreen('course-detail')">
-                        <div class="course-thumbnail">✍️</div>
-                        <div class="course-info">
-                            <div class="course-category">ARABIC LANGUAGE</div>
-                            <div class="course-name">Quranic Arabic Essentials</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 30 hours</div>
-                                <div class="meta-item">📝 35 lessons</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="showScreen('course-detail')">
-                        <div class="course-thumbnail">👨‍👩‍👧‍👦</div>
-                        <div class="course-info">
-                            <div class="course-category">PARENTING</div>
-                            <div class="course-name">Islamic Parenting Guide</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 18 hours</div>
-                                <div class="meta-item">📝 22 lessons</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="showScreen('course-detail')">
-                        <div class="course-thumbnail">📿</div>
-                        <div class="course-info">
-                            <div class="course-category">TAZKIYAH</div>
-                            <div class="course-name">Purification of the Soul</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 16 hours</div>
-                                <div class="meta-item">📝 19 lessons</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-list-item" onclick="showScreen('course-detail')">
-                        <div class="course-thumbnail">💼</div>
-                        <div class="course-info">
-                            <div class="course-category">CONTEMPORARY ISSUES</div>
-                            <div class="course-name">Islam in Modern Life</div>
-                            <div class="course-meta">
-                                <div class="meta-item">⏱️ 12 hours</div>
-                                <div class="meta-item">📝 15 lessons</div>
+                            <div class="lb-card" onclick="showScreen('course-detail')">
+                                <div class="lb-img" style="background:#E8F5EF">📖</div>
+                                <div class="lb-body">
+                                    <div class="lb-title">Hadith Sciences</div>
+                                    <div class="lb-row">
+                                        <span class="lb-meta">9 mod · 4.6★</span>
+                                        <span class="badge-int">Intermediate</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -246,20 +172,21 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
                     <span>Progress</span>
                 </a>
-                <a href="profile.html" class="nav-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    <span>Profile</span>
+                <a href="../support/chat.html" class="nav-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    <span>Mentor</span>
                 </a>
             </div>
         </div>
 
         <div class="screen-navigation">
-            <div class="nav-title">Navigate Screens</div>
+            <div class="nav-title">Navigate <span>Screens</span></div>
             <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
                 <optgroup label="🔐 Auth &amp; Onboarding">
                     <option value="login">Login</option>
                     <option value="register">Register</option>
                     <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
                 </optgroup>
                 <optgroup label="👤 Student Dashboard">
                     <option value="dashboard">Dashboard</option>
@@ -271,11 +198,15 @@
                     <option value="module-view">Module View</option>
                     <option value="lesson">Lesson Video</option>
                     <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Session</option>
+                    <option value="notes">Notes</option>
                 </optgroup>
                 <optgroup label="✏️ Activities">
                     <option value="flashcards">Flashcards</option>
                     <option value="drag-drop">Drag &amp; Drop</option>
                     <option value="quiz">Quiz</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="audio-recording">Audio Recording</option>
                 </optgroup>
                 <optgroup label="📝 Homework &amp; Review">
                     <option value="homework">Homework Submit</option>
@@ -286,10 +217,13 @@
                     <option value="chat">Mentor Chat</option>
                     <option value="certificate">Certificate</option>
                     <option value="payment">Payment</option>
+                    <option value="downloads">Downloads</option>
+                    <option value="subscription">Subscription</option>
                 </optgroup>
                 <optgroup label="🎓 Mentor/Admin">
                     <option value="mentor-dashboard">Mentor Dashboard</option>
                     <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
                 </optgroup>
             </select>
             <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>

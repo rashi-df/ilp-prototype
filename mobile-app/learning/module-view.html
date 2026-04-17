@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Module View - Islamic Learning Platform</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -29,12 +26,12 @@
                 <div class="screen-content">
                     <div class="section-title">Module 1: Basic Tajweed Rules</div>
 
-                    <div class="progress-bar mb-20" style="background: #EEEEEE; height: 5px;">
-                        <div class="progress-fill" style="width: 40%; background: #006634;"></div>
+                    <div class="progress-bar mb-20" style="background: #EBE2D0; height: 5px;">
+                        <div class="progress-fill" style="width: 40%; background: #0D4A3A;"></div>
                     </div>
 
                     <div class="course-list-item" onclick="showScreen('lesson')">
-                        <div class="course-thumbnail" style="background: #10b981;">✓</div>
+                        <div class="course-thumbnail" style="background: #1D9E75;">✓</div>
                         <div class="course-info">
                             <div class="course-category">COMPLETED</div>
                             <div class="course-name">Introduction to Tajweed</div>
@@ -45,7 +42,7 @@
                     </div>
 
                     <div class="course-list-item" onclick="showScreen('lesson')">
-                        <div class="course-thumbnail" style="background: #10b981;">✓</div>
+                        <div class="course-thumbnail" style="background: #1D9E75;">✓</div>
                         <div class="course-info">
                             <div class="course-category">COMPLETED</div>
                             <div class="course-name">Makharij al-Huruf</div>
@@ -69,8 +66,8 @@
                     <div class="course-list-item" onclick="showScreen('lesson')">
                         <div class="course-thumbnail" style="opacity: 0.5;">🔒</div>
                         <div class="course-info">
-                            <div class="course-category" style="color: #6b7280;">LOCKED</div>
-                            <div class="course-name" style="color: #6b7280;">Meem Sakinah Rules</div>
+                            <div class="course-category" style="color: #7A8F88;">LOCKED</div>
+                            <div class="course-name" style="color: #7A8F88;">Meem Sakinah Rules</div>
                             <div class="course-meta">
                                 <div class="meta-item">▶️ 22 min</div>
                             </div>
@@ -80,8 +77,8 @@
                     <div class="course-list-item" onclick="showScreen('lesson')">
                         <div class="course-thumbnail" style="opacity: 0.5;">🔒</div>
                         <div class="course-info">
-                            <div class="course-category" style="color: #6b7280;">LOCKED</div>
-                            <div class="course-name" style="color: #6b7280;">Qalqalah (Echoing Sound)</div>
+                            <div class="course-category" style="color: #7A8F88;">LOCKED</div>
+                            <div class="course-name" style="color: #7A8F88;">Qalqalah (Echoing Sound)</div>
                             <div class="course-meta">
                                 <div class="meta-item">▶️ 25 min</div>
                             </div>
@@ -98,6 +95,7 @@
                     <option value="login">Login</option>
                     <option value="register">Register</option>
                     <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
                 </optgroup>
                 <optgroup label="👤 Student Dashboard">
                     <option value="dashboard">Dashboard</option>
@@ -109,11 +107,15 @@
                     <option value="module-view" selected>Module View</option>
                     <option value="lesson">Lesson Video</option>
                     <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Session</option>
+                    <option value="notes">Notes</option>
                 </optgroup>
                 <optgroup label="✏️ Activities">
                     <option value="flashcards">Flashcards</option>
                     <option value="drag-drop">Drag &amp; Drop</option>
                     <option value="quiz">Quiz</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="audio-recording">Audio Recording</option>
                 </optgroup>
                 <optgroup label="📝 Homework &amp; Review">
                     <option value="homework">Homework Submit</option>
@@ -124,10 +126,13 @@
                     <option value="chat">Mentor Chat</option>
                     <option value="certificate">Certificate</option>
                     <option value="payment">Payment</option>
+                    <option value="downloads">Downloads</option>
+                    <option value="subscription">Subscription</option>
                 </optgroup>
                 <optgroup label="🎓 Mentor/Admin">
                     <option value="mentor-dashboard">Mentor Dashboard</option>
                     <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
                 </optgroup>
             </select>
             <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>

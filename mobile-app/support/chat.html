@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Mentor Chat - Islamic Learning Platform</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -16,87 +13,77 @@
                 <div class="time">9:41</div>
                 <div class="icons">
                     <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
-                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
                     <span style="font-size:12px;font-weight:600">100%</span>
                 </div>
             </div>
 
             <div id="chat" class="screen active">
-                <div class="screen-content">
-                    <div class="chat-header">
-                        <div class="mentor-avatar">👨‍🏫</div>
-                        <div class="mentor-info">
-                            <div class="mentor-name">Ustadh Abdullah</div>
-                            <div class="mentor-status">
-                                <span class="status-dot"></span>
-                                Online - Available 24/7
-                            </div>
+                <div class="screen-content no-pad" style="display:flex;flex-direction:column;">
+                    <div class="chat-hero">
+                        <button class="chat-hero-back" onclick="history.back()">←</button>
+                        <div class="chat-hero-av">👳</div>
+                        <div class="chat-hero-info">
+                            <div class="chat-hero-name">Ustadh Ibrahim Hassan</div>
+                            <div class="chat-hero-online">Online now</div>
                         </div>
                     </div>
-
-                    <div class="chat-messages">
-                        <div class="message received">
+                    <div class="chat-scroll">
+                        <div class="msg m-them">
+                            <div class="msg-av">👳</div>
                             <div>
-                                <div class="message-bubble">
-                                    As-Salamu Alaikum! I'm here to help with any questions about your lessons. Feel free to ask anytime.
-                                </div>
-                                <div class="message-time">9:30 AM</div>
+                                <div class="bubble b-them">Assalamu Alaikum Ahmad! Reviewed your Madd recitation. Mashallah, good progress!</div>
+                                <div class="b-time">10:32 AM</div>
                             </div>
                         </div>
-
-                        <div class="message sent">
+                        <div class="msg m-me">
                             <div>
-                                <div class="message-bubble">
-                                    Wa Alaikum As-Salam. I have a question about the Idghaam rule in Tajweed.
-                                </div>
-                                <div class="message-time" style="text-align: right;">9:35 AM</div>
+                                <div class="bubble b-me">Wa Alaikum Assalam! JazakAllah. I'm struggling with Al-Madd Al-Muttasil. Can we review?</div>
+                                <div class="b-time" style="display:flex;align-items:center;gap:4px;justify-content:flex-end;">10:35 AM <span style="color:var(--em3);font-size:12px;font-weight:700;">✓✓</span></div>
                             </div>
                         </div>
-
-                        <div class="message received">
+                        <div class="msg m-them">
+                            <div class="msg-av">👳</div>
                             <div>
-                                <div class="message-bubble">
-                                    Excellent question! Idghaam means to merge the Noon Sakinah into the following letter. There are six letters: ي ر م ل و ن
-                                </div>
-                                <div class="message-time">9:36 AM</div>
+                                <div class="bubble b-them">Of course! Let's schedule a live session tomorrow at 5pm.</div>
+                                <div class="b-time">10:36 AM</div>
                             </div>
                         </div>
-
-                        <div class="message sent">
+                        <!-- Audio message -->
+                        <div class="msg m-me">
                             <div>
-                                <div class="message-bubble">
-                                    JazakAllah khair! That's very helpful.
+                                <div class="bubble b-me" style="display:flex;align-items:center;gap:10px;padding:10px 14px;min-width:160px;">
+                                    <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">▶</div>
+                                    <div style="flex:1;">
+                                        <div style="height:3px;background:rgba(255,255,255,0.3);border-radius:2px;margin-bottom:4px;"><div style="width:40%;height:100%;background:white;border-radius:2px;"></div></div>
+                                        <div style="font-size:10px;color:rgba(255,255,255,0.7);">0:24</div>
+                                    </div>
                                 </div>
-                                <div class="message-time" style="text-align: right;">9:38 AM</div>
+                                <div class="b-time" style="display:flex;align-items:center;gap:4px;justify-content:flex-end;">10:37 AM <span style="color:var(--txt3);font-size:12px;font-weight:700;">✓✓</span></div>
                             </div>
                         </div>
-
-                        <div class="message received">
-                            <div>
-                                <div class="message-bubble">
-                                    Wa iyyakum! I also reviewed your homework submission. MashAllah, your recitation is improving! Keep up the great work. 🎯
-                                </div>
-                                <div class="message-time">9:40 AM</div>
-                            </div>
+                        <div class="res-shared">
+                            <div class="rs-lbl">📎 Shared resource</div>
+                            <div class="rs-title">Madd Al-Muttasil Practice Sheet</div>
+                            <div class="rs-sub">PDF · 4 pages</div>
                         </div>
                     </div>
-
-                    <div class="chat-input-container">
-                        <button class="btn-secondary" style="padding: 8px; min-width: auto;">📎</button>
-                        <input type="text" class="chat-input" placeholder="Type your message...">
-                        <div class="btn-send">📤</div>
+                    <div class="chat-input-row" style="gap:8px;">
+                        <button style="width:36px;height:36px;border-radius:50%;background:var(--cream2);border:none;font-size:16px;cursor:pointer;flex-shrink:0;">🎤</button>
+                        <input type="text" class="chat-inp" placeholder="Type a message...">
+                        <button class="chat-send">→</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="screen-navigation">
-            <div class="nav-title">Navigate Screens</div>
+            <div class="nav-title">Navigate <span>Screens</span></div>
             <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
                 <optgroup label="🔐 Auth &amp; Onboarding">
                     <option value="login">Login</option>
                     <option value="register">Register</option>
                     <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
                 </optgroup>
                 <optgroup label="👤 Student Dashboard">
                     <option value="dashboard">Dashboard</option>
@@ -108,11 +95,15 @@
                     <option value="module-view">Module View</option>
                     <option value="lesson">Lesson Video</option>
                     <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Session</option>
+                    <option value="notes">Notes</option>
                 </optgroup>
                 <optgroup label="✏️ Activities">
                     <option value="flashcards">Flashcards</option>
                     <option value="drag-drop">Drag &amp; Drop</option>
                     <option value="quiz">Quiz</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="audio-recording">Audio Recording</option>
                 </optgroup>
                 <optgroup label="📝 Homework &amp; Review">
                     <option value="homework">Homework Submit</option>
@@ -123,10 +114,13 @@
                     <option value="chat" selected>Mentor Chat</option>
                     <option value="certificate">Certificate</option>
                     <option value="payment">Payment</option>
+                    <option value="downloads">Downloads</option>
+                    <option value="subscription">Subscription</option>
                 </optgroup>
                 <optgroup label="🎓 Mentor/Admin">
                     <option value="mentor-dashboard">Mentor Dashboard</option>
                     <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
                 </optgroup>
             </select>
             <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>

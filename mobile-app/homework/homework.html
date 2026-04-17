@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Homework - Islamic Learning Platform</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -28,7 +25,34 @@
                 </div>
                 <div class="screen-content">
                     <div class="section-title">Homework Submission</div>
-                    <div class="greeting-subtitle mb-20">Lesson: Correct Method of Wudu • Due in 3 days</div>
+                    <div class="greeting-subtitle" style="margin-bottom:12px;">Lesson: Correct Method of Wudu • Due in 3 days</div>
+
+                    <!-- Submission status track -->
+                    <div style="background:var(--cream2);border-radius:14px;padding:14px;margin-bottom:20px;">
+                        <div style="font-size:10px;font-weight:600;color:var(--txt3);letter-spacing:.5px;margin-bottom:10px;">SUBMISSION STATUS</div>
+                        <div style="display:flex;align-items:center;gap:0;">
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+                                <div style="width:28px;height:28px;border-radius:50%;background:var(--em);display:flex;align-items:center;justify-content:center;font-size:11px;color:white;">✓</div>
+                                <div style="font-size:9px;font-weight:600;color:var(--em);">Draft</div>
+                            </div>
+                            <div style="flex:1;height:2px;background:var(--em);margin-bottom:14px;"></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+                                <div style="width:28px;height:28px;border-radius:50%;background:var(--em);display:flex;align-items:center;justify-content:center;font-size:11px;color:white;">✓</div>
+                                <div style="font-size:9px;font-weight:600;color:var(--em);">Submitted</div>
+                            </div>
+                            <div style="flex:1;height:2px;background:var(--em3);margin-bottom:14px;"></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+                                <div style="width:28px;height:28px;border-radius:50%;background:var(--em3);display:flex;align-items:center;justify-content:center;font-size:11px;color:white;">⏳</div>
+                                <div style="font-size:9px;font-weight:600;color:var(--em3);">In Review</div>
+                            </div>
+                            <div style="flex:1;height:2px;background:var(--cream3);margin-bottom:14px;"></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+                                <div style="width:28px;height:28px;border-radius:50%;background:var(--cream3);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--txt3);">○</div>
+                                <div style="font-size:9px;font-weight:600;color:var(--txt3);">Approved</div>
+                            </div>
+                        </div>
+                        <div style="margin-top:10px;background:rgba(29,158,117,0.1);border-radius:8px;padding:8px 10px;font-size:11px;color:var(--em2);font-weight:500;">⏳ Under review by Ustadh Ibrahim · Usually responds in 4–6 hrs</div>
+                    </div>
 
                     <div class="activity-container">
                         <div class="activity-title">📝 Assignment</div>
@@ -78,6 +102,7 @@ Example:
                     <option value="login">Login</option>
                     <option value="register">Register</option>
                     <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
                 </optgroup>
                 <optgroup label="👤 Student Dashboard">
                     <option value="dashboard">Dashboard</option>
@@ -89,11 +114,15 @@ Example:
                     <option value="module-view">Module View</option>
                     <option value="lesson">Lesson Video</option>
                     <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Session</option>
+                    <option value="notes">Notes</option>
                 </optgroup>
                 <optgroup label="✏️ Activities">
                     <option value="flashcards">Flashcards</option>
                     <option value="drag-drop">Drag &amp; Drop</option>
                     <option value="quiz">Quiz</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="audio-recording">Audio Recording</option>
                 </optgroup>
                 <optgroup label="📝 Homework &amp; Review">
                     <option value="homework" selected>Homework Submit</option>
@@ -104,10 +133,13 @@ Example:
                     <option value="chat">Mentor Chat</option>
                     <option value="certificate">Certificate</option>
                     <option value="payment">Payment</option>
+                    <option value="downloads">Downloads</option>
+                    <option value="subscription">Subscription</option>
                 </optgroup>
                 <optgroup label="🎓 Mentor/Admin">
                     <option value="mentor-dashboard">Mentor Dashboard</option>
                     <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
                 </optgroup>
             </select>
             <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>

@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Dashboard - Islamic Learning Platform</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -16,85 +13,166 @@
                 <div class="time">9:41</div>
                 <div class="icons">
                     <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
-                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
                     <span style="font-size:12px;font-weight:600">100%</span>
                 </div>
             </div>
 
             <div id="dashboard" class="screen active">
-                <div class="screen-content">
-                    <div class="dashboard-header">
-                        <div class="greeting">As-Salamu Alaikum, Ahmad</div>
-                        <div class="greeting-subtitle">Continue your learning journey today</div>
-                    </div>
-
-                    <div class="stats-row">
-                        <div class="stat-card">
-                            <div class="stat-value">12</div>
-                            <div class="stat-label">Day Streak</div>
+                <div class="screen-content no-pad" style="display:flex;flex-direction:column;">
+                    <div class="em-hero">
+                        <div class="em-hero-top">
+                            <div>
+                                <div class="em-greet-label">Assalamu Alaikum,</div>
+                                <div class="em-greet-name">Ahmad Al-Rashidi</div>
+                            </div>
+                            <button class="em-notif-btn">
+                                🔔
+                                <span class="notif-dot"></span>
+                            </button>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-value">45h</div>
-                            <div class="stat-label">Total Time</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">3</div>
-                            <div class="stat-label">Certificates</div>
+                        <div class="streak-pills">
+                            <div class="streak-pill">🔥 <span class="sp-num">14</span> day streak</div>
+                            <div class="streak-pill">⭐ <span class="sp-num">1,240</span> XP</div>
                         </div>
                     </div>
 
-                    <div class="continue-card">
-                        <div class="continue-label">CONTINUE LEARNING</div>
-                        <div class="continue-title">Correct Method of Wudu</div>
-                        <div class="continue-subtitle">Module 03: Fiqh (Jurisprudence)</div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 65%"></div>
+                    <div class="cf-card">
+                        <div class="cf-label">Continue Learning</div>
+                        <div class="cf-row">
+                            <div class="cf-icon">📿</div>
+                            <div>
+                                <div class="cf-title">Tajweed Foundations</div>
+                                <div class="cf-meta">Module 4 · Madd Rules</div>
+                            </div>
                         </div>
-                        <div class="progress-text">65% Complete</div>
-                        <button class="btn-continue" onclick="showScreen('lesson-progress')">Continue</button>
+                        <div class="cf-prog"><div class="cf-prog-fill" style="width:68%"></div></div>
+                        <div class="cf-foot">
+                            <span class="cf-pct">68%</span>
+                            <span class="cf-left">18 min left</span>
+                        </div>
+                        <button class="cf-resume" onclick="showScreen('lesson')">Resume lesson →</button>
                     </div>
 
-                    <div class="section-title">Featured Courses</div>
-                    <div class="course-grid">
-                        <div class="course-card" onclick="showScreen('course-detail')">
-                            <div class="course-icon">📖</div>
-                            <div class="course-title">Quran &amp; Tajweed</div>
-                            <div class="course-lessons">25 lessons</div>
+                    <div class="dash-scroll">
+                        <div class="stats-3">
+                            <div class="stat-3"><div class="stat-3-num">14</div><div class="stat-3-lbl">Day streak</div></div>
+                            <div class="stat-3"><div class="stat-3-num">47m</div><div class="stat-3-lbl">Avg daily</div></div>
+                            <div class="stat-3"><div class="stat-3-num">3</div><div class="stat-3-lbl">Lessons</div></div>
                         </div>
-                        <div class="course-card" onclick="showScreen('course-detail')">
-                            <div class="course-icon">🕌</div>
-                            <div class="course-title">Aqeedah (Creed)</div>
-                            <div class="course-lessons">15 lessons</div>
+
+                        <div class="sec-hdr">
+                            <span class="sec-t">My courses</span>
+                            <span class="sec-see-all" onclick="showScreen('courses')">See all</span>
                         </div>
-                        <div class="course-card" onclick="showScreen('course-detail')">
-                            <div class="course-icon">🤲</div>
-                            <div class="course-title">Fiqh</div>
-                            <div class="course-lessons">25 lessons</div>
+                        <div class="courses-h">
+                            <!-- Malayalam Courses -->
+                            <div class="course-h-card" onclick="window.location.href='../learning/tajweed-detail.html'">
+                                <div class="course-h-top" style="background:#E8F5EF">🎙️</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">തജ്വീദ് പാഠ്യപദ്ധതി</div>
+                                    <div class="course-h-meta">10 classes · In progress</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:68%"></div></div>
+                                </div>
+                            </div>
+                            <div class="course-h-card" onclick="window.location.href='../learning/aqeedah-detail.html'">
+                                <div class="course-h-top" style="background:#FBF4E0">🤲</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">ഈമാൻ കാര്യങ്ങൾ</div>
+                                    <div class="course-h-meta">9 classes · 23%</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:23%"></div></div>
+                                </div>
+                            </div>
+                            <div class="course-h-card" onclick="window.location.href='../learning/fiqh-islam-detail.html'">
+                                <div class="course-h-top" style="background:#E8F0FB">🕌</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">ഇസ്ലാം കാര്യങ്ങൾ</div>
+                                    <div class="course-h-meta">17 classes · 41%</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:41%"></div></div>
+                                </div>
+                            </div>
+                            <div class="course-h-card" onclick="window.location.href='../learning/fiqh-family-detail.html'">
+                                <div class="course-h-top" style="background:#F0EBF5">👨‍👩‍👧</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">കുടുംബം (My Family)</div>
+                                    <div class="course-h-meta">6 classes · 12%</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:12%"></div></div>
+                                </div>
+                            </div>
+                            <div class="course-h-card" onclick="window.location.href='../learning/quran-science-detail.html'">
+                                <div class="course-h-top" style="background:#E8F5EF">🔬</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">ഖുർആനും ശാസ്ത്രവും</div>
+                                    <div class="course-h-meta">6 classes · New</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:0%"></div></div>
+                                </div>
+                            </div>
+                            <div class="course-h-card" onclick="window.location.href='../learning/parenting-detail.html'">
+                                <div class="course-h-top" style="background:#FBF4E0">👶</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">ഇസ്ലാമിക് പാരന്റിംഗ്</div>
+                                    <div class="course-h-meta">8 classes · New</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:0%"></div></div>
+                                </div>
+                            </div>
+                            <!-- English Courses -->
+                            <div class="course-h-card" onclick="showScreen('course-detail')">
+                                <div class="course-h-top" style="background:#E8F5EF">📿</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">Tajweed Foundations</div>
+                                    <div class="course-h-meta">8 mod · 45%</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:45%"></div></div>
+                                </div>
+                            </div>
+                            <div class="course-h-card" onclick="showScreen('course-detail')">
+                                <div class="course-h-top" style="background:#FBF4E0">🕌</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">Islamic History</div>
+                                    <div class="course-h-meta">12 mod · 23%</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:23%"></div></div>
+                                </div>
+                            </div>
+                            <div class="course-h-card" onclick="showScreen('course-detail')">
+                                <div class="course-h-top" style="background:#F0EBF5">🌙</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">Quran Memorisation</div>
+                                    <div class="course-h-meta">Ongoing · New</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:0%"></div></div>
+                                </div>
+                            </div>
+                            <div class="course-h-card" onclick="showScreen('course-detail')">
+                                <div class="course-h-top" style="background:#E8F0FB">📜</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">Fiqh Essentials</div>
+                                    <div class="course-h-meta">6 mod · New</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:0%"></div></div>
+                                </div>
+                            </div>
+                            <div class="course-h-card" onclick="showScreen('course-detail')">
+                                <div class="course-h-top" style="background:#FBF4E0">🗣️</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">Arabic for Beginners</div>
+                                    <div class="course-h-meta">10 mod · New</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:0%"></div></div>
+                                </div>
+                            </div>
+                            <div class="course-h-card" onclick="showScreen('course-detail')">
+                                <div class="course-h-top" style="background:#E8F5EF">📖</div>
+                                <div class="course-h-body">
+                                    <div class="course-h-title">Hadith Sciences</div>
+                                    <div class="course-h-meta">9 mod · New</div>
+                                    <div class="course-h-prog"><div class="course-h-prog-f" style="width:0%"></div></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="course-card" onclick="showScreen('course-detail')">
-                            <div class="course-icon">📜</div>
-                            <div class="course-title">Hadith</div>
-                            <div class="course-lessons">20 lessons</div>
-                        </div>
-                        <div class="course-card" onclick="showScreen('course-detail')">
-                            <div class="course-icon">🌙</div>
-                            <div class="course-title">Seerah</div>
-                            <div class="course-lessons">24 lessons</div>
-                        </div>
-                        <div class="course-card" onclick="showScreen('course-detail')">
-                            <div class="course-icon">✍️</div>
-                            <div class="course-title">Arabic Language</div>
-                            <div class="course-lessons">30 lessons</div>
-                        </div>
-                        <div class="course-card" onclick="showScreen('course-detail')">
-                            <div class="course-icon">💚</div>
-                            <div class="course-title">Akhlaq</div>
-                            <div class="course-lessons">18 lessons</div>
-                        </div>
-                        <div class="course-card" onclick="showScreen('course-detail')">
-                            <div class="course-icon">👨‍👩‍👧‍👦</div>
-                            <div class="course-title">Islamic Parenting</div>
-                            <div class="course-lessons">22 lessons</div>
+
+                        <div class="sec-hdr"><span class="sec-t">Your mentor</span></div>
+                        <div class="mentor-row">
+                            <div class="mentor-row-av">👳</div>
+                            <div class="mentor-row-info">
+                                <div class="mentor-row-name">Ustadh Ibrahim Hassan</div>
+                                <div class="mentor-row-sub">Tajweed &amp; Hifz · Online</div>
+                            </div>
+                            <button class="mentor-row-chat" onclick="showScreen('chat')">Chat</button>
                         </div>
                     </div>
                 </div>
@@ -112,20 +190,21 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
                     <span>Progress</span>
                 </a>
-                <a href="profile.html" class="nav-item">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    <span>Profile</span>
+                <a href="../support/chat.html" class="nav-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    <span>Mentor</span>
                 </a>
             </div>
         </div>
 
         <div class="screen-navigation">
-            <div class="nav-title">Navigate Screens</div>
+            <div class="nav-title">Navigate <span>Screens</span></div>
             <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
                 <optgroup label="🔐 Auth &amp; Onboarding">
                     <option value="login">Login</option>
                     <option value="register">Register</option>
                     <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
                 </optgroup>
                 <optgroup label="👤 Student Dashboard">
                     <option value="dashboard" selected>Dashboard</option>
@@ -137,11 +216,15 @@
                     <option value="module-view">Module View</option>
                     <option value="lesson">Lesson Video</option>
                     <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Session</option>
+                    <option value="notes">Notes</option>
                 </optgroup>
                 <optgroup label="✏️ Activities">
                     <option value="flashcards">Flashcards</option>
                     <option value="drag-drop">Drag &amp; Drop</option>
                     <option value="quiz">Quiz</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="audio-recording">Audio Recording</option>
                 </optgroup>
                 <optgroup label="📝 Homework &amp; Review">
                     <option value="homework">Homework Submit</option>
@@ -152,10 +235,13 @@
                     <option value="chat">Mentor Chat</option>
                     <option value="certificate">Certificate</option>
                     <option value="payment">Payment</option>
+                    <option value="downloads">Downloads</option>
+                    <option value="subscription">Subscription</option>
                 </optgroup>
                 <optgroup label="🎓 Mentor/Admin">
                     <option value="mentor-dashboard">Mentor Dashboard</option>
                     <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
                 </optgroup>
             </select>
             <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>

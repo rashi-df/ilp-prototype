@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Onboarding - Islamic Learning Platform</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -16,37 +13,38 @@
                 <div class="time">9:41</div>
                 <div class="icons">
                     <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
-                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
                     <span style="font-size:12px;font-weight:600">100%</span>
                 </div>
             </div>
 
             <div id="onboarding" class="screen active">
-                <div class="screen-content">
-                    <div class="onboarding-slide">
-                        <div class="onboarding-image">
-                            <img src="../../assets/logo-noname.png" alt="ILP Logo" style="width:100%;height:100%;object-fit:contain;">
-                        </div>
-                        <div class="onboarding-title">Learn Islam Anytime, Anywhere</div>
-                        <div class="onboarding-description">Access comprehensive courses on Quran, Hadith, Fiqh, and more. Learn at your own pace with expert guidance.</div>
-
-                        <div class="onboarding-dots">
-                            <div class="dot active"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                        </div>
-
-                        <button class="btn-primary" onclick="showScreen('dashboard')">Next</button>
-                        <div class="register-link" style="margin-top: 15px;">
-                            <a href="#" onclick="showScreen('dashboard'); return false;">Skip</a>
-                        </div>
+                <div class="screen-content no-pad" style="display:flex;flex-direction:column;">
+                    <div class="onb-skip-row">
+                        <button class="onb-skip" onclick="showScreen('dashboard')">Skip</button>
+                    </div>
+                    <div class="onb-dots-row">
+                        <div class="onb-dot active"></div>
+                        <div class="onb-dot"></div>
+                        <div class="onb-dot"></div>
+                    </div>
+                    <div class="onb-illo">
+                        <div class="onb-illo-circle"></div>
+                        <div class="onb-illo-icon">📖</div>
+                    </div>
+                    <div class="onb-content">
+                        <div class="onb-title">Learn Quran with expert guidance</div>
+                        <div class="onb-desc">Study Tajweed, Hifz, Islamic studies and more — guided by certified scholars, at your own pace, from anywhere in the world.</div>
+                    </div>
+                    <div class="onb-footer">
+                        <button class="onb-btn-p" onclick="showScreen('dashboard')">Get Started</button>
+                        <button class="onb-btn-s" onclick="showScreen('login')">I already have an account</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="screen-navigation">
-            <div class="nav-title">Navigate Screens</div>
+            <div class="nav-title">Navigate <span>Screens</span></div>
             <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
                 <optgroup label="🔐 Auth &amp; Onboarding">
                     <option value="login">Login</option>
@@ -63,11 +61,15 @@
                     <option value="module-view">Module View</option>
                     <option value="lesson">Lesson Video</option>
                     <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Session</option>
+                    <option value="notes">Notes</option>
                 </optgroup>
                 <optgroup label="✏️ Activities">
                     <option value="flashcards">Flashcards</option>
                     <option value="drag-drop">Drag &amp; Drop</option>
                     <option value="quiz">Quiz</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="audio-recording">Audio Recording</option>
                 </optgroup>
                 <optgroup label="📝 Homework &amp; Review">
                     <option value="homework">Homework Submit</option>
@@ -78,10 +80,13 @@
                     <option value="chat">Mentor Chat</option>
                     <option value="certificate">Certificate</option>
                     <option value="payment">Payment</option>
+                    <option value="downloads">Downloads</option>
+                    <option value="subscription">Subscription</option>
                 </optgroup>
                 <optgroup label="🎓 Mentor/Admin">
                     <option value="mentor-dashboard">Mentor Dashboard</option>
                     <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
                 </optgroup>
             </select>
             <a href="../../kids-app/auth/login.html" class="btn-app-link">🧒 Kids App</a>
