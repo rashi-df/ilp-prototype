@@ -20,6 +20,12 @@ const screenPaths = {
   payment: '../support/payment.html',
   'mentor-dashboard': '../mentor/mentor-dashboard.html',
   'mentor-review': '../mentor/mentor-review.html',
+  'password-reset': '../auth/password-reset.html',
+  'live-session': '../learning/live-session.html',
+  notes: '../learning/notes.html',
+  'audio-recording': '../activities/audio-recording.html',
+  subscription: '../support/subscription.html',
+  'mentor-profile': '../mentor/mentor-profile.html',
 };
 
 function showScreen(screenId) {

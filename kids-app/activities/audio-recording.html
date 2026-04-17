@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Recitation - Kids Islamic Learning</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:800">100%</span>
+                </div>
+            </div>
+
+            <div id="audio-recording" class="screen active">
+                <!-- Activity header -->
+                <div style="background:var(--color-primary);padding:14px 16px 12px;display:flex;align-items:center;justify-content:space-between;">
+                    <button onclick="history.back()" style="background:rgba(255,255,255,0.15);border:none;border-radius:10px;padding:6px 10px;font-size:14px;color:#fff;cursor:pointer;font-weight:900;">←</button>
+                    <div style="text-align:center;">
+                        <div style="font-size:10px;font-weight:900;color:#FFD700;letter-spacing:.5px;text-transform:uppercase;">🎤 Recitation Challenge!</div>
+                        <div style="font-size:13px;font-weight:900;color:#fff;">Tajweed · Madd Rules</div>
+                    </div>
+                    <div style="font-size:11px;font-weight:900;color:#FFD700;background:rgba(255,255,255,0.15);border-radius:10px;padding:5px 10px;">+30 ⭐</div>
+                </div>
+
+                <!-- Attempt tracker -->
+                <div style="background:#166652;padding:8px 16px;display:flex;justify-content:space-between;align-items:center;">
+                    <div style="font-size:11px;font-weight:800;color:#9DC9BE;">Try 2 of 3 🎯</div>
+                    <div style="display:flex;gap:6px;">
+                        <div style="width:22px;height:8px;border-radius:4px;background:#FFD700;"></div>
+                        <div style="width:22px;height:8px;border-radius:4px;background:rgba(255,255,255,0.3);"></div>
+                        <div style="width:22px;height:8px;border-radius:4px;background:rgba(255,255,255,0.15);"></div>
+                    </div>
+                </div>
+
+                <div class="screen-content" style="position:relative;">
+
+                    <!-- Noori excited -->
+                    <div class="noori-corner" style="position:absolute;">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                            <circle cx="40" cy="43" r="29" fill="#FFD700"/>
+                            <circle cx="33" cy="38" r="5" fill="#2D1B00"/>
+                            <circle cx="35" cy="36" r="2" fill="rgba(255,255,255,0.65)"/>
+                            <circle cx="47" cy="38" r="5" fill="#2D1B00"/>
+                            <circle cx="49" cy="36" r="2" fill="rgba(255,255,255,0.65)"/>
+                            <ellipse cx="40" cy="51" rx="7" ry="4.5" fill="#2D1B00"/>
+                            <ellipse cx="40" cy="51" rx="5" ry="3" fill="#ff6b6b"/>
+                            <circle cx="27" cy="47" r="5" fill="#ff8888" opacity="0.5"/>
+                            <circle cx="53" cy="47" r="5" fill="#ff8888" opacity="0.5"/>
+                        </svg>
+                    </div>
+
+                    <!-- Ayah card -->
+                    <div style="background:#fff;border-radius:20px;padding:18px;margin-bottom:16px;border:2px solid #EBE2D0;text-align:center;padding-right:70px;">
+                        <div style="font-size:10px;font-weight:900;color:var(--color-quran);letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px;">📖 Recite This Verse!</div>
+                        <div style="font-size:22px;color:#1F2937;line-height:1.8;direction:rtl;font-family:serif;margin-bottom:10px;">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ</div>
+                        <div style="font-size:12px;font-weight:700;color:#6B7280;margin-bottom:10px;font-style:italic;">Bismillāhi r-raḥmāni r-raḥīm</div>
+                        <div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;">
+                            <span style="background:#D1FAE5;color:#065f46;font-size:10px;font-weight:900;padding:3px 10px;border-radius:20px;">Madd Asli — 2 counts</span>
+                            <span style="background:#FEF3C7;color:#92400E;font-size:10px;font-weight:900;padding:3px 10px;border-radius:20px;">Madd Muttasil — 4-5</span>
+                        </div>
+                    </div>
+
+                    <!-- Last recording -->
+                    <div style="background:#F5EFE4;border-radius:18px;padding:14px;margin-bottom:16px;border:2px solid #EBE2D0;">
+                        <div style="font-size:11px;font-weight:900;color:#6B8F85;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">Your Last Try 🎧</div>
+                        <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px;">
+                            <div style="width:38px;height:38px;background:var(--color-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <span style="color:#FFD700;font-size:14px;font-weight:900;">▶</span>
+                            </div>
+                            <div style="flex:1;display:flex;align-items:center;gap:2px;height:32px;">
+                                <div style="height:40%;background:#1D9E75;border-radius:2px;width:4px;"></div>
+                                <div style="height:70%;background:#1D9E75;border-radius:2px;width:4px;"></div>
+                                <div style="height:90%;background:#1D9E75;border-radius:2px;width:4px;"></div>
+                                <div style="height:60%;background:#1D9E75;border-radius:2px;width:4px;"></div>
+                                <div style="height:100%;background:#1D9E75;border-radius:2px;width:4px;"></div>
+                                <div style="height:75%;background:#1D9E75;border-radius:2px;width:4px;"></div>
+                                <div style="height:50%;background:#1D9E75;border-radius:2px;width:4px;"></div>
+                                <div style="height:85%;background:#1D9E75;border-radius:2px;width:4px;"></div>
+                                <div style="height:65%;background:#1D9E75;border-radius:2px;width:4px;"></div>
+                                <div style="height:45%;background:#5DCAA5;border-radius:2px;width:4px;opacity:0.5;"></div>
+                                <div style="height:70%;background:#5DCAA5;border-radius:2px;width:4px;opacity:0.5;"></div>
+                                <div style="height:55%;background:#5DCAA5;border-radius:2px;width:4px;opacity:0.5;"></div>
+                            </div>
+                            <div style="font-size:11px;font-weight:800;color:#6B8F85;flex-shrink:0;">0:07</div>
+                        </div>
+                        <!-- Noori feedback -->
+                        <div style="background:#FEF3C7;border-radius:12px;padding:10px;border-left:3px solid #F59E0B;display:flex;gap:8px;align-items:flex-start;">
+                            <span style="font-size:18px;">🌟</span>
+                            <div style="font-size:11px;font-weight:800;color:#92400E;line-height:1.5;">Great start! Try to hold the <em>raḥīm</em> a little longer — that's Madd Muttasil, hold for 4-5 counts! You can do it! 💪</div>
+                        </div>
+                    </div>
+
+                    <!-- Big mic button -->
+                    <div style="text-align:center;margin-bottom:16px;">
+                        <div style="font-size:13px;font-weight:800;color:#6B8F85;margin-bottom:14px;">👇 Tap & hold to record your recitation!</div>
+                        <div style="position:relative;display:inline-block;">
+                            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100px;height:100px;border-radius:50%;border:3px solid rgba(29,158,117,0.3);"></div>
+                            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;border-radius:50%;border:3px solid rgba(29,158,117,0.4);"></div>
+                            <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),#1D9E75);display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 8px 24px rgba(13,74,58,0.4);cursor:pointer;position:relative;z-index:1;">🎤</div>
+                        </div>
+                        <div style="font-size:11px;font-weight:700;color:#9CA3AF;margin-top:14px;">Stops automatically after 30 seconds</div>
+                    </div>
+
+                    <button class="btn-primary" style="width:100%;margin-bottom:10px;">Send to Teacher ✉️</button>
+                    <button class="btn-secondary" style="width:100%;">Try Again 🔄</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
+                </optgroup>
+                <optgroup label="🏠 Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">My Quests</option>
+                    <option value="profile">My Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Class</option>
+                    <option value="notes">My Notes</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                    <option value="audio-recording" selected>Recitation</option>
+                </optgroup>
+                <optgroup label="📝 Homework">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="🌟 Progress &amp; Support">
+                    <option value="progress">My Progress</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                    <option value="subscription">My Plan</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
+                </optgroup>
+            </select>
+            <a href="../../mobile-app/auth/login.html" class="btn-app-link">Adult App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">Admin Panel</a>
+        </div>
+    </div>
+    <script src="../js/app.js"></script>
+</body>
+</html>

@@ -24,7 +24,6 @@ const screenPaths = {
   chat: '../support/chat.html',
   certificate: '../support/certificate.html',
   payment: '../support/payment.html',
-  downloads: '../support/downloads.html',
   subscription: '../support/subscription.html',
   'mentor-dashboard': '../mentor/mentor-dashboard.html',
   'mentor-review': '../mentor/mentor-review.html',

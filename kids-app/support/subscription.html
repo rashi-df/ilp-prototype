@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>My Plan - Kids Islamic Learning</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <div class="mobile-frame">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="4" y="4" width="3" height="7" rx="0.5"/><rect x="8" y="2" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="11" rx="0.5"/></svg>
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9.5a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none"/><path d="M4.5 7A5 5 0 0111.5 7" stroke-linecap="round"/><path d="M1.5 4.5A9 9 0 0114.5 4.5" stroke-linecap="round"/></svg>
+                    <span style="font-size:12px;font-weight:800">100%</span>
+                </div>
+            </div>
+
+            <div id="subscription" class="screen active">
+                <div class="screen-header">
+                    <button class="screen-header-back" onclick="history.back()">←</button>
+                    <div class="screen-header-title">My Plan 🌟</div>
+                    <div></div>
+                </div>
+                <div class="screen-content" style="position:relative;">
+
+                    <!-- Noori -->
+                    <div class="noori-corner noori-float" style="position:absolute;">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                            <circle cx="40" cy="43" r="29" fill="#FFD700"/>
+                            <polygon points="40,6 43,16 53,16 45,22 48,32 40,26 32,32 35,22 27,16 37,16" fill="#fff" opacity="0.9"/>
+                            <circle cx="33" cy="39" r="4" fill="#2D1B00"/>
+                            <circle cx="34.5" cy="37.5" r="1.5" fill="rgba(255,255,255,0.65)"/>
+                            <circle cx="47" cy="39" r="4" fill="#2D1B00"/>
+                            <circle cx="48.5" cy="37.5" r="1.5" fill="rgba(255,255,255,0.65)"/>
+                            <path d="M32 49 Q40 56 48 49" stroke="#2D1B00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <circle cx="27" cy="47" r="5" fill="#ff8888" opacity="0.35"/>
+                            <circle cx="53" cy="47" r="5" fill="#ff8888" opacity="0.35"/>
+                        </svg>
+                    </div>
+
+                    <!-- Active plan card -->
+                    <div style="background:linear-gradient(135deg,var(--color-primary),#1D9E75);border-radius:22px;padding:20px;margin-bottom:16px;position:relative;overflow:hidden;">
+                        <div style="position:absolute;top:-20px;right:-20px;font-size:90px;opacity:0.08;">🏅</div>
+                        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.18);border-radius:20px;padding:4px 12px;font-size:11px;font-weight:900;color:#FFD700;margin-bottom:12px;">
+                            ✅ ACTIVE
+                        </div>
+                        <div style="font-size:20px;font-weight:900;color:#fff;margin-bottom:2px;">Explorer Plan 🚀</div>
+                        <div style="font-size:12px;font-weight:700;color:#9DC9BE;margin-bottom:14px;">Unlimited Quests · All Activities</div>
+                        <!-- Plan details row -->
+                        <div style="display:flex;gap:10px;margin-bottom:14px;">
+                            <div style="flex:1;background:rgba(0,0,0,0.2);border-radius:14px;padding:10px;text-align:center;">
+                                <div style="font-size:18px;font-weight:900;color:#FFD700;">₹499</div>
+                                <div style="font-size:9px;font-weight:800;color:#9DC9BE;text-transform:uppercase;">/ month</div>
+                            </div>
+                            <div style="flex:1;background:rgba(0,0,0,0.2);border-radius:14px;padding:10px;text-align:center;">
+                                <div style="font-size:18px;font-weight:900;color:#FFD700;">Apr 30</div>
+                                <div style="font-size:9px;font-weight:800;color:#9DC9BE;text-transform:uppercase;">renews on</div>
+                            </div>
+                            <div style="flex:1;background:rgba(0,0,0,0.2);border-radius:14px;padding:10px;text-align:center;">
+                                <div style="font-size:18px;font-weight:900;color:#FFD700;">13</div>
+                                <div style="font-size:9px;font-weight:800;color:#9DC9BE;text-transform:uppercase;">days left</div>
+                            </div>
+                        </div>
+                        <button class="btn-primary" style="width:100%;background:#FFD700;color:#412402;border-color:#FFD700;font-size:13px;">⬆️ Upgrade to Champion Plan!</button>
+                    </div>
+
+                    <!-- My adventure stats -->
+                    <div style="background:#fff;border-radius:20px;padding:16px;margin-bottom:14px;border:2px solid #EBE2D0;">
+                        <div style="font-size:12px;font-weight:900;color:var(--color-primary);text-transform:uppercase;letter-spacing:.4px;margin-bottom:12px;">⚡ My Adventure Stats</div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                            <div style="background:linear-gradient(135deg,#FEF3C7,#FFF8E1);border-radius:14px;padding:12px;text-align:center;border:2px solid #FCD34D;">
+                                <div style="font-size:24px;font-weight:900;color:#92400E;">47</div>
+                                <div style="font-size:10px;font-weight:800;color:#92400E;">Quests Joined 🗺️</div>
+                            </div>
+                            <div style="background:linear-gradient(135deg,#D1FAE5,#ECFDF5);border-radius:14px;padding:12px;text-align:center;border:2px solid #6EE7B7;">
+                                <div style="font-size:24px;font-weight:900;color:#065f46;">1,240</div>
+                                <div style="font-size:10px;font-weight:800;color:#065f46;">Stars Earned ⭐</div>
+                            </div>
+                            <div style="background:linear-gradient(135deg,#EDE9FE,#F5F3FF);border-radius:14px;padding:12px;text-align:center;border:2px solid #C4B5FD;">
+                                <div style="font-size:24px;font-weight:900;color:#5B21B6;">8</div>
+                                <div style="font-size:10px;font-weight:800;color:#5B21B6;">Badges Won 🏅</div>
+                            </div>
+                            <div style="background:linear-gradient(135deg,#DBEAFE,#EFF6FF);border-radius:14px;padding:12px;text-align:center;border:2px solid #93C5FD;">
+                                <div style="font-size:24px;font-weight:900;color:#1E40AF;">12 🔥</div>
+                                <div style="font-size:10px;font-weight:800;color:#1E40AF;">Day Streak</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What's included -->
+                    <div style="background:linear-gradient(135deg,#FEF3C7,#FFF8E1);border-radius:20px;padding:16px;margin-bottom:14px;border:2px solid #FCD34D;">
+                        <div style="font-size:12px;font-weight:900;color:#92400E;text-transform:uppercase;letter-spacing:.4px;margin-bottom:12px;">🎁 What's in Your Plan</div>
+                        <div style="display:flex;flex-direction:column;gap:8px;">
+                            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:14px;">✅</span><span style="font-size:12px;font-weight:700;color:#374151;">All Quran & Tajweed quests</span></div>
+                            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:14px;">✅</span><span style="font-size:12px;font-weight:700;color:#374151;">Unlimited flashcards & games</span></div>
+                            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:14px;">✅</span><span style="font-size:12px;font-weight:700;color:#374151;">Live classes with Ustadh</span></div>
+                            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:14px;">✅</span><span style="font-size:12px;font-weight:700;color:#374151;">Mentor chat & feedback</span></div>
+                            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:14px;">✅</span><span style="font-size:12px;font-weight:700;color:#374151;">Certificates of achievement 🏆</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Manage buttons -->
+                    <button class="btn-secondary" style="width:100%;margin-bottom:10px;">💳 Manage Billing</button>
+                    <button style="width:100%;background:none;border:2px solid #FCA5A5;border-radius:14px;padding:12px;font-size:13px;font-weight:800;color:#EF4444;cursor:pointer;">Cancel Plan</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-navigation">
+            <div class="nav-title">Navigate Screens</div>
+            <select class="nav-dropdown" id="screenSelector" onchange="showScreen(this.value)">
+                <optgroup label="🔐 Auth &amp; Onboarding">
+                    <option value="login">Login</option>
+                    <option value="register">Register</option>
+                    <option value="onboarding">Onboarding</option>
+                    <option value="password-reset">Password Reset</option>
+                </optgroup>
+                <optgroup label="🏠 Dashboard">
+                    <option value="dashboard">Dashboard</option>
+                    <option value="courses">My Quests</option>
+                    <option value="profile">My Profile</option>
+                </optgroup>
+                <optgroup label="📚 Learning">
+                    <option value="course-detail">Course Detail</option>
+                    <option value="module-view">Module View</option>
+                    <option value="lesson">Lesson Video</option>
+                    <option value="lesson-progress">Lesson Progress</option>
+                    <option value="live-session">Live Class</option>
+                    <option value="notes">My Notes</option>
+                </optgroup>
+                <optgroup label="✏️ Activities">
+                    <option value="flashcards">Flashcards</option>
+                    <option value="drag-drop">Drag &amp; Drop</option>
+                    <option value="quiz">Quiz</option>
+                    <option value="audio-recording">Recitation</option>
+                </optgroup>
+                <optgroup label="📝 Homework">
+                    <option value="homework">Homework Submit</option>
+                    <option value="homework-feedback">Homework Feedback</option>
+                </optgroup>
+                <optgroup label="🌟 Progress &amp; Support">
+                    <option value="progress">My Progress</option>
+                    <option value="chat">Mentor Chat</option>
+                    <option value="certificate">Certificate</option>
+                    <option value="payment">Payment</option>
+                    <option value="subscription" selected>My Plan</option>
+                </optgroup>
+                <optgroup label="🎓 Mentor">
+                    <option value="mentor-dashboard">Mentor Dashboard</option>
+                    <option value="mentor-review">Give Feedback</option>
+                    <option value="mentor-profile">Mentor Profile</option>
+                </optgroup>
+            </select>
+            <a href="../../mobile-app/auth/login.html" class="btn-app-link">Adult App</a>
+            <a href="../../admin-dashboard/index.html" class="btn-admin-link">Admin Panel</a>
+        </div>
+    </div>
+    <script src="../js/app.js"></script>
+</body>
+</html>
