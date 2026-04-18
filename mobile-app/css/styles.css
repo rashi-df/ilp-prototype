@@ -1921,7 +1921,7 @@ textarea.form-input {
 .plan-card.recommended::before {
     content: 'Recommended';
     position: absolute;
-    top: -11px;
+    bottom: 12px;
     right: 18px;
     background: var(--gold);
     color: var(--em);
@@ -1947,15 +1947,17 @@ textarea.form-input {
 }
 
 .plan-price {
-
     font-size: 22px;
     font-weight: 600;
     color: var(--em);
+    display: inline;
 }
 
 .plan-period {
     font-size: 12px;
     color: var(--txt3);
+    display: inline;
+    margin-left: 1px;
 }
 
 .plan-features {
@@ -2540,17 +2542,6 @@ textarea.form-input {
     font-weight: 600;
 }
 
-.bottom-nav .nav-item.active::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: var(--em3);
-}
 
 .bottom-nav .nav-item svg {
     width: 22px;
