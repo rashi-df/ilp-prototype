@@ -1420,58 +1420,109 @@ body {
    LESSON SCREEN
    ============================================================ */
 .video-player-kids {
-  background: #1a1a2e;
-  border-radius: 20px;
+  border-radius: 16px;
   aspect-ratio: 16/9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: relative;
   overflow: hidden;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .video-play-btn {
-  width: 80px;
-  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-star), #e6a800);
+  background: rgba(255,255,255,0.92);
   border: none;
+  color: #0f1923;
+  font-size: 19px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 8px rgba(255,215,0,0.2), 0 8px 24px rgba(255,200,0,0.5);
-  transition: all 0.2s;
-  font-size: 36px;
-  color: #5D2E00;
+  transition: all 0.18s;
+  padding-left: 3px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.45);
 }
 
 .video-play-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 0 12px rgba(255,215,0,0.25), 0 12px 32px rgba(255,200,0,0.6);
+  background: rgba(255,255,255,0.28);
+  transform: translate(-50%, -55%) scale(1.08);
 }
 
-.video-progress-bar {
+.video-controls-bar {
   position: absolute;
-  bottom: 12px;
-  left: 16px;
-  right: 16px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.1) 80%, transparent 100%);
+  padding: 20px 12px 9px;
 }
 
-.video-progress-track {
+.video-seek-row { margin-bottom: 7px; }
+
+.video-seek-track {
   height: 4px;
-  background: rgba(255,255,255,0.2);
-  border-radius: 2px;
-  overflow: hidden;
+  background: rgba(255,255,255,0.22);
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
 }
 
-.video-progress-fill {
+.video-seek-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
+  width: 33%;
   background: var(--color-star);
-  border-radius: 2px;
-  width: 35%;
+  border-radius: 3px;
+}
+
+.video-seek-dot {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--color-star);
+  box-shadow: 0 0 0 3px rgba(255,215,0,0.28);
+}
+
+.video-ctrl-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.video-ctrl-icon {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.9);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: opacity 0.15s;
+}
+
+.video-ctrl-icon:hover { opacity: 0.7; }
+
+.video-ctrl-time {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+  font-family: var(--font-body);
+  letter-spacing: .3px;
 }
 
 .lesson-objectives {

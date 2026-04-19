@@ -37,15 +37,34 @@
 
                     <div style="font-size:20px;font-weight:900;color:#1a1a1a;margin-bottom:16px;">The Letter س (Seen)</div>
 
-                    <!-- Video player -->
-                    <div class="video-player-kids">
-                        <div style="position:absolute;top:12px;left:14px;background:rgba(255,255,255,0.15);backdrop-filter:blur(6px);border-radius:8px;padding:4px 10px;color:white;font-size:11px;font-weight:800;">📺 Lesson Video</div>
-                        <div style="font-size:72px;margin-bottom:8px;opacity:0.5;">س</div>
-                        <button class="video-play-btn" onclick="this.innerHTML='⏸'">▶</button>
-                        <div style="color:rgba(255,255,255,0.5);font-size:12px;font-weight:700;margin-top:12px;">3:24 min</div>
-                        <div class="video-progress-bar">
-                            <div class="video-progress-track">
-                                <div class="video-progress-fill"></div>
+                    <!-- Video player — Bunny.net style -->
+                    <div class="video-player-kids" id="videoPlayer">
+                        <!-- Thumbnail area -->
+                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#0f1923 0%,#1a2535 100%);">
+                            <div style="font-size:52px;opacity:0.18;color:#fff;user-select:none;">س</div>
+                        </div>
+                        <!-- Top label -->
+                        <div style="position:absolute;top:10px;left:12px;background:rgba(0,0,0,0.55);backdrop-filter:blur(6px);border-radius:6px;padding:3px 9px;color:white;font-size:10px;font-weight:800;letter-spacing:.3px;z-index:2;">📺 Arabic Letters · Lesson 3</div>
+                        <!-- Centre play button -->
+                        <button class="video-play-btn" id="videoPlayBtn" onclick="toggleVideoPlay()" style="z-index:3;">▶</button>
+                        <!-- Bottom control bar -->
+                        <div class="video-controls-bar">
+                            <div class="video-seek-row">
+                                <div class="video-seek-track">
+                                    <div class="video-seek-fill" id="videoSeekFill"></div>
+                                    <div class="video-seek-dot" id="videoSeekDot"></div>
+                                </div>
+                            </div>
+                            <div class="video-ctrl-row">
+                                <button class="video-ctrl-icon" id="videoCtrlPlay" onclick="toggleVideoPlay()">▶</button>
+                                <span class="video-ctrl-time">1:12 / 3:24</span>
+                                <div style="flex:1;"></div>
+                                <button class="video-ctrl-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                                </button>
+                                <button class="video-ctrl-icon">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -143,5 +162,16 @@
     </div>
 
     <script src="../js/app.js"></script>
+    <script>
+        let videoPlaying = false;
+        let videoProgress = 33; // %
+        function toggleVideoPlay() {
+            videoPlaying = !videoPlaying;
+            const btn1 = document.getElementById('videoPlayBtn');
+            const btn2 = document.getElementById('videoCtrlPlay');
+            btn1.innerHTML = videoPlaying ? '⏸' : '▶';
+            btn2.innerHTML = videoPlaying ? '⏸' : '▶';
+        }
+    </script>
 </body>
 </html>

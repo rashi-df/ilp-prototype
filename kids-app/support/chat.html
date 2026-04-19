@@ -32,13 +32,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="screen-content" style="display:flex;flex-direction:column;">
+                <div class="screen-content" style="display:flex;flex-direction:column;padding-bottom:16px;">
 
                     <!-- Safe space badge -->
                     <div class="chat-safe-badge">🛡️ Safe space. Teachers only. Parents can see all messages.</div>
 
                     <!-- Chat messages -->
-                    <div class="chat-messages">
+                    <div class="chat-messages" style="flex:1;overflow-y:auto;">
                         <div>
                             <div class="chat-bubble teacher">
                                 <div class="chat-sender">Teacher Fatima</div>
@@ -69,13 +69,6 @@
                                 Wonderful attitude! I've left feedback on your homework. Check it when you can. Keep up the great work! 🌟
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Quick reply chips -->
-                    <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;flex-shrink:0;">
-                        <button onclick="sendMessage(this)" style="padding:8px 14px;border-radius:100px;background:rgba(13,74,58,0.1);border:2px solid var(--color-primary);font-size:12px;font-weight:800;color:var(--color-primary);font-family:var(--font-body);cursor:pointer;white-space:nowrap;">Thank you! 🙏</button>
-                        <button onclick="sendMessage(this)" style="padding:8px 14px;border-radius:100px;background:rgba(13,74,58,0.1);border:2px solid var(--color-primary);font-size:12px;font-weight:800;color:var(--color-primary);font-family:var(--font-body);cursor:pointer;white-space:nowrap;">I have a question</button>
-                        <button onclick="sendMessage(this)" style="padding:8px 14px;border-radius:100px;background:rgba(13,74,58,0.1);border:2px solid var(--color-primary);font-size:12px;font-weight:800;color:var(--color-primary);font-family:var(--font-body);cursor:pointer;white-space:nowrap;">I understand! ✅</button>
                     </div>
 
                     <!-- Input bar -->
