@@ -23,13 +23,13 @@
 
             <div id="audio-recording" class="screen active">
                 <!-- Activity header -->
-                <div style="background:var(--color-primary);padding:14px 16px 12px;display:flex;align-items:center;justify-content:space-between;">
-                    <button onclick="history.back()" style="background:rgba(255,255,255,0.15);border:none;border-radius:10px;padding:6px 10px;font-size:14px;color:#fff;cursor:pointer;font-weight:900;">←</button>
-                    <div style="text-align:center;">
+                <div class="screen-header" style="justify-content:space-between;">
+                    <button class="screen-header-back" onclick="history.back()">←</button>
+                    <div style="text-align:center;position:relative;z-index:1;">
                         <div style="font-size:10px;font-weight:900;color:#FFD700;letter-spacing:.5px;text-transform:uppercase;">🎤 Recitation Challenge!</div>
                         <div style="font-size:13px;font-weight:900;color:#fff;">Tajweed · Madd Rules</div>
                     </div>
-                    <div style="font-size:11px;font-weight:900;color:#FFD700;background:rgba(255,255,255,0.15);border-radius:10px;padding:5px 10px;">+30 ⭐</div>
+                    <div style="font-size:11px;font-weight:900;color:#FFD700;background:rgba(255,255,255,0.15);border-radius:10px;padding:5px 10px;position:relative;z-index:1;">+30 ⭐</div>
                 </div>
 
                 <!-- Attempt tracker -->
